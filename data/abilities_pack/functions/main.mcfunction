@@ -21,7 +21,10 @@ scoreboard players set @a coas_counter 0
 execute as @a if score @s activate_cd matches 1.. if predicate abilities_pack:in_slot run item modify entity @s hotbar.0 abilities_pack:low_dur
 execute as @a if score @s activate_cd matches 0 if predicate abilities_pack:in_slot run item modify entity @s hotbar.0 abilities_pack:full_dur
 
-#Decrement Cooldown
+#Decrement Damage Cooldown
+execute as @a if score @s damage_cd matches 1.. run scoreboard players remove @s damage_cd 1
+
+#Decrement Activate Cooldown
 execute as @a if score @s activate_cd matches 1.. run scoreboard players remove @s activate_cd 1
 
 ######################################## START Abilites ########################################

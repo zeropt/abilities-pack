@@ -7,6 +7,7 @@ scoreboard objectives add pick_ability trigger
 scoreboard objectives add coas_counter minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add activate dummy
 scoreboard objectives add activate_cd dummy
+scoreboard objectives add damage_cd dummy
 
 ######################################## START Abilites ########################################
 
