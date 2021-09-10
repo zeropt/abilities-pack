@@ -2,6 +2,10 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "nbt": "{Inventory:[{Slot:0b,tag:{activator:1b}}]}"
+    "player": {
+      "looking_at": {
+        "type": "minecraft:endermite"
+      }
+    }
   }
 }

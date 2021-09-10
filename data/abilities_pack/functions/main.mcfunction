@@ -1,17 +1,21 @@
 # Main Loop
 # As: Server
 
+#New Player
+execute as @a unless score @s player_id matches 0.. run function abilities_pack:new_player
+
 #Pick an ability
-execute as @a unless score @s has_ability matches 1 run scoreboard players enable @s pick_ability
-execute as @a if score @s pick_ability matches 1.. run function abilities_pack:ability_selector
+execute as @a if score @s ability_id matches 0 run scoreboard players enable @s pick_ability 
+execute as @a if score @s pick_ability matches 1.. run function abilities_pack:admin/ability_selector
+execute as @a if score @s pick_ability matches 1.. run scoreboard players reset @s pick_ability
 
 #Abilities require activator in Slot:0b
-execute as @a if score @s has_ability matches 1 unless predicate abilities_pack:in_slot run clear @s carrot_on_a_stick{activator:1b}
-execute as @a if score @s has_ability matches 1 unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:give_activator
-execute as @a if score @s has_ability matches 1 unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run clear @s carrot_on_a_stick{activator:1b}
+execute as @a if score @s ability_id matches 1.. unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
+execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:give_activator
+execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
 
 #Kill all dropped activators
-kill @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{activator:1b}}}]
+kill @e[type=item,nbt={Item:{tag:{activator:1b}}}]
 
 #Activator right-click detection
 execute as @a if predicate abilities_pack:in_mainhand if score @s coas_counter matches 1.. run scoreboard players set @s activate 1
@@ -29,8 +33,11 @@ execute as @a if score @s activate_cd matches 1.. run scoreboard players remove 
 
 ######################################## START Abilites ########################################
 
-#Blaze
-execute as @a[tag=blaze] run function abilities_pack:blaze/loop
+#Blaze 1
+execute as @a if score @s ability_id matches 1 run function abilities_pack:blaze/loop
+
+#Enderman 2
+execute as @a if score @s ability_id matches 2 run function abilities_pack:enderman/loop
 
 ######################################## END Abilities ########################################
 scoreboard players set @a activate 0

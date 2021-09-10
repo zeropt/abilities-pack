@@ -1,0 +1,17 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "player": {
+      "looking_at": {
+        "equipment": {
+          "head": {
+            "items": [
+              "minecraft:carved_pumpkin"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
