@@ -17,7 +17,7 @@ scoreboard players operation @s proj_y0 += @s proj_y1
 scoreboard players operation @s proj_z0 += @s proj_z1
 
 #direction armor_stand
-execute at @s run summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:0b,Tags:["direction"]}
+execute at @s run summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["direction"]}
 
 execute store result entity @e[type=minecraft:armor_stand,tag=direction,limit=1,sort=nearest] Pos[0] double 0.000001 run scoreboard players get @s proj_x0
 execute store result entity @e[type=minecraft:armor_stand,tag=direction,limit=1,sort=nearest] Pos[1] double 0.000001 run scoreboard players get @s proj_y0
