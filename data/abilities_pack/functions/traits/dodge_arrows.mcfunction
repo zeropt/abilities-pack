@@ -1,7 +1,7 @@
 # Detect and Dodge arrows
 # As: Player
 
-execute at @s as @e[type=#minecraft:arrows,nbt={inGround:0b},distance=..10] run function abilities_pack:traits/arrow_ray
+execute at @s as @e[type=#minecraft:arrows,nbt={LeftOwner:1b,inGround:0b},distance=..10] run function abilities_pack:traits/dodge_arrows/arrow_raycast
 execute at @s at @e[type=minecraft:armor_stand,tag=ray,limit=1,sort=nearest] positioned ~-0.3 ~-0.3 ~-0.3 if entity @s[dx=0] positioned ~-0.4 ~-0.4 ~-0.4 if entity @s[dx=0] run spreadplayers ~ ~ 0 16 false @s
 
 #execute as @e[type=minecraft:armor_stand,tag=direction] at @s unless entity @e[type=#minecraft:arrows,tag=tracked,nbt={inGround:0b},distance=..10] run kill @s
