@@ -5,7 +5,7 @@
 execute rotated as @p run summon minecraft:small_fireball ^ ^ ^0.4 {Tags:["new"]}
 
 #Playsound
-playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 0.8
+playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.8
 
 #Copy Data
 data modify entity @e[type=minecraft:small_fireball,nbt={Tags:["new"]},limit=1,sort=nearest] Owner set from entity @s Owner

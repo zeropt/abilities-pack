@@ -1,9 +1,0 @@
-{
-  "function": "minecraft:set_contents",
-  "entries": [
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:stick"
-    }
-  ]
-}
