@@ -1,2 +1,0 @@
-# Test Init
-# As: Server

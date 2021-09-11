@@ -23,11 +23,3 @@ scoreboard objectives add pitch dummy
 
 #Initialize GLobal ID
 scoreboard players add #global player_id 0
-
-######################################## START Abilites ########################################
-
-function abilities_pack:test/init
-function abilities_pack:blaze/init
-function abilities_pack:enderman/init
-
-######################################## END Abilites ########################################

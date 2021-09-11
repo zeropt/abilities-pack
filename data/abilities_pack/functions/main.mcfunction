@@ -1,5 +1,5 @@
 # Main Loop
-# As: Server
+# As: Player
 
 #New Player
 execute as @a unless score @s player_id matches 0.. run function abilities_pack:new_player
@@ -21,9 +21,9 @@ kill @e[type=item,nbt={Item:{tag:{activator:1b}}}]
 execute as @a if predicate abilities_pack:in_mainhand if score @s coas_counter matches 1.. run scoreboard players set @s activate 1
 scoreboard players set @a coas_counter 0
 
-#Set Durability for cooldown indicator
-execute as @a if score @s activate_cd matches 1.. if predicate abilities_pack:in_slot run item modify entity @s hotbar.0 abilities_pack:low_dur
-execute as @a if score @s activate_cd matches 0 if predicate abilities_pack:in_slot run item modify entity @s hotbar.0 abilities_pack:full_dur
+#Cooldown stick
+execute as @a if score @s activate_cd matches 1.. if predicate abilities_pack:in_slot run item replace entity @s hotbar.0 with stick{display:{Name:'{"text":"Cooldown"}'},CustomModelData:0,activator:1b,Enchantments:[{}]}
+execute as @a if score @s activate_cd matches 0 if predicate abilities_pack:in_slot run clear @s stick{activator:1b}
 
 #Decrement Damage Cooldown
 execute as @a if score @s damage_cd matches 1.. run scoreboard players remove @s damage_cd 1
@@ -33,13 +33,13 @@ execute as @a if score @s activate_cd matches 1.. run scoreboard players remove 
 
 ######################################## START Abilites ########################################
 
-#Test -1
+#Test ID:-1
 execute as @a if score @s ability_id matches -1 run function abilities_pack:test/loop
 
-#Blaze 1
+#Blaze ID:1
 execute as @a if score @s ability_id matches 1 run function abilities_pack:blaze/loop
 
-#Enderman 2
+#Enderman ID:2
 execute as @a if score @s ability_id matches 2 run function abilities_pack:enderman/loop
 
 ######################################## END Abilities ########################################

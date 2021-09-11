@@ -1,2 +1,0 @@
-# Blaze Init
-# As: Server

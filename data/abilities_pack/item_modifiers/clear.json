@@ -1,0 +1,8 @@
+{
+  "function": "minecraft:set_contents",
+  "entries": [
+    {
+      "type": "minecraft:empty"
+    }
+  ]
+}

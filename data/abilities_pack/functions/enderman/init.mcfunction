@@ -1,2 +1,0 @@
-# Enderman Init
-# As: Server
