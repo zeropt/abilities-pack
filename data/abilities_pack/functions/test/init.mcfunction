@@ -1,2 +1,2 @@
-# Blaze Init
+# Test Init
 # As: Server

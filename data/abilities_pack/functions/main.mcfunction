@@ -33,6 +33,9 @@ execute as @a if score @s activate_cd matches 1.. run scoreboard players remove 
 
 ######################################## START Abilites ########################################
 
+#Test -1
+execute as @a if score @s ability_id matches -1 run function abilities_pack:test/loop
+
 #Blaze 1
 execute as @a if score @s ability_id matches 1 run function abilities_pack:blaze/loop
 
