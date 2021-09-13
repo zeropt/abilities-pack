@@ -9,3 +9,6 @@ execute if score @s ability_id matches 1 run give @s snowball{display:{Name:'{"t
 
 #Enderman ID:2
 execute if score @s ability_id matches 2 run give @s ender_pearl{display:{Name:'{"text":"Ender Pearl","color":"light_purple"}'},CustomModelData:0,activator:1b,Enchantments:[{}]} 1
+
+#Guardian ID:3
+execute if score @s ability_id matches 3 run give @s carrot_on_a_stick{display:{Name:'{"text":"Laser"}'},CustomModelData:0,activator:1b} 1
