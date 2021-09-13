@@ -3,7 +3,7 @@
 
 #Particles
 #particle minecraft:dust 0.533 0.000 0.667 1 ~ ~ ~ 0 0 0 0 1 normal
-particle minecraft:bubble ~ ~ ~ 0 0 0 0 1 normal
+particle minecraft:bubble ~ ~-0.3 ~ 0 0 0 0 1 normal
 
 #Decrement ray_range
 scoreboard players remove @s ray_range 1
