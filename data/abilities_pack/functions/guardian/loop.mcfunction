@@ -5,11 +5,11 @@
 effect give @s minecraft:water_breathing 1 0 true
 
 #Slowness out of Water
-function abilities_pack:traits/tag_in_water
+function abilities_pack:abilities/tag_in_water
 execute as @s[tag=!in_water] run effect give @s minecraft:slowness 1 2 true
 
 #Float in Water
-execute unless predicate abilities_pack:is_sneaking unless predicate abilities_pack:is_swimming run function abilities_pack:traits/float_in_water
+execute unless predicate abilities_pack:is_sneaking unless predicate abilities_pack:is_swimming run function abilities_pack:abilities/float_in_water
 
 #Aqua Affinity Helmet
 execute unless entity @s[nbt={Inventory:[{Slot:103b,tag:{trait:1b}}]}] run clear @s minecraft:leather_helmet{trait:1b}
@@ -33,7 +33,7 @@ execute if score @s laser_dur matches 1.. run scoreboard players remove @s laser
 #if laser is active
 execute unless predicate abilities_pack:see_entity if score @s activate_cd matches ..20 run scoreboard players add @s activate_cd 2
 execute if score @s laser_dur matches 1.. if score @s activate_cd matches 0 run tag @s add guardian_charged
-execute if score @s laser_dur matches 1.. if predicate abilities_pack:in_mainhand if predicate abilities_pack:see_entity run function abilities_pack:traits/guardian_ray
+execute if score @s laser_dur matches 1.. if predicate abilities_pack:in_mainhand if predicate abilities_pack:see_entity run function abilities_pack:abilities/guardian_ray
 
 execute if score @s activate_cd matches 0 run scoreboard players set @s activate_cd 20
 

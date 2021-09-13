@@ -1,5 +1,5 @@
 # tp cloud to target
-# As: area_effect_cloud w/ target_id
+# As: area_effect_cloud with target_id
 
 tag @s add this_cloud
 execute at @s as @e[type=!minecraft:area_effect_cloud,distance=..20] if score @s target_id = @e[tag=this_cloud,limit=1] target_id at @s run tp @e[tag=this_cloud] @s

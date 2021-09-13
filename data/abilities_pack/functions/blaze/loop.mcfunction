@@ -5,8 +5,8 @@
 effect give @s minecraft:fire_resistance 1 0 true
 
 #Water Damage
-function abilities_pack:traits/tag_in_water
-execute unless entity @s[tag=!in_water,tag=!in_rain] run function abilities_pack:traits/damage
+function abilities_pack:abilities/tag_in_water
+execute unless entity @s[tag=!in_water,tag=!in_rain] run function abilities_pack:abilities/damage
 
 #Particles
 execute if score @s activate_cd matches 0 if predicate abilities_pack:in_mainhand at @s run function abilities_pack:blaze/particles

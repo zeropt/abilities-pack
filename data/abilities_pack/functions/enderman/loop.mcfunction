@@ -8,8 +8,8 @@ execute if predicate abilities_pack:see_carved_pumpkin run effect give @s minecr
 execute if predicate abilities_pack:see_endermite run effect give @s minecraft:strength 1 4 false
 
 #Water Damage
-function abilities_pack:traits/tag_in_water
-execute unless entity @s[tag=!in_water,tag=!in_rain] run function abilities_pack:traits/damage
+function abilities_pack:abilities/tag_in_water
+execute unless entity @s[tag=!in_water,tag=!in_rain] run function abilities_pack:abilities/damage
 
 #Dodge arrows
-execute unless predicate abilities_pack:is_sneaking run function abilities_pack:traits/dodge_arrows
+execute unless predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dodge_arrows

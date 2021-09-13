@@ -24,7 +24,7 @@ execute store result entity @e[type=minecraft:armor_stand,tag=direction,limit=1,
 execute store result entity @e[type=minecraft:armor_stand,tag=direction,limit=1,sort=nearest] Pos[2] double 0.000001 run scoreboard players get @s proj_z0
 
 #run raycast
-execute at @s facing entity @e[type=minecraft:armor_stand,tag=direction,limit=1,sort=nearest] feet positioned ^ ^ ^2 run function abilities_pack:traits/dodge_arrows/armorstand_ray
+execute at @s facing entity @e[type=minecraft:armor_stand,tag=direction,limit=1,sort=nearest] feet positioned ^ ^ ^2 run function abilities_pack:abilities/proj_raycast/raycast
 
 #kill the direction armor_stand
-kill @e[type=minecraft:armor_stand,tag=direction,limit=1,sort=nearest]
+kill @e[type=minecraft:armor_stand,tag=direction]
