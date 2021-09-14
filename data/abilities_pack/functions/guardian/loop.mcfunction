@@ -27,13 +27,13 @@ execute if predicate abilities_pack:in_mainhand if predicate abilities_pack:is_s
 
 ##Laser
 #Laser duration
-execute if score @s activate matches 1 run scoreboard players set @s laser_dur 10
-execute if score @s laser_dur matches 1.. run scoreboard players remove @s laser_dur 1
+execute if score @s activate matches 1 run scoreboard players set @s activate_dur 10
+execute if score @s activate_dur matches 1.. run scoreboard players remove @s activate_dur 1
 
 #if laser is active
-execute unless predicate abilities_pack:see_entity if score @s activate_cd matches ..20 run scoreboard players add @s activate_cd 2
-execute if score @s laser_dur matches 1.. if score @s activate_cd matches 0 run tag @s add guardian_charged
-execute if score @s laser_dur matches 1.. if predicate abilities_pack:in_mainhand if predicate abilities_pack:see_entity run function abilities_pack:abilities/guardian_ray
+execute unless predicate abilities_pack:see_entity_guardian if score @s activate_cd matches ..20 run scoreboard players add @s activate_cd 2
+execute if score @s activate_dur matches 1.. if score @s activate_cd matches 0 run tag @s add guardian_charged
+execute if score @s activate_dur matches 1.. if predicate abilities_pack:in_mainhand if predicate abilities_pack:see_entity_guardian run function abilities_pack:abilities/guardian_ray
 
 execute if score @s activate_cd matches 0 run scoreboard players set @s activate_cd 20
 
