@@ -6,6 +6,7 @@ execute if predicate abilities_pack:is_sneaking run function abilities_pack:abil
 execute unless predicate abilities_pack:is_sneaking run effect clear @s minecraft:slowness
 execute unless predicate abilities_pack:is_sneaking run effect give @s minecraft:slowness 1 0 true
 execute unless predicate abilities_pack:is_sneaking run effect clear @s minecraft:resistance
+execute unless predicate abilities_pack:is_sneaking run effect clear @s minecraft:blindness
 
 #check for existing shulker bullets
 tag @s add ready
