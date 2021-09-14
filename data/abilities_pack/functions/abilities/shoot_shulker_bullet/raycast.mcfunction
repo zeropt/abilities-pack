@@ -2,7 +2,7 @@
 # As: Player
 
 #Particles
-particle minecraft:crit ~ ~-0.25 ~ 0 0 0 0 1 normal
+#particle minecraft:crit ~ ~-0.25 ~ 0 0 0 0 1 normal
 
 #Decrement ray_range
 scoreboard players remove @s ray_range 1
