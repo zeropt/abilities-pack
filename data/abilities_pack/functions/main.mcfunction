@@ -14,9 +14,9 @@ execute as @a if score @s ability_id matches 1.. unless predicate abilities_pack
 execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:give_activator
 execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
 
-execute as @a if score @s ability_id matches -1 unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
-execute as @a if score @s ability_id matches -1 unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:give_activator
-execute as @a if score @s ability_id matches -1 unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
+#execute as @a if score @s ability_id matches -1 unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
+#execute as @a if score @s ability_id matches -1 unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:give_activator
+#execute as @a if score @s ability_id matches -1 unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
 
 #Activator right-click detection
 scoreboard players set @a activate 0
@@ -40,12 +40,6 @@ execute as @a if score @s playsound_cd matches 1.. run scoreboard players remove
 
 #linked clouds
 execute as @e[type=minecraft:area_effect_cloud] if score @s target_id matches ..2147483647 run function abilities_pack:abilities/linked_clouds/loop
-
-#small_fireball
-function abilities_pack:abilities/small_fireball/loop
-
-#shulker_bullet
-function abilities_pack:abilities/shulker_bullet/loop
 
 ######################################## STARTOF Abilites ########################################
 

@@ -20,9 +20,5 @@ execute unless predicate abilities_pack:is_sneaking if predicate abilities_pack:
 execute unless score @s activate_cd matches 0 unless predicate abilities_pack:is_sneaking if predicate abilities_pack:in_slot run item replace entity @s hotbar.0 with stick{display:{Name:'{"text":"Cooldown"}'},CustomModelData:0,activator:1b}
 execute if score @s activate_cd matches 0 if predicate abilities_pack:in_slot run clear @s stick{activator:1b}
 
-
-#kill when sneak activating
-#execute if score @s activate matches 1 if predicate abilities_pack:is_sneaking run function abilities_pack:abilities/shulker_bullet/destruct
-
 #set target
-execute if score @s activate matches 1 if predicate abilities_pack:see_entity_shulker run function abilities_pack:abilities/shoot_shulker_bullet
+execute if score @s activate matches 1 run function abilities_pack:abilities/shoot_shulker_bullet
