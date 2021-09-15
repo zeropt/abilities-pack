@@ -5,7 +5,12 @@
 scoreboard objectives add player_id dummy
 scoreboard objectives add ability_id dummy
 scoreboard objectives add pick_ability trigger
+
+#Activators
 scoreboard objectives add coas_counter minecraft.used:minecraft.carrot_on_a_stick
+scoreboard objectives add wfoas_counter minecraft.used:minecraft.warped_fungus_on_a_stick
+scoreboard objectives add s_counter minecraft.used:minecraft.snowball
+scoreboard objectives add ee_counter minecraft.used:minecraft.ender_eye
 scoreboard objectives add activate dummy
 scoreboard objectives add activate_cd dummy
 

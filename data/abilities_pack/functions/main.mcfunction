@@ -14,14 +14,20 @@ execute as @a if score @s ability_id matches 1.. unless predicate abilities_pack
 execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:give_activator
 execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
 
-#Kill all dropped trait items and activators
-kill @e[type=item,nbt={Item:{tag:{activator:1b}}}]
-kill @e[type=item,nbt={Item:{tag:{trait:1b}}}]
+execute as @a if score @s ability_id matches -1 unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
+execute as @a if score @s ability_id matches -1 unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:give_activator
+execute as @a if score @s ability_id matches -1 unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
 
 #Activator right-click detection
 scoreboard players set @a activate 0
 execute as @a if predicate abilities_pack:in_mainhand if score @s coas_counter matches 1.. run scoreboard players set @s activate 1
+execute as @a if predicate abilities_pack:in_mainhand if score @s wfoas_counter matches 1.. run scoreboard players set @s activate 1
+execute as @a if predicate abilities_pack:in_mainhand if score @s s_counter matches 1.. run scoreboard players set @s activate 1
+execute as @a if predicate abilities_pack:in_mainhand if score @s ee_counter matches 1.. run scoreboard players set @s activate 1
 scoreboard players set @a coas_counter 0
+scoreboard players set @a wfoas_counter 0
+scoreboard players set @a s_counter 0
+scoreboard players set @a ee_counter 0
 
 #Decrement Damage Cooldown
 execute as @a if score @s damage_cd matches 1.. run scoreboard players remove @s damage_cd 1
@@ -56,3 +62,7 @@ execute as @a if score @s ability_id matches 3 run function abilities_pack:guard
 execute as @a if score @s ability_id matches 4 run function abilities_pack:shulker/loop
 
 ######################################## ENDOF Abilities ########################################
+
+#Kill all dropped trait items and activators
+kill @e[type=!ender_pearl,nbt={Item:{tag:{activator:1b}}}]
+kill @e[nbt={Item:{tag:{trait:1b}}}]
