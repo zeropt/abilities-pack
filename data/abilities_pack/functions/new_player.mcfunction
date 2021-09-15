@@ -15,4 +15,4 @@ scoreboard players set @s ee_counter 0
 scoreboard players set @s activate 0
 scoreboard players set @s activate_cd 0
 scoreboard players set @s damage_cd 0
-scoreboard players set @s float_y 0
+scoreboard players set @s playsound_cd 0

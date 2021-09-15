@@ -35,6 +35,9 @@ execute as @a if score @s damage_cd matches 1.. run scoreboard players remove @s
 #Decrement Activate Cooldown
 execute as @a if score @s activate_cd matches 1.. run scoreboard players remove @s activate_cd 1
 
+#Decrement Playsound Cooldown
+execute as @a if score @s playsound_cd matches 1.. run scoreboard players remove @s playsound_cd 1
+
 #linked clouds
 execute as @e[type=minecraft:area_effect_cloud] if score @s target_id matches ..2147483647 run function abilities_pack:abilities/linked_clouds/loop
 

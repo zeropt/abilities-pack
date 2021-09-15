@@ -15,7 +15,7 @@ execute as @s[tag=guardian_charged] at @e[tag=guardian_target] run function abil
 execute if entity @e[tag=guardian_target] run tag @s add target_acquired
 
 #call again
-execute unless entity @e[tag=guardian_target] if score @s ray_range matches 1.. positioned ^ ^ ^0.5 run function abilities_pack:abilities/guardian_ray/raycast
+execute unless entity @e[tag=guardian_target] if score @s ray_range matches 1.. if block ~ ~ ~ #abilities_pack:nonsolid positioned ^ ^ ^0.5 run function abilities_pack:abilities/guardian_ray/raycast
 
 #remove target tag
 tag @e[tag=guardian_target] remove guardian_target

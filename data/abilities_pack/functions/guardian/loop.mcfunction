@@ -31,6 +31,7 @@ execute if score @s activate matches 1 run scoreboard players set @s activate_du
 execute if score @s activate_dur matches 1.. run scoreboard players remove @s activate_dur 1
 
 #if laser is active
+tag @s remove target_acquired
 execute if score @s activate_dur matches 1.. if predicate abilities_pack:in_mainhand run function abilities_pack:abilities/guardian_ray
 tag @s remove guardian_charged
 execute as @s[tag=!target_acquired] if score @s activate_cd matches ..20 run scoreboard players add @s activate_cd 2

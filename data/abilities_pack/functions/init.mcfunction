@@ -26,6 +26,7 @@ scoreboard objectives add proj_y1 dummy
 scoreboard objectives add proj_z1 dummy
 scoreboard objectives add pitch dummy
 scoreboard objectives add target_id dummy
+scoreboard objectives add playsound_cd dummy
 
 #Initialize GLobal ID
 scoreboard players add #global player_id 0
