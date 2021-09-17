@@ -6,8 +6,7 @@ execute as @a unless score @s player_id matches 0.. run function abilities_pack:
 
 #Pick an ability
 execute as @a if score @s ability_id matches 0 run scoreboard players enable @s pick_ability 
-execute as @a if score @s pick_ability matches 1.. run function abilities_pack:admin/ability_selector
-execute as @a if score @s pick_ability matches 1.. run scoreboard players reset @s pick_ability
+execute as @a if score @s pick_ability matches 1 run function abilities_pack:admin/ability_selector
 
 #Abilities require activator in Slot:0b
 execute as @a if score @s ability_id matches 1.. unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
@@ -47,15 +46,19 @@ execute as @e[type=minecraft:area_effect_cloud] if score @s target_id matches ..
 execute as @a if score @s ability_id matches -1 run function abilities_pack:test/loop
 
 #Blaze ID:1
+execute as @a if score @s pick_ability matches -1 run function abilities_pack:blaze/join
 execute as @a if score @s ability_id matches 1 run function abilities_pack:blaze/loop
 
 #Enderman ID:2
+execute as @a if score @s pick_ability matches -2 run function abilities_pack:enderman/join
 execute as @a if score @s ability_id matches 2 run function abilities_pack:enderman/loop
 
 #Guardian ID:3
+execute as @a if score @s pick_ability matches -3 run function abilities_pack:guardian/join
 execute as @a if score @s ability_id matches 3 run function abilities_pack:guardian/loop
 
 #Shulker ID:4
+execute as @a if score @s pick_ability matches -4 run function abilities_pack:shulker/join
 execute as @a if score @s ability_id matches 4 run function abilities_pack:shulker/loop
 
 ######################################## ENDOF Abilities ########################################
@@ -63,3 +66,6 @@ execute as @a if score @s ability_id matches 4 run function abilities_pack:shulk
 #Kill all dropped trait items and activators
 kill @e[type=!ender_pearl,nbt={Item:{tag:{activator:1b}}}]
 kill @e[nbt={Item:{tag:{trait:1b}}}]
+
+#reset trigger
+execute as @a unless score @s pick_ability matches 0 run scoreboard players reset @s pick_ability

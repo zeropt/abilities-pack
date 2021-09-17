@@ -1,6 +1,0 @@
-{
-  "function": "minecraft:set_enchantments",
-  "enchantments": {
-    "minecraft:aqua_affinity": 1
-  }
-}
