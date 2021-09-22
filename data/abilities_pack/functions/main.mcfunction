@@ -37,6 +37,9 @@ execute as @a if score @s activate_cd matches 1.. run scoreboard players remove 
 #Decrement Playsound Cooldown
 execute as @a if score @s playsound_cd matches 1.. run scoreboard players remove @s playsound_cd 1
 
+#Decrement Crystal Regen Cooldown
+execute as @a if score @s crystal_regen_cd matches 1.. run scoreboard players remove @s crystal_regen_cd 1
+
 #linked clouds
 execute as @e[type=minecraft:area_effect_cloud] if score @s target_id matches ..2147483647 run function abilities_pack:abilities/linked_clouds/loop
 
@@ -60,6 +63,10 @@ execute as @a if score @s ability_id matches 3 run function abilities_pack:guard
 #Shulker ID:4
 execute as @a if score @s pick_ability matches -4 run function abilities_pack:shulker/join
 execute as @a if score @s ability_id matches 4 run function abilities_pack:shulker/loop
+
+#Shulker ID:5
+execute as @a if score @s pick_ability matches -5 run function abilities_pack:dragon/join
+execute as @a if score @s ability_id matches 5 run function abilities_pack:dragon/loop
 
 ######################################## ENDOF Abilities ########################################
 

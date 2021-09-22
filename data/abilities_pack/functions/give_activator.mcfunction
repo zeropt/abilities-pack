@@ -15,3 +15,6 @@ execute if score @s ability_id matches 3 run give @s warped_fungus_on_a_stick{di
 
 #Shulker ID:4
 execute if score @s ability_id matches 4 run give @s snowball{display:{Name:'{"text":"Shulker Bullet","color":"light_purple"}'},CustomModelData:0,activator:1b} 1
+
+#Dragon ID:5
+execute if score @s ability_id matches 5 run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Boost"}'},CustomModelData:0,activator:1b} 1

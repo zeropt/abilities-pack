@@ -8,3 +8,4 @@ tellraw @s {"text":"[Blaze]","color":"aqua","clickEvent":{"action":"run_command"
 tellraw @s {"text":"[Enderman]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -2"}}
 tellraw @s {"text":"[Guardian]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -3"}}
 tellraw @s {"text":"[Shulker]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -4"}}
+tellraw @s {"text":"[Dragon]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -5"}}

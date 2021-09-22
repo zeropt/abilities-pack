@@ -14,7 +14,7 @@ scoreboard objectives add ee_counter minecraft.used:minecraft.ender_eye
 scoreboard objectives add activate dummy
 scoreboard objectives add activate_cd dummy
 
-#Trait objectives
+#Ability objectives
 scoreboard objectives add damage_cd dummy
 scoreboard objectives add rain_test dummy
 scoreboard objectives add ray_range dummy
@@ -27,6 +27,8 @@ scoreboard objectives add proj_z1 dummy
 scoreboard objectives add pitch dummy
 scoreboard objectives add target_id dummy
 scoreboard objectives add playsound_cd dummy
+scoreboard objectives add crystal_regen_cd dummy
+scoreboard objectives add ability_success dummy
 
 #Initialize GLobal ID
 scoreboard players add #global player_id 0
