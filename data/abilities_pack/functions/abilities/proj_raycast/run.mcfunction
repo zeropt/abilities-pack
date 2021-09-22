@@ -2,7 +2,7 @@
 # As: Arrow Entity
 
 #set raycast distance
-scoreboard players set @s ray_range 10
+scoreboard players set #global temp_global 10
 
 #copy arrow data
 execute store result score @s proj_x0 run data get entity @s Pos[0] 1000000

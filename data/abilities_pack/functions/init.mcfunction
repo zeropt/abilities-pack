@@ -13,22 +13,21 @@ scoreboard objectives add s_counter minecraft.used:minecraft.snowball
 scoreboard objectives add ee_counter minecraft.used:minecraft.ender_eye
 scoreboard objectives add activate dummy
 scoreboard objectives add activate_cd dummy
+scoreboard objectives add act_count dummy
+scoreboard objectives add act_target dummy
 
 #Ability objectives
-scoreboard objectives add damage_cd dummy
-scoreboard objectives add rain_test dummy
-scoreboard objectives add ray_range dummy
+scoreboard objectives add temp_global dummy
 scoreboard objectives add proj_x0 dummy
 scoreboard objectives add proj_y0 dummy
 scoreboard objectives add proj_z0 dummy
 scoreboard objectives add proj_x1 dummy
 scoreboard objectives add proj_y1 dummy
 scoreboard objectives add proj_z1 dummy
-scoreboard objectives add pitch dummy
 scoreboard objectives add target_id dummy
+scoreboard objectives add damage_cd dummy
 scoreboard objectives add playsound_cd dummy
 scoreboard objectives add crystal_regen_cd dummy
-scoreboard objectives add ability_success dummy
 
 #Initialize GLobal ID
 scoreboard players add #global player_id 0
