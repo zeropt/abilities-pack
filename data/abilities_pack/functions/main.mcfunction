@@ -8,14 +8,11 @@ execute as @a unless score @s player_id matches 0.. run function abilities_pack:
 execute as @a if score @s ability_id matches 0 run scoreboard players enable @s pick_ability 
 execute as @a if score @s pick_ability matches 1 run function abilities_pack:admin/ability_selector
 
-#Abilities require activator in Slot:0b
+#Slot Stick
+#execute as @a[tag=!active] run function abilities_pack:clear_activator
 execute as @a if score @s ability_id matches 1.. unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
-execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:give_activator
+execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run give @s stick{display:{Name:'{"text":"Ability Slot"}'},CustomModelData:0,activator:1b} 1
 execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
-
-#execute as @a if score @s ability_id matches -1 unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
-#execute as @a if score @s ability_id matches -1 unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:give_activator
-#execute as @a if score @s ability_id matches -1 unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
 
 #Activator right-click detection
 scoreboard players set @a activate 0
@@ -76,3 +73,11 @@ kill @e[nbt={Item:{tag:{trait:1b}}}]
 
 #reset trigger
 execute as @a unless score @s pick_ability matches 0 run scoreboard players reset @s pick_ability
+
+#Replace, Add, Clear Activators
+execute as @a[tag=active] run clear @s stick{activator:1b}
+execute as @a run scoreboard players set @s act_count 0
+execute as @a[tag=active] if predicate abilities_pack:in_slot store result score @s act_count run data get entity @s Inventory[0].Count
+execute as @a[tag=active] unless score @s act_count = @s act_target run function abilities_pack:clear_activator
+execute as @a[tag=active] unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless score @s act_count = @s act_target run function abilities_pack:fill_activators
+execute as @a unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator

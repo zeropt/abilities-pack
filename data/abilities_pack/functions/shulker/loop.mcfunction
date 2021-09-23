@@ -8,17 +8,20 @@ execute unless predicate abilities_pack:is_sneaking run effect give @s minecraft
 execute unless predicate abilities_pack:is_sneaking run effect clear @s minecraft:resistance
 execute unless predicate abilities_pack:is_sneaking run effect clear @s minecraft:blindness
 
-#check for existing shulker bullets
-tag @s add ready
-execute at @s as @e[type=minecraft:shulker_bullet] if score @s player_id = @p player_id run tag @p remove ready
-execute as @s[tag=!ready] run scoreboard players set @s activate_cd 40
-
-#switch out activators
+#shulker shell when sneaking
 execute if predicate abilities_pack:is_sneaking if predicate abilities_pack:in_slot run item replace entity @s hotbar.0 with shulker_shell{display:{Name:'{"text":"Closed"}'},CustomModelData:0,activator:1b}
 execute unless predicate abilities_pack:is_sneaking if predicate abilities_pack:in_slot run clear @s shulker_shell{activator:1b}
 
-execute unless score @s activate_cd matches 0 unless predicate abilities_pack:is_sneaking if predicate abilities_pack:in_slot run item replace entity @s hotbar.0 with stick{display:{Name:'{"text":"Cooldown"}'},CustomModelData:0,activator:1b}
-execute if score @s activate_cd matches 0 if predicate abilities_pack:in_slot run clear @s stick{activator:1b}
-
 #set target
 execute if score @s activate matches 1 run function abilities_pack:abilities/shoot_shulker_bullet
+
+#check for existing shulker bullets
+tag @s remove bullet_exists
+execute at @s as @e[type=minecraft:shulker_bullet] if score @s player_id = @p player_id run tag @p add bullet_exists
+#reset cooldown
+execute as @s[tag=bullet_exists] run scoreboard players set @s activate_cd 40
+execute as @s[tag=bullet_exists] run tag @s remove active
+execute as @s[tag=bullet_exists] run clear @s warped_fungus_on_a_stick{activator:1b}
+
+#reactivate
+execute if score @s activate_cd matches 0 run tag @s add active
