@@ -8,6 +8,7 @@ function abilities_pack:clear_activator
 
 #clear traits
 clear @s leather_helmet{trait:1b}
+clear @s leather_chestplate{trait:1b}
 clear @s leather_boots{trait:1b}
 clear @s elytra{trait:1b}
 

@@ -18,3 +18,6 @@ execute if score @s ability_id matches 4 run give @s warped_fungus_on_a_stick{di
 
 #Dragon ID:5
 execute if score @s ability_id matches 5 run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Boost"}'},CustomModelData:0,activator:1b} 1
+
+#Evoker ID:6
+execute if score @s ability_id matches 6 run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Spells"}'},CustomModelData:0,activator:1b} 1

@@ -18,12 +18,12 @@ scoreboard objectives add act_target dummy
 
 #Ability objectives
 scoreboard objectives add temp_global dummy
-scoreboard objectives add proj_x0 dummy
-scoreboard objectives add proj_y0 dummy
-scoreboard objectives add proj_z0 dummy
-scoreboard objectives add proj_x1 dummy
-scoreboard objectives add proj_y1 dummy
-scoreboard objectives add proj_z1 dummy
+scoreboard objectives add temp_x0 dummy
+scoreboard objectives add temp_y0 dummy
+scoreboard objectives add temp_z0 dummy
+scoreboard objectives add temp_x1 dummy
+scoreboard objectives add temp_y1 dummy
+scoreboard objectives add temp_z1 dummy
 scoreboard objectives add target_id dummy
 scoreboard objectives add damage_cd dummy
 scoreboard objectives add playsound_cd dummy

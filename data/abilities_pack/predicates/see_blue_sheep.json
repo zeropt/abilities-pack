@@ -1,0 +1,18 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "player": {
+      "looking_at": {
+        "type": "minecraft:sheep",
+        "nbt": "{Color:11b}",
+        "distance": {
+          "absolute": {
+            "min": 0,
+            "max": 16
+          }
+        }
+      }
+    }
+  }
+}
