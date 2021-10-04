@@ -13,6 +13,7 @@ scoreboard objectives add s_counter minecraft.used:minecraft.snowball
 scoreboard objectives add ee_counter minecraft.used:minecraft.ender_eye
 scoreboard objectives add ep_counter minecraft.used:minecraft.ender_pearl
 scoreboard objectives add death_counter deathCount
+scoreboard objectives add health health
 scoreboard objectives add activate_cd dummy
 scoreboard objectives add act_count dummy
 scoreboard objectives add act_target dummy
