@@ -24,7 +24,7 @@ execute store result entity @e[type=area_effect_cloud,tag=direction,limit=1,sort
 execute store result entity @e[type=area_effect_cloud,tag=direction,limit=1,sort=nearest] Pos[2] double 0.000001 run scoreboard players get @s temp_z0
 
 #run raycast
-execute at @s facing entity @e[type=area_effect_cloud,tag=direction,limit=1,sort=nearest] feet positioned ^ ^ ^2 run function abilities_pack:abilities/temp_raycast/raycast
+execute at @s facing entity @e[type=area_effect_cloud,tag=direction,limit=1,sort=nearest] feet positioned ^ ^ ^2 run function abilities_pack:abilities/proj_raycast/raycast
 
 #kill the direction area_effect_cloud
 kill @e[type=area_effect_cloud,tag=direction]
