@@ -2,8 +2,8 @@
 # As: Tagged Player
 
 #effects
-execute if predicate abilities_pack:is_sprinting effect give @s speed 1 1 true
-execute unless predicate abilities_pack:is_sprinting effect remove speed
+execute if predicate abilities_pack:is_sprinting run effect give @s speed 1 1 true
+execute unless predicate abilities_pack:is_sprinting run effect remove speed
 effect give @s weakness 1 0 true
 
 #Permanent Leather Armor
