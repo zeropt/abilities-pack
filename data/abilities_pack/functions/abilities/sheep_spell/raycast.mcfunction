@@ -5,7 +5,7 @@
 scoreboard players remove #global temp_global 1
 
 #check for blue sheep
-execute as @e[type=sheep,nbt={Color:11b},tag=!evoker_source,dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @e[type=sheep,nbt={Color:11b},tag=!evoker_source,dx=0] run tag @s add target_sheep
+execute as @e[type=sheep,nbt={Color:11b},tag=!evoker_source,dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] run tag @s add target_sheep
 
 #change the color
 execute as @e[tag=target_sheep] run data modify entity @s Color set value 14

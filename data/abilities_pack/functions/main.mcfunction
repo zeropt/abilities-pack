@@ -45,6 +45,9 @@ execute as @e[type=minecraft:area_effect_cloud] if score @s target_id matches ..
 #evoker fangs
 function abilities_pack:abilities/evoker_fangs/loop
 
+#launch player
+function abilities_pack:abilities/launch_player/loop
+
 ######################################## STARTOF Abilites ########################################
 
 #Test ID:-1
@@ -66,11 +69,11 @@ execute as @a if score @s ability_id matches 3 run function abilities_pack:guard
 execute as @a if score @s pick_ability matches -4 run function abilities_pack:shulker/join
 execute as @a if score @s ability_id matches 4 run function abilities_pack:shulker/loop
 
-#Shulker ID:5
+#Dragon ID:5
 execute as @a if score @s pick_ability matches -5 run function abilities_pack:dragon/join
 execute as @a if score @s ability_id matches 5 run function abilities_pack:dragon/loop
 
-#Shulker ID:6
+#Evoker ID:6
 execute as @a if score @s pick_ability matches -6 run function abilities_pack:evoker/join
 execute as @a if score @s ability_id matches 6 run function abilities_pack:evoker/loop
 
