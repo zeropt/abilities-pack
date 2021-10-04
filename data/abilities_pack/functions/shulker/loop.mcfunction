@@ -13,7 +13,7 @@ execute if predicate abilities_pack:is_sneaking if predicate abilities_pack:in_s
 execute unless predicate abilities_pack:is_sneaking if predicate abilities_pack:in_slot run clear @s shulker_shell{activator:1b}
 
 #set target
-execute if score @s activate matches 1 run function abilities_pack:abilities/shoot_shulker_bullet
+execute as @s[tag=trigger_act] run function abilities_pack:abilities/shoot_shulker_bullet
 
 #check for existing shulker bullets
 tag @s remove bullet_exists

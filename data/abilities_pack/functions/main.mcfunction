@@ -15,17 +15,22 @@ execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory
 execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
 
 #Activator right-click detection
-scoreboard players set @a activate 0
-execute as @a if predicate abilities_pack:in_mainhand if score @s coas_counter matches 1.. run scoreboard players set @s activate 1
-execute as @a if predicate abilities_pack:in_mainhand if score @s wfoas_counter matches 1.. run scoreboard players set @s activate 1
-execute as @a if predicate abilities_pack:in_mainhand if score @s s_counter matches 1.. run scoreboard players set @s activate 1
-execute as @a if predicate abilities_pack:in_mainhand if score @s ee_counter matches 1.. run scoreboard players set @s activate 1
-execute as @a if predicate abilities_pack:in_mainhand if score @s ep_counter matches 1.. run scoreboard players set @s activate 1
+tag @a remove trigger_act
+execute as @a if predicate abilities_pack:in_mainhand if score @s coas_counter matches 1.. run tag @s add trigger_act
+execute as @a if predicate abilities_pack:in_mainhand if score @s wfoas_counter matches 1.. run tag @s add trigger_act
+execute as @a if predicate abilities_pack:in_mainhand if score @s s_counter matches 1.. run tag @s add trigger_act
+execute as @a if predicate abilities_pack:in_mainhand if score @s ee_counter matches 1.. run tag @s add trigger_act
+execute as @a if predicate abilities_pack:in_mainhand if score @s ep_counter matches 1.. run tag @s add trigger_act
 scoreboard players set @a coas_counter 0
 scoreboard players set @a wfoas_counter 0
 scoreboard players set @a s_counter 0
 scoreboard players set @a ee_counter 0
 scoreboard players set @a ep_counter 0
+
+#death detection
+tag @a remove died
+execute as @a if score @s death_counter matches 1.. run tag @s add died
+scoreboard players set @a death_counter 0
 
 #Decrement Damage Cooldown
 execute as @a if score @s damage_cd matches 1.. run scoreboard players remove @s damage_cd 1

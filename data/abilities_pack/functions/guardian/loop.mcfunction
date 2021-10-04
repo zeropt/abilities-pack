@@ -25,7 +25,7 @@ execute if predicate abilities_pack:in_mainhand if predicate abilities_pack:is_s
 
 ##Laser
 #Laser duration
-execute if score @s activate matches 1 run scoreboard players set @s activate_dur 5
+execute as @s[tag=trigger_act] run scoreboard players set @s activate_dur 5
 execute if score @s activate_dur matches 1.. run scoreboard players remove @s activate_dur 1
 
 #if laser is active

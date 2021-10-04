@@ -14,11 +14,11 @@ function abilities_pack:abilities/more_arrow_damage
 execute unless predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dragon_ram
 
 #boost and cloud
-execute if score @s activate matches 1 run function abilities_pack:abilities/launch_player
-execute if score @s activate matches 1 if predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dragon_cloud
-execute if score @s activate matches 1 run scoreboard players set @s activate_cd 200
-execute if score @s activate matches 1 run tag @s remove active
-execute if score @s activate matches 1 run clear @s warped_fungus_on_a_stick{activator:1b}
+execute as @s[tag=trigger_act] run function abilities_pack:abilities/launch_player
+execute as @s[tag=trigger_act] if predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dragon_cloud
+execute as @s[tag=trigger_act] run scoreboard players set @s activate_cd 200
+execute as @s[tag=trigger_act] run tag @s remove active
+execute as @s[tag=trigger_act] run clear @s warped_fungus_on_a_stick{activator:1b}
 
 #reactivate
 execute if score @s activate_cd matches 0 run tag @s add active
