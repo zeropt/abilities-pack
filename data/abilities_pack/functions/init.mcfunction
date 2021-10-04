@@ -11,6 +11,7 @@ scoreboard objectives add coas_counter minecraft.used:minecraft.carrot_on_a_stic
 scoreboard objectives add wfoas_counter minecraft.used:minecraft.warped_fungus_on_a_stick
 scoreboard objectives add s_counter minecraft.used:minecraft.snowball
 scoreboard objectives add ee_counter minecraft.used:minecraft.ender_eye
+scoreboard objectives add ep_counter minecraft.used:minecraft.ender_pearl
 scoreboard objectives add activate dummy
 scoreboard objectives add activate_cd dummy
 scoreboard objectives add act_count dummy

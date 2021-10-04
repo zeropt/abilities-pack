@@ -20,10 +20,12 @@ execute as @a if predicate abilities_pack:in_mainhand if score @s coas_counter m
 execute as @a if predicate abilities_pack:in_mainhand if score @s wfoas_counter matches 1.. run scoreboard players set @s activate 1
 execute as @a if predicate abilities_pack:in_mainhand if score @s s_counter matches 1.. run scoreboard players set @s activate 1
 execute as @a if predicate abilities_pack:in_mainhand if score @s ee_counter matches 1.. run scoreboard players set @s activate 1
+execute as @a if predicate abilities_pack:in_mainhand if score @s ep_counter matches 1.. run scoreboard players set @s activate 1
 scoreboard players set @a coas_counter 0
 scoreboard players set @a wfoas_counter 0
 scoreboard players set @a s_counter 0
 scoreboard players set @a ee_counter 0
+scoreboard players set @a ep_counter 0
 
 #Decrement Damage Cooldown
 execute as @a if score @s damage_cd matches 1.. run scoreboard players remove @s damage_cd 1

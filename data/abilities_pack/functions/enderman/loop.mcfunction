@@ -13,3 +13,11 @@ execute unless entity @s[tag=!in_water,tag=!in_rain] run function abilities_pack
 
 #Dodge arrows
 execute unless predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dodge_arrows
+
+#set cooldown
+execute if score @s activate matches 1 run scoreboard players set @s activate_cd 60
+execute if score @s activate matches 1 run tag @s remove active
+execute if score @s activate matches 1 run clear @s ender_pearl{activator:1b}
+
+#reactivate
+execute if score @s activate_cd matches 0 run tag @s add active

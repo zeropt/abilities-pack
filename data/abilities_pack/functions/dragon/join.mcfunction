@@ -13,3 +13,7 @@ scoreboard players set @s activate_cd 0
 
 #clear arrow advancement
 advancement revoke @s only abilities_pack:hurt_by_arrow
+
+#objectives
+scoreboard objectives add activate_dur dummy
+scoreboard players set @s activate_dur 0
