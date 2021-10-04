@@ -2,7 +2,7 @@
 # As: Tagged Player
 
 #effects
-effect give @s speed 1 0 true
+effect give @s speed 1 1 true
 effect give @s weakness 1 0 true
 
 #Permanent Leather Armor
