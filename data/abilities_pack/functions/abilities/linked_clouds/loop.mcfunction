@@ -1,6 +1,4 @@
-# tp cloud to target
-# As: area_effect_cloud with target_id
+# linked clouds follow their targets
+# As: Server
 
-tag @s add this_cloud
-execute at @s as @e[type=!minecraft:area_effect_cloud,distance=..20] if score @s target_id = @e[tag=this_cloud,limit=1] target_id at @s run tp @e[tag=this_cloud] @s
-tag @s remove this_cloud
+execute as @e[type=minecraft:area_effect_cloud] if score @s target_id matches ..2147483647 run function abilities_pack:abilities/linked_clouds/loop

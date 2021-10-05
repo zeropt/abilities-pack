@@ -9,7 +9,6 @@ execute as @a if score @s ability_id matches 0 run scoreboard players enable @s 
 execute as @a if score @s pick_ability matches 1 run function abilities_pack:admin/ability_selector
 
 #Slot Stick
-#execute as @a[tag=!active] run function abilities_pack:clear_activator
 execute as @a if score @s ability_id matches 1.. unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
 execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run give @s stick{display:{Name:'{"text":"Ability Slot"}'},CustomModelData:0,activator:1b} 1
 execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
@@ -27,30 +26,20 @@ scoreboard players set @a s_counter 0
 scoreboard players set @a ee_counter 0
 scoreboard players set @a ep_counter 0
 
-#death detection
+#Death detection
 tag @a remove died
 execute as @a if score @s death_counter matches 1.. run tag @s add died
 scoreboard players set @a death_counter 0
 
-#Decrement Damage Cooldown
-execute as @a if score @s damage_cd matches 1.. run scoreboard players remove @s damage_cd 1
-
-#Decrement Activate Cooldown
+#Cooldowns
 execute as @a if score @s activate_cd matches 1.. run scoreboard players remove @s activate_cd 1
-
-#Decrement Playsound Cooldown
+execute as @a if score @s damage_cd matches 1.. run scoreboard players remove @s damage_cd 1
 execute as @a if score @s playsound_cd matches 1.. run scoreboard players remove @s playsound_cd 1
-
-#Decrement Crystal Regen Cooldown
 execute as @a if score @s crystal_regen_cd matches 1.. run scoreboard players remove @s crystal_regen_cd 1
 
-#linked clouds
-execute as @e[type=minecraft:area_effect_cloud] if score @s target_id matches ..2147483647 run function abilities_pack:abilities/linked_clouds/loop
-
-#evoker fangs
+#Abilities loops
+function abilities_pack:abilities/linked_clouds/loop
 function abilities_pack:abilities/evoker_fangs/loop
-
-#launch player
 function abilities_pack:abilities/launch_player/loop
 
 ######################################## STARTOF Abilites ########################################
@@ -88,7 +77,7 @@ execute as @a if score @s ability_id matches 6 run function abilities_pack:evoke
 kill @e[type=!ender_pearl,nbt={Item:{tag:{activator:1b}}}]
 kill @e[nbt={Item:{tag:{trait:1b}}}]
 
-#reset trigger
+#Reset trigger
 execute as @a unless score @s pick_ability matches 0 run scoreboard players reset @s pick_ability
 
 #Replace, Add, Clear Activators
