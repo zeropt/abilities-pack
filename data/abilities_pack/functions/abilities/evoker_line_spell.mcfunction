@@ -24,3 +24,10 @@ scoreboard players set @e[type=area_effect_cloud,tag=fangs_line_head,tag=new] te
 scoreboard players operation @e[type=area_effect_cloud,tag=fangs_line_head,tag=new] temp_y0 = @s temp_y0
 scoreboard players operation @e[type=area_effect_cloud,tag=fangs_line_head,tag=new] temp_y1 = @s temp_y1
 tag @e[type=area_effect_cloud,tag=fangs_line_head,tag=new] remove new
+
+#playsound
+execute at @s run playsound entity.evoker.prepare_attack master @a ~ ~ ~ 0.8
+
+#particles
+scoreboard players set #global temp_global 100
+function abilities_pack:abilities/evoker_fangs/particles
