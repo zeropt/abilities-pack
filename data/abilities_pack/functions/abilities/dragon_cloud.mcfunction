@@ -9,3 +9,6 @@ execute as @e[type=area_effect_cloud,tag=new] at @s run data modify entity @s Ow
 
 #remove tag
 tag @e[type=area_effect_cloud,tag=new] remove new
+
+#playsound
+execute at @s run playsound entity.ender_dragon.growl master @a ~ ~ ~ 1.0

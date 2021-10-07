@@ -14,7 +14,7 @@ function abilities_pack:abilities/more_arrow_damage
 execute unless predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dragon_ram
 
 #boost and cloud
-execute as @s[tag=trigger_act] run function abilities_pack:abilities/launch_player
+execute as @s[tag=trigger_act] run function abilities_pack:abilities/launch_dragon
 execute as @s[tag=trigger_act] if predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dragon_cloud
 execute as @s[tag=trigger_act] run scoreboard players set @s activate_cd 200
 execute as @s[tag=trigger_act] run tag @s remove active

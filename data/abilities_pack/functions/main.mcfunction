@@ -33,8 +33,8 @@ scoreboard players set @a death_counter 0
 
 #Cooldowns
 execute as @a if score @s activate_cd matches 1.. run scoreboard players remove @s activate_cd 1
-execute as @a if score @s damage_cd matches 1.. run scoreboard players remove @s damage_cd 1
 execute as @a if score @s playsound_cd matches 1.. run scoreboard players remove @s playsound_cd 1
+execute as @a if score @s damage_cd matches 1.. run scoreboard players remove @s damage_cd 1
 execute as @a if score @s crystal_regen_cd matches 1.. run scoreboard players remove @s crystal_regen_cd 1
 
 #Abilities loops
