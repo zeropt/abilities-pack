@@ -9,7 +9,7 @@ function abilities_pack:abilities/tag_in_water
 execute unless entity @s[tag=!in_water,tag=!in_rain] run function abilities_pack:abilities/damage
 
 #particles
-execute as @s[tag=active] if predicate abilities_pack:in_mainhand at @s run function abilities_pack:blaze/ambient
+execute as @s[tag=active] if predicate abilities_pack:in_mainhand run function abilities_pack:blaze/ambient
 
 #shoot fireball
 execute as @s[tag=trigger_act] as @e[type=snowball,nbt={Item:{tag:{activator:1b}}},limit=1,sort=nearest] run function abilities_pack:abilities/small_fireball_replace
