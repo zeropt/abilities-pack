@@ -8,6 +8,11 @@ effect give @s minecraft:water_breathing 1 0 true
 function abilities_pack:abilities/tag_in_water
 execute as @s[tag=!in_water] run effect give @s minecraft:slowness 1 2 true
 
+#flop sound
+scoreboard players operation @s temp_y0 = @s temp_y1
+execute store result score @s temp_y1 run data get entity @s Motion[1] 100
+execute as @s[tag=!in_water] if score @s temp_y1 matches -9.. if score @s temp_y0 matches ..-10 at @s run playsound entity.guardian.flop player @a ~ ~ ~ 0.4
+
 #Float in Water
 execute unless predicate abilities_pack:is_sneaking unless predicate abilities_pack:is_swimming run function abilities_pack:abilities/float_in_water
 

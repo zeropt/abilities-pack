@@ -7,7 +7,7 @@ execute at @s anchored eyes positioned ^ ^ ^0.4 run function abilities_pack:abil
 tag @s remove evoker_source
 
 #playsound
-execute at @s run playsound entity.evoker.prepare_wololo master @a ~ ~ ~ 0.8
+execute at @s run playsound entity.evoker.prepare_wololo player @a ~ ~ ~ 0.8
 
 #particles
 scoreboard players set #global temp_global 100

@@ -12,6 +12,12 @@ execute unless predicate abilities_pack:is_sneaking run effect clear @s minecraf
 execute if predicate abilities_pack:is_sneaking if predicate abilities_pack:in_slot run item replace entity @s hotbar.0 with shulker_shell{display:{Name:'{"text":"Closed"}'},CustomModelData:0,activator:1b}
 execute unless predicate abilities_pack:is_sneaking if predicate abilities_pack:in_slot run clear @s shulker_shell{activator:1b}
 
+#close and open noise
+execute as @s[tag=!closed] if predicate abilities_pack:is_sneaking at @s run playsound entity.shulker.close player @a ~ ~ ~ 1.0
+execute if predicate abilities_pack:is_sneaking run tag @s add closed
+execute as @s[tag=closed] unless predicate abilities_pack:is_sneaking at @s run playsound entity.shulker.open player @a ~ ~ ~ 1.0
+execute unless predicate abilities_pack:is_sneaking run tag @s remove closed
+
 #tp away when under health threshold
 execute if score @s health matches 10.. run tag @s add healthy
 execute as @s[tag=healthy] unless score @s health matches 10.. run function abilities_pack:abilities/shulker_tp

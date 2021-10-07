@@ -26,7 +26,7 @@ scoreboard players operation @e[type=area_effect_cloud,tag=fangs_line_head,tag=n
 tag @e[type=area_effect_cloud,tag=fangs_line_head,tag=new] remove new
 
 #playsound
-execute at @s run playsound entity.evoker.prepare_attack master @a ~ ~ ~ 0.8
+execute at @s run playsound entity.evoker.prepare_attack player @a ~ ~ ~ 0.8
 
 #particles
 scoreboard players set #global temp_global 100
