@@ -1,14 +1,30 @@
-{
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "location": {
-      "light": {
+[
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "effects": {
+          "minecraft:night_vision": {
+            "visible": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "location": {
         "light": {
-          "min": 12,
-          "max": 15
+          "light": {
+            "min": 12,
+            "max": 15
+          }
         }
       }
     }
   }
-}
+]
