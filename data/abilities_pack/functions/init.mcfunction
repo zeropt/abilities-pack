@@ -31,6 +31,7 @@ scoreboard objectives add damage_cd dummy
 scoreboard objectives add playsound_cd dummy
 scoreboard objectives add crystal_regen_cd dummy
 scoreboard objectives add lev_cd dummy
+scoreboard objectives add safe_landing_cd dummy
 
 #Initialize GLobal ID
 scoreboard players add #global player_id 0

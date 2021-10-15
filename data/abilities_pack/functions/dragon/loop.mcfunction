@@ -21,4 +21,4 @@ execute as @s[tag=trigger_act] run tag @s remove active
 execute as @s[tag=trigger_act] run clear @s warped_fungus_on_a_stick{activator:1b}
 
 #reactivate
-execute if score @s activate_cd matches 0 run tag @s add active
+execute if score @s activate_cd matches ..0 run tag @s add active

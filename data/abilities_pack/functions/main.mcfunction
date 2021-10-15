@@ -32,15 +32,16 @@ execute as @a if score @s death_counter matches 1.. run tag @s add died
 scoreboard players set @a death_counter 0
 
 #Cooldowns
-execute as @a if score @s activate_cd matches 1.. run scoreboard players remove @s activate_cd 1
-execute as @a if score @s playsound_cd matches 1.. run scoreboard players remove @s playsound_cd 1
-execute as @a if score @s damage_cd matches 1.. run scoreboard players remove @s damage_cd 1
-execute as @a if score @s crystal_regen_cd matches 1.. run scoreboard players remove @s crystal_regen_cd 1
+execute as @a if score @s activate_cd matches 0.. run scoreboard players remove @s activate_cd 1
+execute as @a if score @s playsound_cd matches 0.. run scoreboard players remove @s playsound_cd 1
+execute as @a if score @s damage_cd matches 0.. run scoreboard players remove @s damage_cd 1
+execute as @a if score @s crystal_regen_cd matches 0.. run scoreboard players remove @s crystal_regen_cd 1
 
 #Abilities loops
 function abilities_pack:abilities/linked_clouds/loop
 function abilities_pack:abilities/evoker_fangs/loop
 function abilities_pack:abilities/launch_player/loop
+function abilities_pack:abilities/safe_landing/loop
 
 ######################################## STARTOF Abilites ########################################
 
@@ -70,6 +71,10 @@ execute as @a if score @s ability_id matches 5 run function abilities_pack:drago
 #Evoker ID:6
 execute as @a if score @s pick_ability matches -6 run function abilities_pack:evoker/join
 execute as @a if score @s ability_id matches 6 run function abilities_pack:evoker/loop
+
+#Bat ID:7
+execute as @a if score @s pick_ability matches -7 run function abilities_pack:bat/join
+execute as @a if score @s ability_id matches 7 run function abilities_pack:bat/loop
 
 ######################################## ENDOF Abilities ########################################
 

@@ -35,4 +35,4 @@ execute as @s[tag=bullet_exists] run tag @s remove active
 execute as @s[tag=bullet_exists] run clear @s warped_fungus_on_a_stick{activator:1b}
 
 #reactivate
-execute if score @s activate_cd matches 0 run tag @s add active
+execute if score @s activate_cd matches ..0 run tag @s add active

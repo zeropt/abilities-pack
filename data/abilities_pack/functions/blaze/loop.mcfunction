@@ -17,8 +17,8 @@ execute as @s[tag=trigger_act] if score @s act_target matches 1.. run scoreboard
 execute as @s[tag=trigger_act] run scoreboard players set @s activate_cd 100
 
 #recharge
-execute if score @s activate_cd matches 0 unless score @s act_target matches 3.. run scoreboard players add @s act_target 1
-execute if score @s activate_cd matches 0 unless score @s act_target matches 3.. run scoreboard players set @s activate_cd 100
+execute if score @s activate_cd matches ..0 unless score @s act_target matches 3.. run scoreboard players add @s act_target 1
+execute if score @s activate_cd matches ..0 unless score @s act_target matches 3.. run scoreboard players set @s activate_cd 100
 
 #activation
 tag @s remove active
