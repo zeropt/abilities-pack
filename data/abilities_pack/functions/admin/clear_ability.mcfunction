@@ -11,3 +11,6 @@ function abilities_pack:clear_traits
 
 #kill rain_test armor_stands
 execute at @s as @e[type=armor_stand,tag=rain_test] if score @s player_id = @p player_id run kill @s
+
+#disable llama inventories
+function abilities_pack:abilities/llama_inventory/disable
