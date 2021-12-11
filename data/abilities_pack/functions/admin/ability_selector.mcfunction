@@ -11,3 +11,4 @@ tellraw @s {"text":"[Shulker]","color":"aqua","clickEvent":{"action":"run_comman
 tellraw @s {"text":"[Dragon]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -5"}}
 tellraw @s {"text":"[Evoker]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -6"}}
 tellraw @s {"text":"[Bat]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -7"}}
+tellraw @s {"text":"[Iron Golem]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -8"}}

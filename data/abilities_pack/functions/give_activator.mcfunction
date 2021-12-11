@@ -24,3 +24,6 @@ execute if score @s ability_id matches 6 run give @s warped_fungus_on_a_stick{di
 
 #Bat ID:7
 execute if score @s ability_id matches 7 run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Locater"}'},CustomModelData:0,activator:1b} 1
+
+#Golem ID:8
+execute if score @s ability_id matches 8 run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Locater"}'},CustomModelData:0,activator:1b} 1

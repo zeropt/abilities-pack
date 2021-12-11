@@ -14,3 +14,4 @@ scoreboard players set @s playsound_cd 0
 scoreboard players set @s crystal_regen_cd 0
 scoreboard players set @s lev_cd 0
 scoreboard players set @s safe_landing_cd 0
+scoreboard players set @s health_tracker 0

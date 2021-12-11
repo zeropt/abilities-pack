@@ -76,6 +76,10 @@ execute as @a if score @s ability_id matches 6 run function abilities_pack:evoke
 execute as @a if score @s pick_ability matches -7 run function abilities_pack:bat/join
 execute as @a if score @s ability_id matches 7 run function abilities_pack:bat/loop
 
+#Iron Golem ID:8
+execute as @a if score @s pick_ability matches -8 run function abilities_pack:iron_golem/join
+execute as @a if score @s ability_id matches 8 run function abilities_pack:iron_golem/loop
+
 ######################################## ENDOF Abilities ########################################
 
 #Kill all dropped trait items and activators

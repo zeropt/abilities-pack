@@ -14,3 +14,6 @@ execute at @s as @e[type=armor_stand,tag=rain_test] if score @s player_id = @p p
 
 #disable llama inventories
 function abilities_pack:abilities/llama_inventory/disable
+
+#clear special effects
+effect clear @s minecraft:health_boost
