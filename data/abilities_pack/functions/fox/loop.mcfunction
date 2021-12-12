@@ -10,7 +10,7 @@ execute if predicate abilities_pack:clear_day unless predicate abilities_pack:is
 
 #sleep effects
 execute as @s[tag=slept] run function abilities_pack:abilities/clear_bad_effects
-execute as @s[tag=slept] run effect give @s minecraft:regeneration 2 1 false
+execute as @s[tag=slept] run effect give @s minecraft:regeneration 10 0 false
 
 #Anger wolves
 function abilities_pack:abilities/anger_wolves
