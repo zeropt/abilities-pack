@@ -11,6 +11,5 @@ scoreboard players set @s act_target 1
 #set cooldown
 scoreboard players set @s activate_cd 0
 
-#objectives
-scoreboard objectives add poppy_counter minecraft.used:minecraft.poppy
-scoreboard players set @s poppy_counter 0
+#clear hit entity advancement
+advancement revoke @s only abilities_pack:hit_entity

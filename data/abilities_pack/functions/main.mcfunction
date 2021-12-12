@@ -20,16 +20,23 @@ execute as @a if predicate abilities_pack:in_mainhand if score @s wfoas_counter 
 execute as @a if predicate abilities_pack:in_mainhand if score @s s_counter matches 1.. run tag @s add trigger_act
 execute as @a if predicate abilities_pack:in_mainhand if score @s ee_counter matches 1.. run tag @s add trigger_act
 execute as @a if predicate abilities_pack:in_mainhand if score @s ep_counter matches 1.. run tag @s add trigger_act
+execute as @a if predicate abilities_pack:in_mainhand if score @s poppy_counter matches 1.. run tag @s add trigger_act
 scoreboard players set @a coas_counter 0
 scoreboard players set @a wfoas_counter 0
 scoreboard players set @a s_counter 0
 scoreboard players set @a ee_counter 0
 scoreboard players set @a ep_counter 0
+scoreboard players set @a poppy_counter 0
 
 #Death detection
 tag @a remove died
 execute as @a if score @s death_counter matches 1.. run tag @s add died
 scoreboard players set @a death_counter 0
+
+#Sleep detection
+tag @a remove slept
+execute as @a if score @s sleep_counter matches 1.. run tag @s add slept
+scoreboard players set @a sleep_counter 0
 
 #Cooldowns
 execute as @a if score @s activate_cd matches 0.. run scoreboard players remove @s activate_cd 1
