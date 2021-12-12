@@ -10,3 +10,4 @@ clear @s ender_pearl{activator:1b}
 clear @s stick{activator:1b}
 clear @s shulker_shell{activator:1b}
 clear @s poppy{activator:1b}
+clear @s feather{activator:1b}

@@ -1,0 +1,23 @@
+[
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "location": {
+        "dimension": "minecraft:overworld"
+      }
+    }
+  },
+  {
+    "condition": "minecraft:weather_check",
+    "raining": false,
+    "thundering": false
+  },
+  {
+    "condition": "minecraft:time_check",
+    "value": {
+      "min": 0,
+      "max": 12000
+    }
+  }
+]
