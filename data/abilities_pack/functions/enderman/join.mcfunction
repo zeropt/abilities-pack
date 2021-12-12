@@ -2,7 +2,13 @@
 # As: Player
 
 #Enderman ID:2
-execute if score @s ability_id matches 0 run scoreboard players set @s ability_id 2
+scoreboard players set @s ability_id 2
+
+#title
+title @s title {"text":"Enderman","color":"dark_purple"}
+
+#playsound
+execute at @s run playsound entity.enderman.teleport player @a ~ ~ ~ 1.0
 
 #activator
 tag @s add active

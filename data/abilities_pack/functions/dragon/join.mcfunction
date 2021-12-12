@@ -2,7 +2,13 @@
 # As: Player
 
 #Dragon ID:5
-execute if score @s ability_id matches 0 run scoreboard players set @s ability_id 5
+scoreboard players set @s ability_id 5
+
+#title
+title @s title {"text":"Dragon","color":"light_purple"}
+
+#playsound
+execute at @s run playsound entity.ender_dragon.ambient player @a ~ ~ ~ 1.0
 
 #activators
 tag @s add active

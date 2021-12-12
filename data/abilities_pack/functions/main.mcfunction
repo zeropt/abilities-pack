@@ -53,42 +53,42 @@ function abilities_pack:abilities/safe_landing/loop
 ######################################## STARTOF Abilites ########################################
 
 #Test ID:-1
-execute as @a if score @s ability_id matches -1 run function abilities_pack:test/loop
+execute as @a if score @s ability_id matches 0 if score @s ability_id matches -1 run function abilities_pack:test/loop
 
 #Blaze ID:1
-execute as @a if score @s pick_ability matches -1 run function abilities_pack:blaze/join
+execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -1 run function abilities_pack:blaze/join
 execute as @a if score @s ability_id matches 1 run function abilities_pack:blaze/loop
 
 #Enderman ID:2
-execute as @a if score @s pick_ability matches -2 run function abilities_pack:enderman/join
+execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -2 run function abilities_pack:enderman/join
 execute as @a if score @s ability_id matches 2 run function abilities_pack:enderman/loop
 
 #Guardian ID:3
-execute as @a if score @s pick_ability matches -3 run function abilities_pack:guardian/join
+execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -3 run function abilities_pack:guardian/join
 execute as @a if score @s ability_id matches 3 run function abilities_pack:guardian/loop
 
 #Shulker ID:4
-execute as @a if score @s pick_ability matches -4 run function abilities_pack:shulker/join
+execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -4 run function abilities_pack:shulker/join
 execute as @a if score @s ability_id matches 4 run function abilities_pack:shulker/loop
 
 #Dragon ID:5
-execute as @a if score @s pick_ability matches -5 run function abilities_pack:dragon/join
+execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -5 run function abilities_pack:dragon/join
 execute as @a if score @s ability_id matches 5 run function abilities_pack:dragon/loop
 
 #Evoker ID:6
-execute as @a if score @s pick_ability matches -6 run function abilities_pack:evoker/join
+execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -6 run function abilities_pack:evoker/join
 execute as @a if score @s ability_id matches 6 run function abilities_pack:evoker/loop
 
 #Bat ID:7
-execute as @a if score @s pick_ability matches -7 run function abilities_pack:bat/join
+execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -7 run function abilities_pack:bat/join
 execute as @a if score @s ability_id matches 7 run function abilities_pack:bat/loop
 
 #Iron Golem ID:8
-execute as @a if score @s pick_ability matches -8 run function abilities_pack:iron_golem/join
+execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -8 run function abilities_pack:iron_golem/join
 execute as @a if score @s ability_id matches 8 run function abilities_pack:iron_golem/loop
 
 #Fox ID:9
-execute as @a if score @s pick_ability matches -9 run function abilities_pack:fox/join
+execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -9 run function abilities_pack:fox/join
 execute as @a if score @s ability_id matches 9 run function abilities_pack:fox/loop
 
 ######################################## ENDOF Abilities ########################################

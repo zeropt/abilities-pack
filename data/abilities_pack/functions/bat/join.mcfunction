@@ -2,7 +2,13 @@
 # As: Player
 
 #Bat ID:7
-execute if score @s ability_id matches 0 run scoreboard players set @s ability_id 7
+scoreboard players set @s ability_id 7
+
+#title
+title @s title {"text":"Bat","color":"black"}
+
+#playsound
+execute at @s run playsound entity.bat.ambient player @a ~ ~ ~ 1.0
 
 #activators
 tag @s add active

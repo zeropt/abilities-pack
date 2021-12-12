@@ -2,7 +2,13 @@
 # As: Player
 
 #Iron Golem ID:8
-execute if score @s ability_id matches 0 run scoreboard players set @s ability_id 8
+scoreboard players set @s ability_id 8
+
+#title
+title @s title "Iron Golem"
+
+#playsound
+execute at @s run playsound entity.iron_golem.repair player @a ~ ~ ~ 1.0
 
 #activator
 tag @s add active

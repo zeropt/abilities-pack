@@ -17,3 +17,6 @@ function abilities_pack:abilities/llama_inventory/disable
 
 #clear special effects
 effect clear @s minecraft:health_boost
+
+#Title
+title @s title {"text":"Ability Cleared","color":"red"}

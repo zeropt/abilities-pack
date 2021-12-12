@@ -2,7 +2,13 @@
 # As: Player
 
 #Blaze ID:1
-execute if score @s ability_id matches 0 run scoreboard players set @s ability_id 1
+scoreboard players set @s ability_id 1
+
+#title
+title @s title {"text":"Blaze","color":"yellow"}
+
+#playsound
+execute at @s run playsound entity.blaze.ambient player @a ~ ~ ~ 1.0
 
 #activators
 tag @s add active

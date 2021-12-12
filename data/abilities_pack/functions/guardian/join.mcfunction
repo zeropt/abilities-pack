@@ -2,7 +2,13 @@
 # As: Player
 
 #Guardian ID:3
-execute if score @s ability_id matches 0 run scoreboard players set @s ability_id 3
+scoreboard players set @s ability_id 3
+
+#title
+title @s title {"text":"Guardian","color":"dark_aqua"}
+
+#playsound
+execute at @s run playsound entity.guardian.ambient player @a ~ ~ ~ 1.0
 
 #activator
 tag @s add active

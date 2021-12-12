@@ -2,7 +2,13 @@
 # As: Player
 
 #Evoker ID:5
-execute if score @s ability_id matches 0 run scoreboard players set @s ability_id 6
+scoreboard players set @s ability_id 6
+
+#title
+title @s title {"text":"Evoker","color":"gray"}
+
+#playsound
+execute at @s run playsound entity.evoker.prepare_wololo player @a ~ ~ ~ 1.0
 
 #activators
 tag @s add active
