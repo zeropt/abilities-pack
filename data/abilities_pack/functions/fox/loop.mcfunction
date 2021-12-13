@@ -3,7 +3,8 @@
 
 #Give Effects
 effect give @s minecraft:luck 2 1 true
-execute if predicate abilities_pack:is_sprinting run effect give @s minecraft:jump_boost 1 3 true
+execute if predicate abilities_pack:is_sprinting unless predicate abilities_pack:has_elytra run effect give @s minecraft:jump_boost 1 3 true
+execute if predicate abilities_pack:is_sprinting if predicate abilities_pack:has_elytra run effect give @s minecraft:jump_boost 1 1 true
 execute if predicate abilities_pack:clear_day unless predicate abilities_pack:is_dim run effect give @s weakness 1 0 true
 execute if predicate abilities_pack:clear_day unless predicate abilities_pack:is_dim run effect give @s hunger 1 2 true
 
