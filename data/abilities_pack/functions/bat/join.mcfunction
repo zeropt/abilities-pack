@@ -5,7 +5,7 @@
 scoreboard players set @s ability_id 7
 
 #title
-title @s title {"text":"Bat","color":"black"}
+title @s title {"text":"Bat","color":"dark_gray"}
 
 #playsound
 execute at @s run playsound entity.bat.ambient player @a ~ ~ ~ 1.0
