@@ -93,8 +93,11 @@ execute as @a if score @s ability_id matches 9 run function abilities_pack:fox/l
 
 ######################################## ENDOF Abilities ########################################
 
+#remove data from ender pearls
+execute as @e[type=ender_pearl,nbt={Item:{tag:{activator:1b}}}] run data merge entity @s {Item:{tag:{activator:0b,CustomModelData:0}}}
+
 #Kill all dropped trait items and activators
-kill @e[type=!ender_pearl,nbt={Item:{tag:{activator:1b}}}]
+kill @e[nbt={Item:{tag:{activator:1b}}}]
 kill @e[nbt={Item:{tag:{trait:1b}}}]
 
 #Reset trigger
