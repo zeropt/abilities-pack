@@ -8,7 +8,7 @@ scoreboard players set @s ability_id 3
 title @s title {"text":"Guardian","color":"dark_aqua"}
 
 #playsound
-execute at @s run playsound entity.guardian.ambient player @a ~ ~ ~ 1.0
+execute at @s run playsound entity.guardian.ambient player @a ~ ~ ~ 6.0
 
 #activator
 tag @s add active
