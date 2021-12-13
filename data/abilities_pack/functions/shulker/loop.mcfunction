@@ -9,7 +9,7 @@ execute unless predicate abilities_pack:is_sneaking run effect clear @s minecraf
 execute unless predicate abilities_pack:is_sneaking run effect clear @s minecraft:blindness
 
 #shulker shell when sneaking
-execute if predicate abilities_pack:is_sneaking if predicate abilities_pack:in_slot run item replace entity @s hotbar.0 with shulker_shell{display:{Name:'{"text":"Closed"}'},CustomModelData:0,activator:1b}
+execute if predicate abilities_pack:is_sneaking if predicate abilities_pack:in_slot run item replace entity @s hotbar.0 with shulker_shell{display:{Name:'{"text":"Closed Shell","color":"light_purple"}'},CustomModelData:0,activator:1b}
 execute unless predicate abilities_pack:is_sneaking if predicate abilities_pack:in_slot run clear @s shulker_shell{activator:1b}
 
 #close and open noise
