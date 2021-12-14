@@ -8,4 +8,4 @@ execute at @s anchored eyes rotated as @s run function abilities_pack:abilities/
 tag @s remove source
 
 #playsound
-execute at @s run playsound entity.iron_golem.attack player @a ~ ~ ~ 1.0
+execute at @s run playsound entity.iron_golem.attack player @a ~ ~ ~ 6.0

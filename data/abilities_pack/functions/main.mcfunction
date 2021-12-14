@@ -47,7 +47,8 @@ execute as @a if score @s crystal_regen_cd matches 0.. run scoreboard players re
 #Abilities loops
 function abilities_pack:abilities/linked_clouds/loop
 function abilities_pack:abilities/evoker_fangs/loop
-function abilities_pack:abilities/launch_player/loop
+function abilities_pack:abilities/launch/loop
+function abilities_pack:abilities/dragon_boost/loop
 function abilities_pack:abilities/safe_landing/loop
 
 ######################################## STARTOF Abilites ########################################

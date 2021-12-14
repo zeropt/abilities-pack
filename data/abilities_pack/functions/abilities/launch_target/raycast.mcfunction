@@ -11,7 +11,7 @@ scoreboard players remove #global temp_global 1
 execute as @e[tag=!source,dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] run tag @s add launch_target
 
 #set as target
-execute as @e[tag=launch_target] run function abilities_pack:abilities/launch_player
+execute as @e[tag=launch_target] run function abilities_pack:abilities/launch
 
 #call again
 execute unless entity @e[tag=launch_target] if score #global temp_global matches 1.. if block ~ ~ ~ air positioned ^ ^ ^0.5 run function abilities_pack:abilities/launch_target/raycast
