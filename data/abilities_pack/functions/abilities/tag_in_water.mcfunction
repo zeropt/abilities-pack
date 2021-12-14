@@ -24,6 +24,7 @@ execute at @e[tag=player_eyes,limit=1,sort=nearest] positioned ~-0.3 ~-0.42 ~0.3
 execute at @e[tag=player_eyes,limit=1,sort=nearest] positioned ~0.3 ~-0.42 ~-0.3 if predicate abilities_pack:is_in_water run tag @s add in_water
 execute at @e[tag=player_eyes,limit=1,sort=nearest] positioned ~0.3 ~-0.42 ~0.3 if predicate abilities_pack:is_in_water run tag @s add in_water
 kill @e[type=area_effect_cloud,tag=player_eyes]
+execute at @s if block ~ ~ ~ minecraft:water_cauldron run tag @s add in_water
 
 #in_rain
 execute at @s unless predicate abilities_pack:dry_weather as @e[type=armor_stand,tag=rain_test] if score @s player_id = @p player_id store result score #global temp_global run data get entity @s Fire
