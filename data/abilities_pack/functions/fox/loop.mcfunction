@@ -16,7 +16,7 @@ execute as @s[tag=slept] run effect give @s minecraft:regeneration 10 0 false
 function abilities_pack:abilities/anger_wolves
 
 #speed boost
-execute as @s[tag=trigger_act] run effect give @s minecraft:speed 5 1 false
+execute as @s[tag=trigger_act] run function abilities_pack:abilities/fox_sprint
 execute as @s[tag=trigger_act] run scoreboard players set @s activate_cd 260
 execute as @s[tag=trigger_act] run tag @s remove active
 execute as @s[tag=trigger_act] run clear @s warped_fungus_on_a_stick{activator:1b}
