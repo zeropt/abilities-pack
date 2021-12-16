@@ -3,7 +3,7 @@
 
 #effects
 #effect give @s hunger 1 0 true
-effect give @s weakness 1 0 true
+#effect give @s weakness 1 0 true
 #effect give @s speed 1 0 true
 
 #Blinded by the light!

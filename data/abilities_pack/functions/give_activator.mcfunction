@@ -29,4 +29,4 @@ execute if score @s ability_id matches 7 run give @s warped_fungus_on_a_stick{di
 execute if score @s ability_id matches 8 run give @s poppy{display:{Name:'{"text":"Lucky Poppy","color":"red"}'},CustomModelData:11808,activator:1b} 1
 
 #Fox ID:9
-execute if score @s ability_id matches 9 run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Sprint","color":"gold"}'},CustomModelData:11809,activator:1b} 1
+execute if score @s ability_id matches 9 run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Fox Sprint","color":"gold"}'},CustomModelData:11809,activator:1b} 1
