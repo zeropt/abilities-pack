@@ -1,15 +1,16 @@
 # Pick an ability, any ability!
 # As: Player
 
-tellraw @s {"text":"Pick an Ability:","bold":true,"color":"yellow"}
+tellraw @s {"text":"Abilities Pack","bold":true,"color":"yellow"}
+tellraw @s {"text":"Pick an Ability:","color":"yellow"}
 
 ######################################## Abilities ########################################
-tellraw @s {"text":"[Bat]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -7"}}
-tellraw @s {"text":"[Blaze]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -1"}}
-tellraw @s {"text":"[Dragon]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -5"}}
-tellraw @s {"text":"[Enderman]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -2"}}
-tellraw @s {"text":"[Evoker]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -6"}}
-tellraw @s {"text":"[Fox]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -9"}}
-tellraw @s {"text":"[Guardian]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -3"}}
-tellraw @s {"text":"[Iron Golem]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -8"}}
-tellraw @s {"text":"[Shulker]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -4"}}
+tellraw @p {"text":"[Bat]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -7"},"hoverEvent":{"action":"show_text","contents":[{"text":"To these erratic creatures, flying is as effortless as breathing. They thrive in perpetual darkness making use of their remarkable hearing to navigate the black.","color":"green"}]}}
+tellraw @s {"text":"[Blaze]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -1"},"hoverEvent":{"action":"show_text","contents":[{"text":"They come from dark fortresses deep within the Nether. These crackling sentinels have tamed the art of fire in both life and death. Beware the perils of the overworld where flames can be snuffed out.","color":"green"}]}}
+tellraw @s {"text":"[Dragon]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -5"},"hoverEvent":{"action":"show_text","contents":[{"text":"Masters of the air, a single flap of their powerful wings will send them skywards. These beings are protected by revolving crystals and breaths that spell doom for all living creatures. Ranged strikes are far more effective; get too close and you’ll find yourself flying.","color":"green"}]}}
+tellraw @s {"text":"[Enderman]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -2"},"hoverEvent":{"action":"show_text","contents":[{"text":"These nomads of the void can transcend spatial planes. Their strength and ability to teleport when in danger make them capable fighters. Deterred by water and hollowed masks.","color":"green"}]}}
+tellraw @s {"text":"[Evoker]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -6"},"hoverEvent":{"action":"show_text","contents":[{"text":"These enchanters, masters of immortality, can be found wandering the woods and casting dark spells. They are quite weak and choose to run and avoid direct confrontation.","color":"green"}]}}
+tellraw @s {"text":"[Fox]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -9"},"hoverEvent":{"action":"show_text","contents":[{"text":"Nimble and spry, foxes are able to traverse mountains and valleys quickly, finding delectable morsels and abundant treasures anywhere they explore. Foxes are deep sleepers and tire more quickly during the day. Cursed with a rivalry against man’s best friend.","color":"green"}]}}
+tellraw @s {"text":"[Guardian]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -3"},"hoverEvent":{"action":"show_text","contents":[{"text":"Devoted sentries, Guardians are found patrolling deep beneath the surface of the ocean. They have the ability to summon lasers and thorns if provoked. They are natural swimmers and seldom leave the safety of the seas.","color":"green"}]}}
+tellraw @s {"text":"[Iron Golem]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -8"},"hoverEvent":{"action":"show_text","contents":[{"text":"Iron Golems, the great protectors of villages, are formidable combatants. Though they may be slow, their hearts are stronger than most. Their strength can launch their target skyward. But be kind to these lumbering giants and you may find yourself rewarded with a small gift.","color":"green"}]}}
+tellraw @s {"text":"[Shulker]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pick_ability set -4"},"hoverEvent":{"action":"show_text","contents":[{"text":"Born from the floating cities of the End dimension, these creatures possess the ability to levitate others. They carry a tough armor casing that will diminish all damage when deployed. When faced with endangerment, a Shulker may hide and can even teleport away.","color":"green"}]}}
