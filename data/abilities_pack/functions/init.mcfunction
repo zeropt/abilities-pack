@@ -35,6 +35,7 @@ scoreboard objectives add crystal_regen_cd dummy
 scoreboard objectives add launch_cd dummy
 scoreboard objectives add boost_cd dummy
 scoreboard objectives add safe_landing_cd dummy
+scoreboard objectives add glow_cd dummy
 scoreboard objectives add health_tracker dummy
 
 #Initialize GLobal ID

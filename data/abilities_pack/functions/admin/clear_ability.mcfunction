@@ -11,6 +11,7 @@ scoreboard players set @s launch_cd 0
 scoreboard players set @s boost_cd 0
 scoreboard players set @s safe_landing_cd 0
 scoreboard players set @s health_tracker 0
+scoreboard players set @s glow_cd 0
 
 #clear activators
 function abilities_pack:clear_activator

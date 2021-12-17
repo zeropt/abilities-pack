@@ -50,6 +50,7 @@ function abilities_pack:abilities/evoker_fangs/loop
 function abilities_pack:abilities/launch/loop
 function abilities_pack:abilities/dragon_boost/loop
 function abilities_pack:abilities/safe_landing/loop
+function abilities_pack:abilities/glow/loop
 
 ######################################## STARTOF Abilites ########################################
 
