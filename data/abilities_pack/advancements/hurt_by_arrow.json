@@ -4,6 +4,10 @@
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
         "damage": {
+          "taken": {
+            "min": 1,
+            "max": 20
+          },
           "type": {
             "direct_entity": {
               "type": "#minecraft:arrows"
