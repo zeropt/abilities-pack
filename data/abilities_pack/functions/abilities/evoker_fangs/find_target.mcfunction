@@ -1,6 +1,9 @@
 # Evoker Fang Raycast
 # As: Player
 
+#Particle
+#particle crit ~ ~ ~ 0 0 0 1 0 normal
+
 #Decrement ray range
 scoreboard players remove #global temp_global 1
 
