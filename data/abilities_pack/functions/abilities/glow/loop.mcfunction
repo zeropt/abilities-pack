@@ -6,3 +6,4 @@ execute as @e if score @s glow_cd matches 0.. run scoreboard players remove @s g
 
 #cancel glowing
 execute as @e if score @s glow_cd matches 0 run data merge entity @s {Glowing:0}
+execute as @e if score @s glow_cd matches ..0 run scoreboard players reset @s glow_cd
