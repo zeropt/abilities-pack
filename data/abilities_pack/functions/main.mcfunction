@@ -5,93 +5,86 @@
 execute as @a unless score @s player_id matches 0.. run function abilities_pack:new_player
 
 #Pick an ability
-execute as @a if score @s ability_id matches 0 run scoreboard players enable @s pick_ability 
-execute as @a if score @s pick_ability matches 1 run function abilities_pack:admin/ability_selector
+scoreboard players enable @a[scores={ability_id=0}] pick_ability
+execute as @a[scores={pick_ability=1}] run function abilities_pack:admin/ability_selector
 
 #Slot Stick
-execute as @a if score @s ability_id matches 1.. unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
-execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run give @s stick{display:{Name:'{"text":"Ability Slot"}'},CustomModelData:11800,activator:1b} 1
-execute as @a if score @s ability_id matches 1.. unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
+execute as @a[scores={ability_id=1..}] run function abilities_pack:slot_stick
 
 #Activator right-click detection
 tag @a remove trigger_act
-execute as @a if predicate abilities_pack:in_mainhand if score @s coas_counter matches 1.. run tag @s add trigger_act
-execute as @a if predicate abilities_pack:in_mainhand if score @s wfoas_counter matches 1.. run tag @s add trigger_act
-execute as @a if predicate abilities_pack:in_mainhand if score @s s_counter matches 1.. run tag @s add trigger_act
-execute as @a if predicate abilities_pack:in_mainhand if score @s ee_counter matches 1.. run tag @s add trigger_act
-execute as @a if predicate abilities_pack:in_mainhand if score @s ep_counter matches 1.. run tag @s add trigger_act
-execute as @a if predicate abilities_pack:in_mainhand if score @s poppy_counter matches 1.. run tag @s add trigger_act
-scoreboard players set @a coas_counter 0
-scoreboard players set @a wfoas_counter 0
-scoreboard players set @a s_counter 0
-scoreboard players set @a ee_counter 0
-scoreboard players set @a ep_counter 0
-scoreboard players set @a poppy_counter 0
+execute as @a[predicate=abilities_pack:in_mainhand] run function abilities_pack:activation
+scoreboard players set @a[scores={coas_counter=1..}] coas_counter 0
+scoreboard players set @a[scores={wfoas_counter=1..}] wfoas_counter 0
+scoreboard players set @a[scores={s_counter=1..}] s_counter 0
+scoreboard players set @a[scores={ee_counter=1..}] ee_counter 0
+scoreboard players set @a[scores={ep_counter=1..}] ep_counter 0
+scoreboard players set @a[scores={poppy_counter=1..}] poppy_counter 0
 
 #Death detection
-tag @a remove died
-execute as @a if score @s death_counter matches 1.. run tag @s add died
-scoreboard players set @a death_counter 0
+tag @a[tag=died] remove died
+execute as @a[scores={death_counter=1..}] run tag @s add died
+scoreboard players set @a[scores={death_counter=1..}] death_counter 0
 
 #Sleep detection
-tag @a remove slept
-execute as @a if score @s sleep_counter matches 1.. run tag @s add slept
-scoreboard players set @a sleep_counter 0
+tag @a[tag=slept] remove slept
+execute as @a[scores={sleep_counter=1..}] run tag @s add slept
+scoreboard players set @a[scores={sleep_counter=1..}] sleep_counter 0
 
 #Cooldowns
-execute as @a if score @s activate_cd matches 0.. run scoreboard players remove @s activate_cd 1
-execute as @a if score @s playsound_cd matches 0.. run scoreboard players remove @s playsound_cd 1
-execute as @a if score @s damage_cd matches 0.. run scoreboard players remove @s damage_cd 1
-execute as @a if score @s crystal_regen_cd matches 0.. run scoreboard players remove @s crystal_regen_cd 1
+scoreboard players remove @a[scores={activate_cd=0..}] activate_cd 1
+scoreboard players remove @a[scores={playsound_cd=0..}] playsound_cd 1
+scoreboard players remove @a[scores={damage_cd=0..}] damage_cd 1
+scoreboard players remove @a[scores={crystal_regen_cd=0..}] crystal_regen_cd 1
 
 #Abilities loops
-function abilities_pack:abilities/linked_clouds/loop
-function abilities_pack:abilities/evoker_fangs/loop
-function abilities_pack:abilities/launch/loop
 function abilities_pack:abilities/dragon_boost/loop
-function abilities_pack:abilities/safe_landing/loop
+function abilities_pack:abilities/evoker_fangs/loop
 function abilities_pack:abilities/glow/loop
+function abilities_pack:abilities/launch/loop
+function abilities_pack:abilities/linked_clouds/loop
+function abilities_pack:abilities/safe_landing/loop
 
 ######################################## STARTOF Abilites ########################################
 
 #Test ID:-1
-execute as @a if score @s ability_id matches 0 if score @s ability_id matches -1 run function abilities_pack:test/loop
+execute as @a[scores={ability_id=-1}] run function abilities_pack:test/loop
 
 #Blaze ID:1
-execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -1 run function abilities_pack:blaze/join
-execute as @a if score @s ability_id matches 1 run function abilities_pack:blaze/loop
+execute as @a[scores={ability_id=0,pick_ability=-1}] run function abilities_pack:blaze/join
+execute as @a[scores={ability_id=1}] run function abilities_pack:blaze/loop
 
 #Enderman ID:2
-execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -2 run function abilities_pack:enderman/join
-execute as @a if score @s ability_id matches 2 run function abilities_pack:enderman/loop
+execute as @a[scores={ability_id=0,pick_ability=-2}] run function abilities_pack:enderman/join
+execute as @a[scores={ability_id=2}] run function abilities_pack:enderman/loop
 
 #Guardian ID:3
-execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -3 run function abilities_pack:guardian/join
-execute as @a if score @s ability_id matches 3 run function abilities_pack:guardian/loop
+execute as @a[scores={ability_id=0,pick_ability=-3}] run function abilities_pack:guardian/join
+execute as @a[scores={ability_id=3}] run function abilities_pack:guardian/loop
 
 #Shulker ID:4
-execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -4 run function abilities_pack:shulker/join
-execute as @a if score @s ability_id matches 4 run function abilities_pack:shulker/loop
+execute as @a[scores={ability_id=0,pick_ability=-4}] run function abilities_pack:shulker/join
+execute as @a[scores={ability_id=4}] run function abilities_pack:shulker/loop
 
 #Dragon ID:5
-execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -5 run function abilities_pack:dragon/join
-execute as @a if score @s ability_id matches 5 run function abilities_pack:dragon/loop
+execute as @a[scores={ability_id=0,pick_ability=-5}] run function abilities_pack:dragon/join
+execute as @a[scores={ability_id=5}] run function abilities_pack:dragon/loop
 
 #Evoker ID:6
-execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -6 run function abilities_pack:evoker/join
-execute as @a if score @s ability_id matches 6 run function abilities_pack:evoker/loop
+execute as @a[scores={ability_id=0,pick_ability=-6}] run function abilities_pack:evoker/join
+execute as @a[scores={ability_id=6}] run function abilities_pack:evoker/loop
 
 #Bat ID:7
-execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -7 run function abilities_pack:bat/join
-execute as @a if score @s ability_id matches 7 run function abilities_pack:bat/loop
+execute as @a[scores={ability_id=0,pick_ability=-7}] run function abilities_pack:bat/join
+execute as @a[scores={ability_id=7}] run function abilities_pack:bat/loop
 
 #Iron Golem ID:8
-execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -8 run function abilities_pack:iron_golem/join
-execute as @a if score @s ability_id matches 8 run function abilities_pack:iron_golem/loop
+execute as @a[scores={ability_id=0,pick_ability=-8}] run function abilities_pack:iron_golem/join
+execute as @a[scores={ability_id=8}] run function abilities_pack:iron_golem/loop
 
 #Fox ID:9
-execute as @a if score @s ability_id matches 0 if score @s pick_ability matches -9 run function abilities_pack:fox/join
-execute as @a if score @s ability_id matches 9 run function abilities_pack:fox/loop
+execute as @a[scores={ability_id=0,pick_ability=-9}] run function abilities_pack:fox/join
+execute as @a[scores={ability_id=9}] run function abilities_pack:fox/loop
 
 ######################################## ENDOF Abilities ########################################
 
@@ -107,9 +100,9 @@ kill @e[type=snowball,nbt={Item:{tag:{activator:1b}}}]
 execute as @a unless score @s pick_ability matches 0 run scoreboard players reset @s pick_ability
 
 #Replace, Add, Clear Activators
-execute as @a[tag=active] run clear @s stick{activator:1b}
-execute as @a run scoreboard players set @s act_count 0
-execute as @a[tag=active] if predicate abilities_pack:in_slot store result score @s act_count run data get entity @s Inventory[0].Count
+clear @a[tag=active] stick{activator:1b}
+scoreboard players set @a act_count 0
+execute as @a[tag=active,predicate=abilities_pack:in_slot] store result score @s act_count run data get entity @s Inventory[0].Count
 execute as @a[tag=active] unless score @s act_count = @s act_target run function abilities_pack:clear_activator
 execute as @a[tag=active] unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless score @s act_count = @s act_target run function abilities_pack:fill_activators
-execute as @a unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
+execute as @a unless score @s ability_id matches 0 unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator

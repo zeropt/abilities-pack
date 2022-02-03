@@ -2,10 +2,10 @@
 # As: Server
 
 #disable glowing
-execute as @e if score @s glow_cd matches 0 run data merge entity @s {Glowing:0}
+execute as @e[scores={glow_cd=0}] run data merge entity @s {Glowing:0}
 
 #clear scoreboard
-execute as @e if score @s glow_cd matches ..0 run scoreboard players reset @s glow_cd
+scoreboard players reset @e[scores={glow_cd=..0}] glow_cd
 
 #decrement
-execute as @e if score @s glow_cd matches 1.. run scoreboard players remove @s glow_cd 1
+scoreboard players remove @e[scores={glow_cd=1..}] glow_cd 1
