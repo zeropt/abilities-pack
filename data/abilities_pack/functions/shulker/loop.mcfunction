@@ -6,8 +6,7 @@ execute if predicate abilities_pack:is_sneaking run function abilities_pack:abil
 execute unless predicate abilities_pack:is_sneaking run function abilities_pack:shulker/not_sneaking
 
 #shulker shell when sneaking
-execute if predicate abilities_pack:is_sneaking if predicate abilities_pack:in_slot run item replace entity @s hotbar.0 with shulker_shell{display:{Name:'{"text":"Closed Shell","color":"light_purple"}'},CustomModelData:0,activator:1b}
-execute unless predicate abilities_pack:is_sneaking if predicate abilities_pack:in_slot run clear @s shulker_shell{activator:1b}
+execute as @s[predicate=abilities_pack:in_slot] run function abilities_pack:shulker/set_data
 
 #close and open noise
 execute as @s[tag=!closed] if predicate abilities_pack:is_sneaking at @s run playsound entity.shulker.close player @a ~ ~ ~ 1.0

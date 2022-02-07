@@ -25,7 +25,7 @@ execute unless entity @s[nbt={Inventory:[{Slot:100b,tag:{trait:1b}}]}] run clear
 execute unless entity @s[nbt={Inventory:[{Slot:100b}]}] run item replace entity @s armor.feet with minecraft:leather_boots{display:{color:1481884},Unbreakable:1b,trait:1b,Enchantments:[{id:"minecraft:depth_strider",lvl:3s}]} 1
 
 #Thorns
-execute as @s[predicate=abilities_pack:in_mainhand] run function abilities_pack:guardian/thorns
+execute as @s[predicate=abilities_pack:in_slot] run function abilities_pack:guardian/thorns
 
 ##Laser
 #Laser duration

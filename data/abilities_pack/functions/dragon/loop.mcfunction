@@ -14,7 +14,7 @@ function abilities_pack:abilities/more_arrow_damage
 execute unless predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dragon_ram
 
 #custom model data while sneaking
-execute as @s[predicate=abilities_pack:in_mainhand] run function abilities_pack:dragon/set_data
+execute as @s[predicate=abilities_pack:in_slot] run function abilities_pack:dragon/set_data
 
 #boost and cloud
 execute as @s[tag=trigger_act] run function abilities_pack:dragon/activate
