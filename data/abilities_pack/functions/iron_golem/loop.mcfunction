@@ -12,8 +12,7 @@ function abilities_pack:abilities/inf_health_boost
 function abilities_pack:abilities/launch_target
 
 #Poppy
-execute as @s[tag=trigger_act] run scoreboard players set @s activate_cd 120
-execute as @s[tag=trigger_act] run tag @s remove active
+execute as @s[tag=trigger_act] run function abilities_pack:iron_golem/activate
 
 #reactivate
-execute if score @s activate_cd matches ..0 run tag @s add active
+execute as @s[scores={activate_cd=..0}] run tag @s add active

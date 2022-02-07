@@ -14,16 +14,10 @@ function abilities_pack:abilities/more_arrow_damage
 execute unless predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dragon_ram
 
 #custom model data while sneaking
-execute if predicate abilities_pack:in_mainhand unless predicate abilities_pack:is_sneaking run item modify entity @s weapon.mainhand abilities_pack:dragon_unsneak
-execute if predicate abilities_pack:in_mainhand if predicate abilities_pack:is_sneaking run item modify entity @s weapon.mainhand abilities_pack:dragon_sneak
+execute as @s[predicate=abilities_pack:in_mainhand] run function abilities_pack:dragon/set_data
 
 #boost and cloud
-execute as @s[tag=trigger_act] unless predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dragon_boost
-execute as @s[tag=trigger_act] if predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dragon_boost_short
-execute as @s[tag=trigger_act] if predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dragon_cloud
-execute as @s[tag=trigger_act] run scoreboard players set @s activate_cd 200
-execute as @s[tag=trigger_act] run tag @s remove active
-execute as @s[tag=trigger_act] run clear @s warped_fungus_on_a_stick{activator:1b}
+execute as @s[tag=trigger_act] run function abilities_pack:dragon/activate
 
 #reactivate
-execute if score @s activate_cd matches ..0 run tag @s add active
+execute as @s[scores={activate_cd=..0}] run tag @s add active

@@ -16,21 +16,11 @@ execute unless entity @s[nbt={Inventory:[{Slot:102b}]}] run item replace entity 
 execute unless entity @s[nbt={Inventory:[{Slot:100b}]}] run item replace entity @s armor.feet with leather_boots{display:{Name:'{"text":"Bat Boots"}',color:0},Unbreakable:1b,trait:1b,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}]} 1
 
 #bat locate
-execute as @s[tag=trigger_act] run function abilities_pack:abilities/bat_locate
-execute as @s[tag=trigger_act] run scoreboard players set @s activate_cd 40
-execute as @s[tag=trigger_act] run tag @s remove active
-execute as @s[tag=trigger_act] run clear @s warped_fungus_on_a_stick{activator:1b}
+execute as @s[tag=trigger_act] run function abilities_pack:bat/activate
 
 #flying
 execute if predicate abilities_pack:in_mainhand unless predicate abilities_pack:is_riding_entity at @s if block ~ ~-0.01 ~ #abilities_pack:nonsolid run tag @s add flying
-execute as @s[tag=flying] at @s unless block ~ ~-0.01 ~ #abilities_pack:nonsolid run effect clear @s levitation
-execute as @s[tag=flying] at @s unless block ~ ~-0.01 ~ #abilities_pack:nonsolid run tag @s remove flying
-execute as @s[tag=flying] if predicate abilities_pack:is_riding_entity run effect clear @s levitation
-execute as @s[tag=flying] if predicate abilities_pack:is_riding_entity run tag @s remove flying
-execute as @s[tag=flying] unless predicate abilities_pack:in_mainhand run function abilities_pack:abilities/safe_landing
-execute as @s[tag=flying] unless predicate abilities_pack:in_mainhand run tag @s remove flying
-
-execute as @s[tag=flying] run function abilities_pack:abilities/bat_levitation
+execute as @s[tag=flying] run function abilities_pack:bat/flying
 execute as @s[tag=!flying] run scoreboard players set @s temp_global 0
 
 #reactivate

@@ -14,19 +14,13 @@ effect give @s weakness 1 0 true
 
 #totem per death
 execute as @s[tag=died] run tag @s add totemed
-execute if score @s tou_counter matches 1.. run tag @s remove totemed
+execute as @s[scores={tou_counter=1..}] run tag @s remove totemed
 scoreboard players set @s tou_counter 0
-execute unless entity @s[tag=totemed] run clear @s totem_of_undying{trait:1b}
-execute if entity @s[tag=totemed] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{trait:1b}}]}] run clear @s totem_of_undying{trait:1b}
-execute if entity @s[tag=totemed] unless entity @s[nbt={Inventory:[{Slot:-106b}]}] run item replace entity @s weapon.offhand with totem_of_undying{trait:1b,Enchantments:[{}]} 1
+#execute as @s[tag=!totemed] run clear @s totem_of_undying{trait:1b}
+execute as @s[tag=totemed] run function abilities_pack:evoker/equip_totem
 
 #spells
-execute as @s[tag=trigger_act] unless predicate abilities_pack:see_blue_sheep unless predicate abilities_pack:is_sneaking run function abilities_pack:abilities/evoker_line_spell
-execute as @s[tag=trigger_act] unless predicate abilities_pack:see_blue_sheep if predicate abilities_pack:is_sneaking run function abilities_pack:abilities/evoker_ring_spell
-execute as @s[tag=trigger_act] if predicate abilities_pack:see_blue_sheep run function abilities_pack:abilities/sheep_spell
-execute as @s[tag=trigger_act] run scoreboard players set @s activate_cd 100
-execute as @s[tag=trigger_act] run tag @s remove active
-execute as @s[tag=trigger_act] run clear @s warped_fungus_on_a_stick{activator:1b}
+execute as @s[tag=trigger_act] run function abilities_pack:evoker/activate
 
 #reactivate
-execute if score @s activate_cd matches ..0 run tag @s add active
+execute as @s[scores={activate_cd=..0}] run tag @s add active

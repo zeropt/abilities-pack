@@ -5,7 +5,7 @@
 execute as @a unless score @s player_id matches 0.. run function abilities_pack:new_player
 
 #Pick an ability
-scoreboard players enable @a[scores={ability_id=0}] pick_ability
+execute as @a[scores={ability_id=0}] run scoreboard players enable @s pick_ability
 execute as @a[scores={pick_ability=1}] run function abilities_pack:admin/ability_selector
 
 #Slot Stick
@@ -14,28 +14,28 @@ execute as @a[scores={ability_id=1..}] run function abilities_pack:slot_stick
 #Activator right-click detection
 tag @a remove trigger_act
 execute as @a[predicate=abilities_pack:in_mainhand] run function abilities_pack:activation
-scoreboard players set @a[scores={coas_counter=1..}] coas_counter 0
-scoreboard players set @a[scores={wfoas_counter=1..}] wfoas_counter 0
-scoreboard players set @a[scores={s_counter=1..}] s_counter 0
-scoreboard players set @a[scores={ee_counter=1..}] ee_counter 0
-scoreboard players set @a[scores={ep_counter=1..}] ep_counter 0
-scoreboard players set @a[scores={poppy_counter=1..}] poppy_counter 0
+execute as @a[scores={coas_counter=1..}] run scoreboard players set @s coas_counter 0
+execute as @a[scores={wfoas_counter=1..}] run scoreboard players set @s wfoas_counter 0
+execute as @a[scores={s_counter=1..}] run scoreboard players set @s s_counter 0
+execute as @a[scores={ee_counter=1..}] run scoreboard players set @s ee_counter 0
+execute as @a[scores={ep_counter=1..}] run scoreboard players set @s ep_counter 0
+execute as @a[scores={poppy_counter=1..}] run scoreboard players set @s poppy_counter 0
 
 #Death detection
-tag @a[tag=died] remove died
+execute as @a[tag=died] run tag @s remove died
 execute as @a[scores={death_counter=1..}] run tag @s add died
-scoreboard players set @a[scores={death_counter=1..}] death_counter 0
+execute as @a[scores={death_counter=1..}] run scoreboard players set @s death_counter 0
 
 #Sleep detection
-tag @a[tag=slept] remove slept
+execute as @a[tag=slept] run tag @s remove slept
 execute as @a[scores={sleep_counter=1..}] run tag @s add slept
-scoreboard players set @a[scores={sleep_counter=1..}] sleep_counter 0
+execute as @a[scores={sleep_counter=1..}] run scoreboard players set @s sleep_counter 0
 
 #Cooldowns
-scoreboard players remove @a[scores={activate_cd=0..}] activate_cd 1
-scoreboard players remove @a[scores={playsound_cd=0..}] playsound_cd 1
-scoreboard players remove @a[scores={damage_cd=0..}] damage_cd 1
-scoreboard players remove @a[scores={crystal_regen_cd=0..}] crystal_regen_cd 1
+execute as @a[scores={activate_cd=0..}] run scoreboard players remove @s activate_cd 1
+execute as @a[scores={playsound_cd=0..}] run scoreboard players remove @s playsound_cd 1
+execute as @a[scores={damage_cd=0..}] run scoreboard players remove @s damage_cd 1
+execute as @a[scores={crystal_regen_cd=0..}] run scoreboard players remove @s crystal_regen_cd 1
 
 #Abilities loops
 function abilities_pack:abilities/dragon_boost/loop
@@ -92,15 +92,15 @@ execute as @a[scores={ability_id=9}] run function abilities_pack:fox/loop
 execute as @e[type=ender_pearl,nbt={Item:{tag:{activator:1b}}}] run data merge entity @s {Item:{tag:{CustomModelData:0}}}
 
 #Kill all dropped trait items and activators
-kill @e[type=item,nbt={Item:{tag:{activator:1b}}}]
-kill @e[type=item,nbt={Item:{tag:{trait:1b}}}]
-kill @e[type=snowball,nbt={Item:{tag:{activator:1b}}}]
+execute as @e[type=item,nbt={Item:{tag:{activator:1b}}}] run kill @s
+execute as @e[type=item,nbt={Item:{tag:{trait:1b}}}] run kill @s
+execute as @e[type=snowball,nbt={Item:{tag:{activator:1b}}}] run kill @s
 
 #Reset trigger
 execute as @a unless score @s pick_ability matches 0 run scoreboard players reset @s pick_ability
 
 #Replace, Add, Clear Activators
-clear @a[tag=active] stick{activator:1b}
+execute as @a[tag=active] run clear @s stick{activator:1b}
 scoreboard players set @a act_count 0
 execute as @a[tag=active,predicate=abilities_pack:in_slot] store result score @s act_count run data get entity @s Inventory[0].Count
 execute as @a[tag=active] unless score @s act_count = @s act_target run function abilities_pack:clear_activator

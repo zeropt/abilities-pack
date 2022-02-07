@@ -12,17 +12,14 @@ execute unless entity @s[tag=!in_water,tag=!in_rain] run function abilities_pack
 function abilities_pack:abilities/fire_heal
 
 #particles
-execute as @s[tag=active] if predicate abilities_pack:in_mainhand run function abilities_pack:blaze/ambient
+execute as @s[tag=active,predicate=abilities_pack:in_mainhand] run function abilities_pack:blaze/ambient
 
 #shoot fireball
-execute as @s[tag=trigger_act] as @e[type=snowball,nbt={Item:{tag:{activator:1b}}},limit=1,sort=nearest] run function abilities_pack:abilities/small_fireball_replace
-execute as @s[tag=trigger_act] if score @s act_target matches 1.. run scoreboard players remove @s act_target 1
-execute as @s[tag=trigger_act] run scoreboard players set @s activate_cd 100
+execute as @s[tag=trigger_act] run function abilities_pack:blaze/activate
 
 #recharge
-execute if score @s activate_cd matches ..0 unless score @s act_target matches 3.. run scoreboard players add @s act_target 1
-execute if score @s activate_cd matches ..0 unless score @s act_target matches 3.. run scoreboard players set @s activate_cd 100
+execute as @s[scores={activate_cd=..0,act_target=..2}] run function abilities_pack:blaze/recharge
 
 #activation
-tag @s remove active
-execute unless score @s act_target matches 0 run tag @s add active
+tag @s add active
+execute as @s[scores={act_target=0}] run tag @s remove active

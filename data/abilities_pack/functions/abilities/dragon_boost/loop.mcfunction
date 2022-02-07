@@ -2,11 +2,11 @@
 # As: Server
 
 #give or clear levitation
-effect give @a[scores={boost_cd=1..}] levitation 1 19 true
-effect clear @a[scores={boost_cd=0}] levitation
+execute as @a[scores={boost_cd=1..}] run effect give @s levitation 1 19 true
+execute as @a[scores={boost_cd=0}] run effect clear @s levitation
 
 #reset scoreboard
-scoreboard players reset @a[scores={boost_cd=..0}] boost_cd
+execute as @a[scores={boost_cd=..0}] run scoreboard players reset @s boost_cd
 
 #decrement cooldown
-scoreboard players remove @a[scores={boost_cd=1..}] boost_cd 1
+execute as @a[scores={boost_cd=1..}] run scoreboard players remove @s boost_cd 1
