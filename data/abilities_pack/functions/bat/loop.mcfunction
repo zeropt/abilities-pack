@@ -10,11 +10,6 @@
 execute at @s unless predicate abilities_pack:is_bright run effect clear @s blindness
 execute at @s if predicate abilities_pack:is_bright run effect give @s blindness 20 0 true
 
-#Permanent armor
-execute unless entity @s[nbt={Inventory:[{Slot:102b}]}] run item replace entity @s armor.chest with leather_chestplate{display:{Name:'{"text":"Bat Tunic"}',color:0},Unbreakable:1b,trait:1b,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}]} 1
-#execute unless entity @s[nbt={Inventory:[{Slot:101b}]}] run item replace entity @s armor.legs with leather_leggings{display:{Name:'{"text":"Bat Pants"}',color:0},Unbreakable:1b,trait:1b,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}]} 1
-execute unless entity @s[nbt={Inventory:[{Slot:100b}]}] run item replace entity @s armor.feet with leather_boots{display:{Name:'{"text":"Bat Boots"}',color:0},Unbreakable:1b,trait:1b,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}]} 1
-
 #bat locate
 execute as @s[tag=trigger_act] run function abilities_pack:bat/activate
 
@@ -24,4 +19,4 @@ execute as @s[tag=flying] run function abilities_pack:bat/flying
 execute as @s[tag=!flying] run scoreboard players set @s temp_global 0
 
 #reactivate
-execute if score @s activate_cd matches ..0 run tag @s add active
+execute as @s[scores={activate_cd=..0,act_target=0}] run scoreboard players set @s act_target 1

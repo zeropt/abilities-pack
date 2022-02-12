@@ -16,4 +16,4 @@ function abilities_pack:abilities/anger_wolves
 execute as @s[tag=trigger_act] run function abilities_pack:fox/activate
 
 #reactivate
-execute as @s[scores={activate_cd=..0}] run tag @s add active
+execute as @s[scores={activate_cd=..0,act_target=0}] run scoreboard players set @s act_target 1

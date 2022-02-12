@@ -11,8 +11,10 @@ title @s title {"text":"Guardian","color":"dark_aqua"}
 execute at @s run playsound entity.guardian.ambient player @a ~ ~ ~ 6.0
 
 #activator
-tag @s add active
 scoreboard players set @s act_target 1
+
+#inventory update
+function abilities_pack:guardian/inventory_update
 
 #objectives
 scoreboard players set @s temp_y1 0

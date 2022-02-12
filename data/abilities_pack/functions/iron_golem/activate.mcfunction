@@ -2,4 +2,4 @@
 # As: Player
 
 scoreboard players set @s activate_cd 120
-tag @s remove active
+scoreboard players set @s act_target 0

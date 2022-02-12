@@ -11,7 +11,6 @@ title @s title {"text":"Enderman","color":"dark_purple"}
 execute at @s run playsound entity.enderman.teleport player @a ~ ~ ~ 1.0
 
 #activator
-tag @s add active
 scoreboard players set @s act_target 1
 
 #set cooldown

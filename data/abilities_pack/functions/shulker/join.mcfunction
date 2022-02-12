@@ -11,7 +11,6 @@ title @s title {"text":"Shulker","color":"light_purple"}
 execute at @s run playsound entity.shulker.ambient player @a ~ ~ ~ 1.0
 
 #activators
-tag @s add active
 scoreboard players set @s act_target 1
 
 #set cooldown

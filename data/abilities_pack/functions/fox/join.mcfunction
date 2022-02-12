@@ -11,5 +11,4 @@ title @s title {"text":"Fox","color":"gold"}
 execute at @s run playsound entity.fox.ambient player @a ~ ~ ~ 1.0
 
 #activators
-tag @s add active
 scoreboard players set @s act_target 1

@@ -28,4 +28,4 @@ execute at @s as @e[type=minecraft:shulker_bullet] if score @s player_id = @p pl
 execute as @s[tag=bullet_exists] run function abilities_pack:shulker/reset_cd
 
 #reactivate
-execute as @s[scores={activate_cd=..0}] run tag @s add active
+execute as @s[scores={activate_cd=..0,act_target=0}] run scoreboard players set @s act_target 1

@@ -18,4 +18,4 @@ execute unless predicate abilities_pack:is_sneaking run function abilities_pack:
 execute as @s[tag=trigger_act] run function abilities_pack:enderman/activate
 
 #reactivate
-execute as @s[scores={activate_cd=..0}] run tag @s add active
+execute as @s[scores={activate_cd=..0,act_target=0}] run scoreboard players set @s act_target 1

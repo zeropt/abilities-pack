@@ -19,6 +19,7 @@ scoreboard objectives add health health
 scoreboard objectives add activate_cd dummy
 scoreboard objectives add act_count dummy
 scoreboard objectives add act_target dummy
+scoreboard objectives add prev_act_target dummy
 
 #Ability objectives
 scoreboard objectives add temp_global dummy

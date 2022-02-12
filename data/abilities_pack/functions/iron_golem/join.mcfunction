@@ -11,7 +11,6 @@ title @s title "Iron Golem"
 execute at @s run playsound entity.iron_golem.repair player @a ~ ~ ~ 1.0
 
 #activator
-tag @s add active
 scoreboard players set @s act_target 1
 
 #set cooldown

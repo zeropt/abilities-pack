@@ -11,8 +11,10 @@ title @s title {"text":"Dragon","color":"light_purple"}
 execute at @s run playsound entity.ender_dragon.ambient player @a ~ ~ ~ 1.0
 
 #activators
-tag @s add active
 scoreboard players set @s act_target 1
+
+#inventory update
+function abilities_pack:dragon/inventory_update
 
 #set cooldown
 scoreboard players set @s activate_cd 0

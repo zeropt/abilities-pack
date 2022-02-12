@@ -11,7 +11,6 @@ title @s title {"text":"Blaze","color":"yellow"}
 execute at @s run playsound entity.blaze.ambient player @a ~ ~ ~ 1.0
 
 #activators
-tag @s add active
 scoreboard players set @s act_target 3
 
 #set cooldown

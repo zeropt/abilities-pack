@@ -1,9 +1,6 @@
 # Dragon Loop
 # As: Tagged Player
 
-#permanent elytra
-execute unless entity @s[nbt={Inventory:[{Slot:102b}]}] run item replace entity @s armor.chest with elytra{display:{Name:'{"text":"Dragon Wings"}'},Unbreakable:1b,trait:1b,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}]} 1
-
 #end crystal healing
 function abilities_pack:abilities/end_crystal_heal
 
@@ -20,4 +17,4 @@ execute as @s[predicate=abilities_pack:in_slot] run function abilities_pack:drag
 execute as @s[tag=trigger_act] run function abilities_pack:dragon/activate
 
 #reactivate
-execute as @s[scores={activate_cd=..0}] run tag @s add active
+execute as @s[scores={activate_cd=..0,act_target=0}] run scoreboard players set @s act_target 1

@@ -11,8 +11,10 @@ title @s title {"text":"Evoker","color":"gray"}
 execute at @s run playsound entity.evoker.prepare_wololo player @a ~ ~ ~ 1.0
 
 #activators
-tag @s add active
 scoreboard players set @s act_target 1
+
+#inventory update
+function abilities_pack:evoker/inventory_update
 
 #set cooldown
 scoreboard players set @s activate_cd 0

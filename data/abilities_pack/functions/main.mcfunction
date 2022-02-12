@@ -8,12 +8,11 @@ execute as @a unless score @s player_id matches 0.. run function abilities_pack:
 execute as @a[scores={ability_id=0}] run scoreboard players enable @s pick_ability
 execute as @a[scores={pick_ability=1}] run function abilities_pack:admin/ability_selector
 
-#Slot Stick
-execute as @a[scores={ability_id=1..}] run function abilities_pack:slot_stick
-
 #Activator right-click detection
-tag @a remove trigger_act
+tag @a[tag=trigger_act] remove trigger_act
 execute as @a[predicate=abilities_pack:in_mainhand] run function abilities_pack:activation
+execute as @a[scores={ep_counter=1..}] run tag @s add trigger_act
+execute as @a[scores={s_counter=1..}] run tag @s add trigger_act
 execute as @a[scores={coas_counter=1..}] run scoreboard players set @s coas_counter 0
 execute as @a[scores={wfoas_counter=1..}] run scoreboard players set @s wfoas_counter 0
 execute as @a[scores={s_counter=1..}] run scoreboard players set @s s_counter 0
@@ -45,7 +44,7 @@ function abilities_pack:abilities/launch/loop
 function abilities_pack:abilities/linked_clouds/loop
 function abilities_pack:abilities/safe_landing/loop
 
-######################################## STARTOF Abilites ########################################
+######################################## STARTOF Abilities ########################################
 
 #Test ID:-1
 execute as @a[scores={ability_id=-1}] run function abilities_pack:test/loop
@@ -97,12 +96,8 @@ execute as @e[type=item,nbt={Item:{tag:{trait:1b}}}] run kill @s
 execute as @e[type=snowball,nbt={Item:{tag:{activator:1b}}}] run kill @s
 
 #Reset trigger
-execute as @a unless score @s pick_ability matches 0 run scoreboard players reset @s pick_ability
+execute as @a unless score @s ability_id matches 0 run scoreboard players reset @s pick_ability
 
-#Replace, Add, Clear Activators
-execute as @a[tag=active] run clear @s stick{activator:1b}
-scoreboard players set @a act_count 0
-execute as @a[tag=active,predicate=abilities_pack:in_slot] store result score @s act_count run data get entity @s Inventory[0].Count
-execute as @a[tag=active] unless score @s act_count = @s act_target run function abilities_pack:clear_activator
-execute as @a[tag=active] unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless score @s act_count = @s act_target run function abilities_pack:fill_activators
-execute as @a unless score @s ability_id matches 0 unless predicate abilities_pack:in_slot run function abilities_pack:clear_activator
+#manage activators on update
+execute as @a unless score @s ability_id matches 0 unless score @s act_target = @s prev_act_target run function abilities_pack:manage_activators
+execute as @a unless score @s ability_id matches 0 run scoreboard players operation @s prev_act_target = @s act_target
