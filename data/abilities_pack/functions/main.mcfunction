@@ -20,8 +20,10 @@ execute as @a[scores={ee_counter=1..}] run scoreboard players set @s ee_counter 
 execute as @a[scores={ep_counter=1..}] run scoreboard players set @s ep_counter 0
 execute as @a[scores={poppy_counter=1..}] run scoreboard players set @s poppy_counter 0
 
-#Death detection
-execute as @a[tag=died] run tag @s remove died
+#Respawn detection
+execute as @a[tag=respawned] run tag @s remove respawned
+execute as @e[type=player,tag=died] run tag @s add respawned
+execute as @e[type=player,tag=died] run tag @s remove died
 execute as @a[scores={death_counter=1..}] run tag @s add died
 execute as @a[scores={death_counter=1..}] run scoreboard players set @s death_counter 0
 
@@ -98,6 +100,7 @@ execute as @e[type=snowball,nbt={Item:{tag:{activator:1b}}}] run kill @s
 #Reset trigger
 execute as @a unless score @s ability_id matches 0 run scoreboard players reset @s pick_ability
 
-#manage activators on update
+#manage activators on update or respawn
+execute as @a[tag=respawned] run function abilities_pack:manage_activators
 execute as @a unless score @s ability_id matches 0 unless score @s act_target = @s prev_act_target run function abilities_pack:manage_activators
 execute as @a unless score @s ability_id matches 0 run scoreboard players operation @s prev_act_target = @s act_target

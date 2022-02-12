@@ -9,7 +9,7 @@ effect give @s speed 1 1 true
 effect give @s weakness 1 0 true
 
 #totem per death
-execute as @s[tag=died] run tag @s add totemed
+execute as @s[tag=respawned] run tag @s add totemed
 execute as @s[scores={tou_counter=1..}] run tag @s remove totemed
 scoreboard players set @s tou_counter 0
 
