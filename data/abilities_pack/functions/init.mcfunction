@@ -42,3 +42,6 @@ scoreboard objectives add health_tracker dummy
 #Initialize GLobal ID
 scoreboard players add #global player_id 0
 scoreboard players add #global target_id 0
+
+#start killing dropped items
+function abilities_pack:kill_activators_traits
