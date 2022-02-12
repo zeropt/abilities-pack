@@ -89,8 +89,9 @@ execute as @a[scores={ability_id=9}] run function abilities_pack:fox/loop
 
 ######################################## ENDOF Abilities ########################################
 
-#remove data from ender pearls
+#remove data from ender pearls, kill snowballs
 execute as @e[type=ender_pearl,nbt={Item:{tag:{activator:1b}}}] run data merge entity @s {Item:{tag:{CustomModelData:0}}}
+execute as @e[type=snowball,nbt={Item:{tag:{activator:1b}}}] run kill @s
 
 #Reset trigger
 execute as @a unless score @s ability_id matches 0 run scoreboard players reset @s pick_ability
