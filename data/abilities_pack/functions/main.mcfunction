@@ -10,15 +10,15 @@ execute as @a[scores={pick_ability=1}] run function abilities_pack:admin/ability
 
 #Activator right-click detection
 tag @a[tag=trigger_act] remove trigger_act
-execute as @a[predicate=abilities_pack:in_mainhand] run function abilities_pack:activation
-execute as @a[scores={ep_counter=1..}] run tag @s add trigger_act
-execute as @a[scores={s_counter=1..}] run tag @s add trigger_act
+execute as @a[tag=in_mainhand] run function abilities_pack:activation
 execute as @a[scores={coas_counter=1..}] run scoreboard players set @s coas_counter 0
 execute as @a[scores={wfoas_counter=1..}] run scoreboard players set @s wfoas_counter 0
 execute as @a[scores={s_counter=1..}] run scoreboard players set @s s_counter 0
 execute as @a[scores={ee_counter=1..}] run scoreboard players set @s ee_counter 0
 execute as @a[scores={ep_counter=1..}] run scoreboard players set @s ep_counter 0
 execute as @a[scores={poppy_counter=1..}] run scoreboard players set @s poppy_counter 0
+execute as @a[tag=in_mainhand] run tag @s remove in_mainhand
+execute as @a[predicate=abilities_pack:in_mainhand] run tag @s add in_mainhand
 
 #Respawn detection
 execute as @a[tag=respawned] run tag @s remove respawned
@@ -99,4 +99,4 @@ execute as @a unless score @s ability_id matches 0 run scoreboard players reset 
 #manage activators on update or respawn
 execute as @a[tag=respawned] run function abilities_pack:manage_activators
 execute as @a unless score @s ability_id matches 0 unless score @s act_target = @s prev_act_target run function abilities_pack:manage_activators
-execute as @a unless score @s ability_id matches 0 run scoreboard players operation @s prev_act_target = @s act_target
+execute as @a run scoreboard players operation @s prev_act_target = @s act_target
