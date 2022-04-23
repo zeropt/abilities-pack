@@ -97,6 +97,6 @@ execute as @e[type=snowball,nbt={Item:{tag:{activator:1b}}}] run kill @s
 execute as @a unless score @s ability_id matches 0 run scoreboard players reset @s pick_ability
 
 #manage activators on update or respawn
-execute as @a[tag=respawned] run function abilities_pack:manage_activators
+execute as @a[tag=respawned] unless score @s ability_id matches 0 run function abilities_pack:manage_activators
 execute as @a unless score @s ability_id matches 0 unless score @s act_target = @s prev_act_target run function abilities_pack:manage_activators
 execute as @a run scoreboard players operation @s prev_act_target = @s act_target
