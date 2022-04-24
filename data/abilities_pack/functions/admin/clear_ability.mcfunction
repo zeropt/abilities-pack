@@ -16,7 +16,6 @@ scoreboard players set @s glow_cd 0
 
 #clear activators
 function abilities_pack:clear_activators
-clear @s stick{activator:1b}
 
 #clear traits
 function abilities_pack:clear_traits

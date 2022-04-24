@@ -2,31 +2,31 @@
 # As: Player
 
 #Test ID:-1
-execute if score @s ability_id matches -1 run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Activator"}'},CustomModelData:0,activator:1b} 1
+execute if score @s ability_id matches -1 run function abilities_pack:test/give_activator
 
 #Blaze ID:1
-execute if score @s ability_id matches 1 run give @s snowball{display:{Name:'{"text":"Fireball","color":"yellow"}'},CustomModelData:11801,activator:1b} 1
+execute if score @s ability_id matches 1 run function abilities_pack:blaze/give_activator
 
 #Enderman ID:2
-execute if score @s ability_id matches 2 run give @s ender_pearl{display:{Name:'{"text":"Ender Pearl","color":"dark_purple"}'},CustomModelData:11802,activator:1b} 1
+execute if score @s ability_id matches 2 run function abilities_pack:enderman/give_activator
 
 #Guardian ID:3
-execute if score @s ability_id matches 3 run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Guardian Laser","color":"dark_aqua"}'},CustomModelData:11803,activator:1b} 1
+execute if score @s ability_id matches 3 run function abilities_pack:guardian/give_activator
 
 #Shulker ID:4
-execute if score @s ability_id matches 4 run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Shulker Bullet","color":"light_purple"}'},CustomModelData:11804,activator:1b} 1
+execute if score @s ability_id matches 4 run function abilities_pack:shulker/give_activator
 
 #Dragon ID:5
-execute if score @s ability_id matches 5 run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Dragon Boost","color":"light_purple"}'},CustomModelData:11805,activator:1b} 1
+execute if score @s ability_id matches 5 run function abilities_pack:dragon/give_activator
 
 #Evoker ID:6
-execute if score @s ability_id matches 6 run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Evoker Spells","color":"gray"}'},CustomModelData:11806,activator:1b} 1
+execute if score @s ability_id matches 6 run function abilities_pack:evoker/give_activator
 
 #Bat ID:7
-execute if score @s ability_id matches 7 run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Locater","color":"dark_gray"}'},CustomModelData:11807,activator:1b} 1
+execute if score @s ability_id matches 7 run function abilities_pack:bat/give_activator
 
 #Iron Golem ID:8
-execute if score @s ability_id matches 8 run give @s poppy{display:{Name:'{"text":"Lucky Poppy","color":"red"}'},CustomModelData:11808,activator:1b} 1
+execute if score @s ability_id matches 8 run function abilities_pack:iron_golem/give_activator
 
 #Fox ID:9
-execute if score @s ability_id matches 9 run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Fox Sprint","color":"gold"}'},CustomModelData:11809,activator:1b} 1
+execute if score @s ability_id matches 9 run function abilities_pack:fox/give_activator

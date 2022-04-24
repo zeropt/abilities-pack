@@ -2,7 +2,8 @@
 # As: Player
 
 #Replace, Add, Clear Activators
-execute unless score @s ability_id matches 0 run function abilities_pack:manage_activators
+#execute unless score @s ability_id matches 0 run function abilities_pack:manage_activators
+tag @s add trigger_update
 
 ######################################## STARTOF Abilities ########################################
 
@@ -30,5 +31,5 @@ execute as @a[scores={ability_id=7}] run function abilities_pack:bat/inventory_u
 
 ######################################## ENDOF Abilities ########################################
 
-#revoke the advancement MUST RUN LAST
-advancement revoke @s only abilities_pack:inventory_change
+#Revoke the inventory change advancement
+execute as @a run advancement revoke @s only abilities_pack:inventory_change

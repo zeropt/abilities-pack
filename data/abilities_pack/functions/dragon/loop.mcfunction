@@ -11,7 +11,10 @@ function abilities_pack:abilities/more_arrow_damage
 execute unless predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dragon_ram
 
 #custom model data while sneaking
-execute as @s[predicate=abilities_pack:in_slot] run function abilities_pack:dragon/set_data
+execute as @s[tag=!sneaking] if predicate abilities_pack:is_sneaking at @s run tag @s add trigger_update
+execute as @s[tag=!sneaking] if predicate abilities_pack:is_sneaking run tag @s add sneaking
+execute as @s[tag=sneaking] unless predicate abilities_pack:is_sneaking at @s run tag @s add trigger_update
+execute as @s[tag=sneaking] unless predicate abilities_pack:is_sneaking run tag @s remove sneaking
 
 #boost and cloud
 execute as @s[tag=trigger_act] run function abilities_pack:dragon/activate

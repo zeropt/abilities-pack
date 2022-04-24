@@ -1,18 +1,15 @@
 # Shulker Loop
-# As: Tagged Player
+# As: Player
 
 #effects
 execute if predicate abilities_pack:is_sneaking run function abilities_pack:abilities/shulker_shell
 execute unless predicate abilities_pack:is_sneaking run function abilities_pack:shulker/not_sneaking
 
-#shulker shell when sneaking
-execute as @s[predicate=abilities_pack:in_slot] run function abilities_pack:shulker/set_data
-
-#close and open noise
-execute as @s[tag=!closed] if predicate abilities_pack:is_sneaking at @s run playsound entity.shulker.close player @a ~ ~ ~ 1.0
-execute as @s[predicate=abilities_pack:is_sneaking] run tag @s add closed
-execute as @s[tag=closed] unless predicate abilities_pack:is_sneaking at @s run playsound entity.shulker.open player @a ~ ~ ~ 1.0
-execute unless predicate abilities_pack:is_sneaking run tag @s remove closed
+#close and open shulker shell
+execute as @s[tag=!sneaking] if predicate abilities_pack:is_sneaking at @s run function abilities_pack:shulker/close
+execute as @s[tag=!sneaking] if predicate abilities_pack:is_sneaking run tag @s add sneaking
+execute as @s[tag=sneaking] unless predicate abilities_pack:is_sneaking at @s run function abilities_pack:shulker/open
+execute as @s[tag=sneaking] unless predicate abilities_pack:is_sneaking run tag @s remove sneaking
 
 #tp away when under health threshold
 execute as @s[tag=!healthy,scores={health=10..}] run tag @s add healthy

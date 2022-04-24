@@ -17,7 +17,10 @@ execute as @s[tag=!in_water,scores={temp_y1=-8..,temp_y0=..-32}] at @s run plays
 execute unless predicate abilities_pack:is_sneaking unless predicate abilities_pack:is_swimming run function abilities_pack:abilities/float_in_water
 
 #Thorns
-execute as @s[predicate=abilities_pack:in_slot] run function abilities_pack:guardian/thorns
+execute as @s[tag=!sneaking] if predicate abilities_pack:is_sneaking run tag @s add trigger_update
+execute as @s[tag=!sneaking] if predicate abilities_pack:is_sneaking run tag @s add sneaking
+execute as @s[tag=sneaking] unless predicate abilities_pack:is_sneaking run tag @s add trigger_update
+execute as @s[tag=sneaking] unless predicate abilities_pack:is_sneaking run tag @s remove sneaking
 
 ##Laser
 #Laser duration
