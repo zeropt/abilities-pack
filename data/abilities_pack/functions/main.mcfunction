@@ -6,7 +6,7 @@ execute as @a unless score @s player_id matches 0.. run function abilities_pack:
 
 #Pick an ability
 execute as @a[scores={ability_id=0}] run scoreboard players enable @s pick_ability
-execute as @a[scores={pick_ability=1}] run function abilities_pack:admin/ability_selector
+execute as @a[scores={pick_ability=1..}] run function abilities_pack:admin/ability_selector
 
 #Activator right-click detection
 tag @a[tag=trigger_act] remove trigger_act

@@ -1,6 +1,9 @@
 # Pick an ability, any ability!
 # As: Player
 
+# only run ability selector once
+scoreboard players set @s pick_ability 0
+
 tellraw @s {"text":"Abilities Pack","bold":true,"color":"yellow"}
 tellraw @s {"text":"Pick an Ability:","color":"yellow"}
 
