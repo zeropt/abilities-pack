@@ -5,7 +5,7 @@
 execute as @s run function abilities_pack:clear_activators
 
 # Get the current count
-scoreboard players set @a act_count 0
+scoreboard players set @s act_count 0
 execute as @s[predicate=abilities_pack:in_slot,scores={act_target=1..}] store result score @s act_count run data get entity @s Inventory[0].Count
 
 # clear if not equal
