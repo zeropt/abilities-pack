@@ -1,21 +1,22 @@
 # Manage Player activators
 # As: Player
 
-# clear activators
-execute as @s run function abilities_pack:clear_activators
+# clear placeholders
+clear @s #abilities_pack:placeholders{placeholder:1b}
+
+# if trigger_refresh: clear activators
+execute as @s[tag=trigger_refresh] run clear @s #abilities_pack:activators{activator:1b}
+execute as @s[tag=trigger_refresh] run tag @s remove trigger_refresh
 
 # Get the current count
 scoreboard players set @s act_count 0
-execute as @s[predicate=abilities_pack:in_slot,scores={act_target=1..}] store result score @s act_count run data get entity @s Inventory[0].Count
+execute as @s store result score @s act_count run clear @s #abilities_pack:activators{activator:1b} 0
 
 # clear if not equal
-execute as @s[scores={act_target=1..}] unless score @s act_count = @s act_target run function abilities_pack:clear_activators
+execute as @s unless score @s act_count = @s act_target run clear @s #abilities_pack:activators{activator:1b}
 
-# fill
-execute as @s[scores={act_target=1..}] unless entity @s[nbt={Inventory:[{Slot:0b}]}] unless score @s act_count = @s act_target run function abilities_pack:fill_activators
-
-# give a single activator if act_target == 0
-execute as @s[scores={act_target=0}] run function abilities_pack:give_activator
+# fill if not equal
+execute as @s unless score @s act_count = @s act_target run function abilities_pack:fill_activators
 
 # clear if it didn't make it in the slot
-execute as @s unless predicate abilities_pack:in_slot run function abilities_pack:clear_activators
+execute as @s unless predicate abilities_pack:activator_in_slot run clear @s #abilities_pack:activators{activator:1b}

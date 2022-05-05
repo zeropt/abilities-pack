@@ -18,7 +18,7 @@ execute as @a[scores={ee_counter=1..}] run scoreboard players set @s ee_counter 
 execute as @a[scores={ep_counter=1..}] run scoreboard players set @s ep_counter 0
 execute as @a[scores={poppy_counter=1..}] run scoreboard players set @s poppy_counter 0
 execute as @a[tag=in_mainhand] run tag @s remove in_mainhand
-execute as @a[predicate=abilities_pack:in_mainhand] run tag @s add in_mainhand
+execute as @a[predicate=abilities_pack:activator_in_mainhand] run tag @s add in_mainhand
 
 #Respawn detection
 execute as @a[tag=respawned] run tag @s remove respawned
@@ -96,11 +96,11 @@ execute as @e[type=snowball,nbt={Item:{tag:{activator:1b}}}] run kill @s
 #Reset trigger
 execute as @a unless score @s ability_id matches 0 run scoreboard players reset @s pick_ability
 
-#trigger_update on update or respawn
-execute as @a[tag=respawned] unless score @s ability_id matches 0 run tag @s add trigger_update
-execute as @a unless score @s ability_id matches 0 unless score @s act_target = @s prev_act_target run tag @s add trigger_update
+#trigger_update on update, trigger_refresh, or respawn
+execute as @a[tag=respawned] run tag @s add trigger_update
+execute as @a unless score @s act_target = @s prev_act_target run tag @s add trigger_update
 execute as @a run scoreboard players operation @s prev_act_target = @s act_target
+execute as @a[tag=trigger_refresh] run tag @s add trigger_update
 
-#if trigger_update manage activators
-execute as @a[tag=trigger_update] run function abilities_pack:manage_activators
-tag @a[tag=trigger_update] remove trigger_update
+#if trigger_update manage inventory
+execute as @a[tag=trigger_update] run function abilities_pack:manage_inventory

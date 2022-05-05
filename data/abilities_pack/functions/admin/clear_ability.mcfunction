@@ -15,10 +15,13 @@ scoreboard players set @s health_tracker 0
 scoreboard players set @s glow_cd 0
 
 #clear activators
-function abilities_pack:clear_activators
+clear @s #abilities_pack:activators{activator:1b}
+
+#clear placeholders
+clear @s #abilities_pack:placeholders{placeholder:1b}
 
 #clear traits
-function abilities_pack:clear_traits
+clear @s #abilities_pack:traits{trait:1b}
 
 #kill rain_test armor_stands
 execute at @s as @e[type=armor_stand,tag=rain_test] if score @s player_id = @p player_id run kill @s

@@ -44,4 +44,4 @@ scoreboard players add #global player_id 0
 scoreboard players add #global target_id 0
 
 #start killing dropped items
-function abilities_pack:kill_activators_traits
+function abilities_pack:kill_pack_items
