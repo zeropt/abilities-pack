@@ -1,0 +1,33 @@
+{
+    "replace": false,
+    "values": [
+        "#abilities_pack:no_collision",
+        "minecraft:lily_pad",
+        "minecraft:cocoa",
+        "minecraft:chorus_plant",
+        "minecraft:sea_pickle",
+        "minecraft:repeater",
+        "minecraft:comparator",
+        "minecraft:flower_pot",
+        "minecraft:skeleton_skull",
+        "minecraft:wither_skeleton_skull",
+        "minecraft:zombie_head",
+        "minecraft:player_head",
+        "minecraft:creeper_head",
+        "minecraft:dragon_head",
+        "minecraft:skeleton_wall_skull",
+        "minecraft:wither_skeleton_wall_skull",
+        "minecraft:zombie_wall_head",
+        "minecraft:player_wall_head",
+        "minecraft:creeper_wall_head",
+        "minecraft:dragon_wall_head",
+        "#minecraft:carpets",
+        "minecraft:snow",
+        "minecraft:bamboo",
+        "#minecraft:fence_gates",
+        "#minecraft:fences",
+        "#minecraft:walls",
+        "#minecraft:doors",
+        "#minecraft:trapdoors"
+    ]
+}

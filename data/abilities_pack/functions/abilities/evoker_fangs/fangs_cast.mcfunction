@@ -7,7 +7,7 @@ execute store result score #global temp_global run data get entity @e[type=area_
 kill @e[type=area_effect_cloud,tag=current_y]
 
 #summon fang
-execute if block ~ ~ ~ #abilities_pack:nonsolid unless block ~ ~-1 ~ #abilities_pack:nonsolid run summon evoker_fangs ~ ~ ~ {Tags:["new"]}
+execute if block ~ ~ ~ #abilities_pack:not_fangable unless block ~ ~-1 ~ #abilities_pack:not_fangable run summon evoker_fangs ~ ~ ~ {Tags:["new"]}
 
 #set owner
 execute as @s[type=player] if entity @e[type=evoker_fangs,tag=new] run data modify entity @e[type=evoker_fangs,tag=new,limit=1] Owner set from entity @s UUID

@@ -13,11 +13,10 @@ execute at @s if predicate abilities_pack:is_bright run effect give @s blindness
 #bat locate
 execute as @s[tag=trigger_act] run function abilities_pack:bat/activate
 
-#flying
-execute if predicate abilities_pack:activator_in_mainhand unless predicate abilities_pack:is_riding_entity at @s if block ~ ~-0.01 ~ #abilities_pack:nonsolid run tag @s add flying
-execute if predicate abilities_pack:placeholder_in_mainhand unless predicate abilities_pack:is_riding_entity at @s if block ~ ~-0.01 ~ #abilities_pack:nonsolid run tag @s add flying
-execute as @s[tag=flying] run function abilities_pack:bat/flying
-execute as @s[tag=!flying] run scoreboard players set @s temp_global 0
+#bat levitation
+execute as @s if predicate abilities_pack:activator_in_mainhand run function abilities_pack:abilities/bat_levitation
+execute as @s if predicate abilities_pack:placeholder_in_mainhand run function abilities_pack:abilities/bat_levitation
+execute as @s unless predicate abilities_pack:activator_in_mainhand unless predicate abilities_pack:placeholder_in_mainhand run function abilities_pack:abilities/bat_levitation/safe_stop
 
 #reactivate
 execute as @s[scores={activate_cd=..0,act_target=0}] run scoreboard players set @s act_target 1

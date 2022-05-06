@@ -15,7 +15,7 @@ execute as @e[tag=!evoker_source,dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity
 execute as @e[tag=evoker_target] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["target_cloud"]}
 tag @e[tag=evoker_target] remove evoker_target
 #block
-execute unless entity @e[tag=target_cloud] unless block ~ ~ ~ #abilities_pack:nonsolid run summon area_effect_cloud ~ ~ ~ {Tags:["target_cloud"]}
+execute unless entity @e[tag=target_cloud] unless block ~ ~ ~ #abilities_pack:not_fangable run summon area_effect_cloud ~ ~ ~ {Tags:["target_cloud"]}
 #final raycast position
 execute unless entity @e[tag=target_cloud] if score #global temp_global matches 0 run summon area_effect_cloud ~ ~ ~ {Tags:["target_cloud"]}
 
