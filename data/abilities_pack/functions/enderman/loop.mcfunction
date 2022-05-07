@@ -9,6 +9,7 @@ execute as @s[predicate=abilities_pack:see_endermite] run effect give @s minecra
 
 #Water Damage
 function abilities_pack:abilities/tag_in_water
+function abilities_pack:abilities/tag_in_rain
 execute unless entity @s[tag=!in_water,tag=!in_rain] run function abilities_pack:abilities/damage
 
 #Dodge arrows
