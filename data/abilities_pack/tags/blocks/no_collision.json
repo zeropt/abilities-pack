@@ -1,9 +1,7 @@
 {
     "replace": false,
     "values": [
-        "minecraft:air",
-        "minecraft:void_air",
-        "minecraft:cave_air",
+        "#abilities_pack:airs",
         "minecraft:water",
         "minecraft:lava",
         "#minecraft:saplings",
