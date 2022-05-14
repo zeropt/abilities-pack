@@ -17,6 +17,7 @@ execute as @a[scores={s_counter=1..}] run scoreboard players set @s s_counter 0
 execute as @a[scores={ee_counter=1..}] run scoreboard players set @s ee_counter 0
 execute as @a[scores={ep_counter=1..}] run scoreboard players set @s ep_counter 0
 execute as @a[scores={poppy_counter=1..}] run scoreboard players set @s poppy_counter 0
+execute as @a[scores={sp_counter=1..}] run scoreboard players set @s sp_counter 0
 execute as @a[tag=in_mainhand] run tag @s remove in_mainhand
 execute as @a[predicate=abilities_pack:activator_in_mainhand] run tag @s add in_mainhand
 
@@ -45,6 +46,8 @@ function abilities_pack:abilities/glow/loop
 function abilities_pack:abilities/launch/loop
 function abilities_pack:abilities/linked_clouds/loop
 function abilities_pack:abilities/safe_landing/loop
+function abilities_pack:abilities/web_potion/loop
+function abilities_pack:abilities/temp_web/loop
 
 ######################################## STARTOF Abilities ########################################
 
@@ -86,6 +89,10 @@ execute as @a[scores={ability_id=8}] run function abilities_pack:iron_golem/loop
 #Fox ID:9
 execute as @a[scores={ability_id=0,pick_ability=-9}] run function abilities_pack:fox/join
 execute as @a[scores={ability_id=9}] run function abilities_pack:fox/loop
+
+#Spider ID:10
+execute as @a[scores={ability_id=0,pick_ability=-10}] run function abilities_pack:spider/join
+execute as @a[scores={ability_id=10}] run function abilities_pack:spider/loop
 
 ######################################## ENDOF Abilities ########################################
 

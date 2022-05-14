@@ -29,6 +29,8 @@ execute as @s[scores={ability_id=7}] run function abilities_pack:bat/inventory_u
 
 #Fox ID:9
 
+#Spider ID:10
+
 ######################################## ENDOF Abilities ########################################
 
 #Revoke the inventory change advancement

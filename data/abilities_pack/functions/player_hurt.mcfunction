@@ -30,6 +30,9 @@ execute as @s[scores={ability_id=8}] run function abilities_pack:iron_golem/dama
 #Fox ID:9
 execute as @s[scores={ability_id=9}] run function abilities_pack:fox/damage
 
+#Spider ID:10
+execute as @s[scores={ability_id=10}] run function abilities_pack:spider/damage
+
 ######################################## ENDOF Abilities ########################################
 
 #Revoke the player_hurt advancement

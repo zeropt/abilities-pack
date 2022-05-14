@@ -30,3 +30,6 @@ execute if score @s ability_id matches 8 run function abilities_pack:iron_golem/
 
 #Fox ID:9
 execute if score @s ability_id matches 9 run function abilities_pack:fox/give_placeholder
+
+#Spider ID:10
+execute if score @s ability_id matches 10 run function abilities_pack:spider/give_placeholder

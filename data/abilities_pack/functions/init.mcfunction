@@ -13,6 +13,7 @@ scoreboard objectives add s_counter minecraft.used:minecraft.snowball
 scoreboard objectives add ee_counter minecraft.used:minecraft.ender_eye
 scoreboard objectives add ep_counter minecraft.used:minecraft.ender_pearl
 scoreboard objectives add poppy_counter minecraft.used:minecraft.poppy
+scoreboard objectives add sp_counter minecraft.used:minecraft.splash_potion
 scoreboard objectives add death_counter deathCount
 scoreboard objectives add sleep_counter minecraft.custom:minecraft.sleep_in_bed
 scoreboard objectives add health health
