@@ -2,7 +2,8 @@
 # As: Player
 
 execute store result score #global temp_global run data get entity @s Rotation[1]
-execute unless score @s temp_global matches ..-1 if score #global temp_global matches ..-1 at @s run playsound entity.bat.takeoff player @a ~ ~ ~ 0.3
+execute as @s[tag=!flying] if score #global temp_global matches ..-1 at @s run playsound entity.bat.takeoff player @a ~ ~ ~ 0.3
+execute as @s[tag=flying] unless score @s temp_global matches ..-1 if score #global temp_global matches ..-1 at @s run playsound entity.bat.takeoff player @a ~ ~ ~ 0.3
 scoreboard players operation @s temp_global = #global temp_global
 effect clear @s minecraft:levitation
 execute if score #global temp_global matches -90..-61 run effect give @s minecraft:levitation 1 17 true
