@@ -3,7 +3,7 @@
 
 #Give Effects
 effect clear @s poison
-execute if predicate abilities_pack:full_moon run effect give @s invisibility 1 0 false
+execute at @s if predicate abilities_pack:full_moon run effect give @s invisibility 1 0 false
 execute at @s if predicate abilities_pack:clear_day unless predicate abilities_pack:is_dim run function abilities_pack:spider/day_effects
 
 #climb

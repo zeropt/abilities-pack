@@ -1,6 +1,11 @@
 {
     "replace": false,
     "values": [
-        "#abilities_pack:no_collision"
+        "#abilities_pack:no_collision",
+        "minecraft:ladder",
+        "#minecraft:trapdoors",
+        "minecraft:big_dripleaf",
+        "minecraft:scaffolding",
+        "#minecraft:carpets"
     ]
 }

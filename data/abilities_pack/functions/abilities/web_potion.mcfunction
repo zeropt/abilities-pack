@@ -6,7 +6,6 @@ tag @s add web_potion
 
 # summon area_effect_cloud
 execute at @s run summon area_effect_cloud ~ ~ ~ {Duration:2,Tags:["web_tracker","new_cloud"]}
-#execute at @s if block ~ ~ ~ #abilities_pack:airs run setblock ~ ~ ~ cobweb
 
 # target_id
 execute unless score @s target_id matches ..2147483647 run scoreboard players add #global target_id 1
