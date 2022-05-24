@@ -6,6 +6,9 @@ effect clear @s poison
 execute at @s if predicate abilities_pack:full_moon run effect give @s invisibility 1 0 false
 execute at @s if predicate abilities_pack:clear_day unless predicate abilities_pack:is_dim run function abilities_pack:spider/day_effects
 
+#boa damage
+function abilities_pack:abilities/boa_damage
+
 #climb
 execute as @s if predicate abilities_pack:activator_in_mainhand run function abilities_pack:abilities/spider_climb
 execute as @s if predicate abilities_pack:placeholder_in_mainhand run function abilities_pack:abilities/spider_climb
