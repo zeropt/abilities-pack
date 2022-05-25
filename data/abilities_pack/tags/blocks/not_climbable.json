@@ -6,6 +6,11 @@
         "#minecraft:trapdoors",
         "minecraft:big_dripleaf",
         "minecraft:scaffolding",
-        "#minecraft:carpets"
+        "#minecraft:carpets",
+        "minecraft:snow",
+        "minecraft:repeater",
+        "minecraft:comparator",
+        "minecraft:flower_pot",
+        "minecraft:daylight_detector"
     ]
 }

@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+        "#abilities_pack:not_climbable",
+        "#abilities_pack:nearly_climbable",
+        "#abilities_pack:half_climbable"
+    ]
+}
