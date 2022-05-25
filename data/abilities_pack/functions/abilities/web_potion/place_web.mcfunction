@@ -2,7 +2,7 @@
 # At: Location
 
 #stopsound
-stopsound @a[distance=..18] neutral
+#stopsound @a[distance=..18] neutral
 
 # web nearby entities
 execute as @e[distance=..2,type=!#abilities_pack:not_webable] at @s run function abilities_pack:abilities/temp_web

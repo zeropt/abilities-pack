@@ -5,14 +5,7 @@
 scoreboard players set @s ability_id 0
 scoreboard players set @s activate_cd 0
 scoreboard players set @s act_target 0
-scoreboard players set @s damage_cd 0
-scoreboard players set @s playsound_cd 0
-scoreboard players set @s crystal_regen_cd 0
-scoreboard players set @s launch_cd 0
-scoreboard players set @s boost_cd 0
-scoreboard players set @s safe_landing_cd 0
 scoreboard players set @s health_tracker 0
-scoreboard players set @s glow_cd 0
 
 #clear activators
 clear @s #abilities_pack:activators{activator:1b}

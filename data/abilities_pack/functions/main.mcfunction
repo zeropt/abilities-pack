@@ -36,8 +36,6 @@ execute as @a[scores={sleep_counter=1..}] run scoreboard players set @s sleep_co
 #Cooldowns
 execute as @a[scores={activate_cd=0..}] run scoreboard players remove @s activate_cd 1
 execute as @a[scores={playsound_cd=0..}] run scoreboard players remove @s playsound_cd 1
-execute as @a[scores={damage_cd=0..}] run scoreboard players remove @s damage_cd 1
-execute as @a[scores={crystal_regen_cd=0..}] run scoreboard players remove @s crystal_regen_cd 1
 
 #Abilities loops
 function abilities_pack:abilities/dragon_boost/loop
@@ -48,6 +46,8 @@ function abilities_pack:abilities/linked_clouds/loop
 function abilities_pack:abilities/safe_landing/loop
 function abilities_pack:abilities/web_potion/loop
 function abilities_pack:abilities/temp_web/loop
+function abilities_pack:abilities/regen/loop
+function abilities_pack:abilities/damage/loop
 
 ######################################## STARTOF Abilities ########################################
 

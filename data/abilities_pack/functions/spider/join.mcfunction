@@ -12,3 +12,6 @@ execute at @s run playsound entity.spider.ambient player @a ~ ~ ~ 1.0
 
 #activators
 scoreboard players set @s act_target 1
+
+#objectives
+scoreboard players reset @s effect_id

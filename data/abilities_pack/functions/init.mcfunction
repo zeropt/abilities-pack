@@ -33,12 +33,13 @@ scoreboard objectives add temp_z1 dummy
 scoreboard objectives add target_id dummy
 scoreboard objectives add damage_cd dummy
 scoreboard objectives add playsound_cd dummy
-scoreboard objectives add crystal_regen_cd dummy
+scoreboard objectives add regen_cd dummy
 scoreboard objectives add launch_cd dummy
 scoreboard objectives add boost_cd dummy
 scoreboard objectives add safe_landing_cd dummy
 scoreboard objectives add glow_cd dummy
 scoreboard objectives add health_tracker dummy
+scoreboard objectives add effect_id dummy
 
 #Initialize GLobal ID
 scoreboard players add #global player_id 0
