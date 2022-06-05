@@ -6,6 +6,7 @@ scoreboard players set @s ability_id 0
 scoreboard players set @s activate_cd 0
 scoreboard players set @s act_target 0
 scoreboard players set @s health_tracker 0
+scoreboard players reset @s effect_id
 
 #clear activators
 clear @s #abilities_pack:activators{activator:1b}
