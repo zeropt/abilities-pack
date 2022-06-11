@@ -15,3 +15,7 @@ scoreboard players set @s act_target 1
 
 #set cooldown
 scoreboard players set @s activate_cd 0
+
+#attributes
+attribute @s minecraft:generic.attack_damage base set 5.0
+attribute @s minecraft:generic.max_health base set 24.0

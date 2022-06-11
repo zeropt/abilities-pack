@@ -1,4 +1,4 @@
-# -- respawn
+# dragon respawn
 # As: Player
 
 #attributes
