@@ -3,7 +3,7 @@
 
 #effects
 execute if predicate abilities_pack:is_sneaking run function abilities_pack:abilities/shulker_shell
-execute unless predicate abilities_pack:is_sneaking run function abilities_pack:shulker/not_sneaking
+execute unless predicate abilities_pack:is_sneaking run function abilities_pack:abilities/shulker_shell/clear
 
 #close and open shulker shell
 execute as @s[tag=!sneaking] if predicate abilities_pack:is_sneaking at @s run function abilities_pack:shulker/close

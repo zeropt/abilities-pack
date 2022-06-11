@@ -22,4 +22,4 @@ scoreboard objectives add activate_dur dummy
 scoreboard players set @s activate_dur 0
 
 #attributes
-attribute @s minecraft:generic.max_health base set 30.0
+attribute @s minecraft:generic.max_health base set 24.0
