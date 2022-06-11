@@ -1,6 +1,8 @@
 # Executes when inventory changes
 # As: Player
 
+effect give @s glowing 1 0 false
+
 #Replace, Add, Clear Activators
 #execute unless score @s ability_id matches 0 run function abilities_pack:manage_activators
 tag @s add trigger_update
