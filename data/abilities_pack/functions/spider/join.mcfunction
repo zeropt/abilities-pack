@@ -15,3 +15,6 @@ scoreboard players set @s act_target 1
 
 #objectives
 scoreboard players reset @s effect_id
+
+#attributes
+attribute @s minecraft:generic.max_health base set 16.0
