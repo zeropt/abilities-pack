@@ -16,9 +16,6 @@ scoreboard players set @s act_target 1
 #inventory update
 function abilities_pack:evoker/inventory_update
 
-#set cooldown
-scoreboard players set @s activate_cd 0
-
 #objectives
 scoreboard objectives add tou_counter minecraft.used:minecraft.totem_of_undying
 scoreboard players set @s tou_counter 0

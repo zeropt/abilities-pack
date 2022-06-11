@@ -12,6 +12,3 @@ execute at @s run playsound entity.blaze.ambient player @a ~ ~ ~ 1.0
 
 #activators
 scoreboard players set @s act_target 3
-
-#set cooldown
-scoreboard players set @s activate_cd 0

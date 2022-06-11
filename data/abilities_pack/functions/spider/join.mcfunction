@@ -13,6 +13,9 @@ execute at @s run playsound entity.spider.ambient player @a ~ ~ ~ 1.0
 #activators
 scoreboard players set @s act_target 1
 
+#clear advancements
+advancement revoke @s only abilities_pack:hurt_by_boa
+
 #objectives
 scoreboard players reset @s effect_id
 

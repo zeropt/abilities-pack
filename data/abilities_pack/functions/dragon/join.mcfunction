@@ -16,9 +16,6 @@ scoreboard players set @s act_target 1
 #inventory update
 function abilities_pack:dragon/inventory_update
 
-#set cooldown
-scoreboard players set @s activate_cd 0
-
 #clear arrow advancement
 advancement revoke @s only abilities_pack:hurt_by_arrow
 
