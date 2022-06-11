@@ -21,3 +21,6 @@ scoreboard players set @s activate_cd 0
 
 #clear arrow advancement
 advancement revoke @s only abilities_pack:hurt_by_arrow
+
+#attributes
+attribute @s minecraft:generic.armor base set 8.0

@@ -2,7 +2,7 @@
 # As: Player
 
 #reset attributes to 
-# attribute @s minecraft:generic.armor base set 0.0
+attribute @s minecraft:generic.armor base set 0.0
 # attribute @s minecraft:generic.armor_toughness set 0.0
 # attribute @s minecraft:generic.attack_damage base set 1.0
 attribute @s minecraft:generic.attack_speed base set 4.0
