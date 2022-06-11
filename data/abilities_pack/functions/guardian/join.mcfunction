@@ -20,3 +20,6 @@ function abilities_pack:guardian/inventory_update
 scoreboard players set @s temp_y1 0
 scoreboard objectives add activate_dur dummy
 scoreboard players set @s activate_dur 0
+
+#attributes
+attribute @s minecraft:generic.max_health base set 30.0
