@@ -11,7 +11,7 @@ execute as @s[predicate=abilities_pack:is_sprinting] run function abilities_pack
 execute as @s[tag=too_bright] run function abilities_pack:fox/day_effects
 
 #rest effects
-execute as @s[tag=resting] run function abilities_pack:fox/rest_effects
+execute as @s[tag=resting,scores={sneak_dur=40..}] run function abilities_pack:fox/rest_effects
 execute as @s[tag=!resting] run function abilities_pack:abilities/regen/stop
 
 #clear tags

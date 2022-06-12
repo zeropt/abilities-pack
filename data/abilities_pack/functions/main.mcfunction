@@ -32,6 +32,9 @@ execute as @a[tag=slept] run tag @s remove slept
 execute as @a[scores={sleep_counter=1..}] run tag @s add slept
 execute as @a[scores={sleep_counter=1..}] run scoreboard players set @s sleep_counter 0
 
+#Sneak duration
+execute as @a unless predicate abilities_pack:is_sneaking run scoreboard players reset @s sneak_dur
+
 #Cooldowns
 execute as @a[scores={activate_cd=0..}] run scoreboard players remove @s activate_cd 1
 execute as @a[scores={playsound_cd=0..}] run scoreboard players remove @s playsound_cd 1
