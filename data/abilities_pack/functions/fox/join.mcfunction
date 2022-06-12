@@ -17,4 +17,4 @@ scoreboard players set @s act_target 1
 advancement revoke @s only abilities_pack:ate_berries
 
 #attributes
-attribute @s minecraft:generic.max_health base set 10.0
+attribute @s minecraft:generic.max_health base set 12.0
