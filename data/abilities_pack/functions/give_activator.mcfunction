@@ -33,3 +33,6 @@ execute if score @s ability_id matches 9 run function abilities_pack:fox/give_ac
 
 #Spider ID:10
 execute if score @s ability_id matches 10 run function abilities_pack:spider/give_activator
+
+#Axolotl ID:11
+execute if score @s ability_id matches 11 run function abilities_pack:axolotl/give_activator

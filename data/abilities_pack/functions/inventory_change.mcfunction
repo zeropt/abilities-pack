@@ -31,6 +31,9 @@ execute as @s[scores={ability_id=7}] run function abilities_pack:bat/inventory_u
 
 #Spider ID:10
 
+#Axolotl ID:11
+execute as @s[scores={ability_id=11}] run function abilities_pack:axolotl/inventory_update
+
 ######################################## ENDOF Abilities ########################################
 
 #Revoke the inventory change advancement

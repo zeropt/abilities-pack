@@ -25,7 +25,7 @@ scoreboard objectives add death_counter deathCount
 scoreboard objectives add sleep_counter minecraft.custom:minecraft.sleep_in_bed
 scoreboard objectives add sneak_dur minecraft.custom:minecraft.sneak_time
 
-#Ability objectives
+#Ability objectives and teams
 scoreboard objectives add temp_global dummy
 scoreboard objectives add temp_x0 dummy
 scoreboard objectives add temp_y0 dummy
@@ -43,10 +43,13 @@ scoreboard objectives add safe_landing_cd dummy
 scoreboard objectives add glow_cd dummy
 scoreboard objectives add health_tracker dummy
 scoreboard objectives add effect_id dummy
+scoreboard objectives add wet_cd dummy
+team add forget
 
 #Initialize GLobal ID
 scoreboard players add #global player_id 0
 scoreboard players add #global target_id 0
 
-#start killing dropped items
+#start looping function
 function abilities_pack:kill_pack_items
+function abilities_pack:slow_tick

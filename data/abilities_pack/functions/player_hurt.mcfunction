@@ -33,6 +33,9 @@ execute as @s[scores={ability_id=9}] run function abilities_pack:fox/damage
 #Spider ID:10
 execute as @s[scores={ability_id=10}] run function abilities_pack:spider/damage
 
+#Axolotl ID:11
+execute as @s[scores={ability_id=11}] run function abilities_pack:axolotl/damage
+
 ######################################## ENDOF Abilities ########################################
 
 #Revoke the player_hurt advancement

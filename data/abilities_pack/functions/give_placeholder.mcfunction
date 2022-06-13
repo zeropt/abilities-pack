@@ -33,3 +33,6 @@ execute if score @s ability_id matches 9 run function abilities_pack:fox/give_pl
 
 #Spider ID:10
 execute if score @s ability_id matches 10 run function abilities_pack:spider/give_placeholder
+
+#Axolotl ID:11
+execute if score @s ability_id matches 11 run function abilities_pack:axolotl/give_placeholder

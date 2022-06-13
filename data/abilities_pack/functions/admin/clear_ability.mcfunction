@@ -30,8 +30,8 @@ clear @s #abilities_pack:traits{trait:1b}
 #kill rain_test armor_stands
 execute at @s as @e[type=armor_stand,tag=rain_test] if score @s player_id = @p player_id run kill @s
 
-#clear special effects
-effect clear @s minecraft:health_boost
+#clear healer tag
+tag @s remove healer
 
 #Title
 title @s title {"text":"Ability Cleared","color":"red"}

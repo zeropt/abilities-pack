@@ -35,3 +35,6 @@ execute as @a[scores={ability_id=9}] run function abilities_pack:fox/respawn
 
 #Spider ID:10
 execute as @a[scores={ability_id=10}] run function abilities_pack:spider/respawn
+
+#Axolotl ID:11
+execute as @a[scores={ability_id=11}] run function abilities_pack:axolotl/respawn

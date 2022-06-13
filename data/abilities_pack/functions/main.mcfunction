@@ -33,11 +33,15 @@ execute as @a[scores={sleep_counter=1..}] run tag @s add slept
 execute as @a[scores={sleep_counter=1..}] run scoreboard players set @s sleep_counter 0
 
 #Sneak duration
+# execute as @a[scores={sneak_dur=0}] run scoreboard players reset @s sneak_dur
+# execute as @a[scores={sneak_dur=2..}] unless predicate abilities_pack:is_sneaking run scoreboard players set @s sneak_dur 0
+# execute as @a[scores={sneak_dur=1..}] unless predicate abilities_pack:is_sneaking run scoreboard players reset @s sneak_dur
 execute as @a unless predicate abilities_pack:is_sneaking run scoreboard players reset @s sneak_dur
 
 #Cooldowns
 execute as @a[scores={activate_cd=0..}] run scoreboard players remove @s activate_cd 1
 execute as @a[scores={playsound_cd=0..}] run scoreboard players remove @s playsound_cd 1
+execute as @a[scores={wet_cd=0..}] run scoreboard players remove @s wet_cd 1
 
 #Abilities loops
 function abilities_pack:abilities/dragon_boost/loop
@@ -50,6 +54,7 @@ function abilities_pack:abilities/web_potion/loop
 function abilities_pack:abilities/temp_web/loop
 function abilities_pack:abilities/regen/loop
 function abilities_pack:abilities/damage/loop
+function abilities_pack:abilities/forget_me/loop
 
 ######################################## STARTOF Abilities ########################################
 
@@ -96,6 +101,10 @@ execute as @a[scores={ability_id=9}] run function abilities_pack:fox/loop
 execute as @a[scores={ability_id=0,pick_ability=-10}] run function abilities_pack:spider/join
 execute as @a[scores={ability_id=10}] run function abilities_pack:spider/loop
 
+#Axolotl ID:11
+execute as @a[scores={ability_id=0,pick_ability=-11}] run function abilities_pack:axolotl/join
+execute as @a[scores={ability_id=11}] run function abilities_pack:axolotl/loop
+
 ######################################## ENDOF Abilities ########################################
 
 #remove data from ender pearls, kill snowballs
@@ -112,3 +121,6 @@ execute as @a[tag=trigger_refresh] run tag @s add trigger_update
 
 #if trigger_update manage inventory
 execute as @a[tag=trigger_update] run function abilities_pack:manage_inventory
+
+#remove slow_tick tag
+tag @a remove slow_tick
