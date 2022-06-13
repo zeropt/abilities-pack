@@ -2,7 +2,7 @@
 # As: Player
 
 #summon shulker bullet
-execute at @s anchored eyes run summon minecraft:shulker_bullet ^ ^ ^ {Steps:1,Tags:["new"]}
+execute at @s anchored eyes run summon minecraft:shulker_bullet ^ ^ ^ {Steps:5,Tags:["new"]}
 
 #Playsound
 execute at @s run playsound minecraft:entity.shulker.shoot master @a ~ ~ ~ 0.8
