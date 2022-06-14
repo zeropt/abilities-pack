@@ -15,6 +15,9 @@ execute unless entity @s[tag=!in_water,tag=!in_rain] run function abilities_pack
 #Dodge arrows
 execute unless predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dodge_arrows
 
+#particles
+execute unless predicate abilities_pack:is_sneaking at @s run particle minecraft:portal ~ ~0.6 ~ 0.0 0.0 0.0 1 1 normal
+
 #set cooldown
 execute as @s[tag=trigger_act] run function abilities_pack:enderman/activate
 
