@@ -10,7 +10,7 @@
         "minecraft:snow",
         "minecraft:repeater",
         "minecraft:comparator",
-        "minecraft:flower_pot",
+        "#minecraft:flower_pots",
         "minecraft:daylight_detector",
         "minecraft:candle",
         "minecraft:lantern",

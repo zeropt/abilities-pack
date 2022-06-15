@@ -8,7 +8,7 @@
         "minecraft:sea_pickle",
         "minecraft:repeater",
         "minecraft:comparator",
-        "minecraft:flower_pot",
+        "#minecraft:flower_pots",
         "minecraft:skeleton_skull",
         "minecraft:wither_skeleton_skull",
         "minecraft:zombie_head",
