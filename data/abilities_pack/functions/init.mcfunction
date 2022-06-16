@@ -19,7 +19,8 @@ scoreboard objectives add activate_cd dummy
 scoreboard objectives add act_count dummy
 scoreboard objectives add act_target dummy
 scoreboard objectives add prev_act_target dummy
-scoreboard objectives add activator_id dummy
+scoreboard objectives add act_id dummy
+scoreboard objectives add prev_act_id dummy
 
 #Stat trackers
 scoreboard objectives add health health

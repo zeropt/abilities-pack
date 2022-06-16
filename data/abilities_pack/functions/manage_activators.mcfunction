@@ -6,7 +6,6 @@ clear @s #abilities_pack:placeholders{placeholder:1b}
 
 # if trigger_refresh: clear activators
 execute as @s[tag=trigger_refresh] run clear @s #abilities_pack:activators{activator:1b}
-execute as @s[tag=trigger_refresh] run tag @s remove trigger_refresh
 
 # Get the current count
 scoreboard players set @s act_count 0

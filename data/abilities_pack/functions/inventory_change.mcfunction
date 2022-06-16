@@ -1,9 +1,11 @@
 # Executes when inventory changes
 # As: Player
 
-#Replace, Add, Clear Activators
-#execute unless score @s ability_id matches 0 run function abilities_pack:manage_activators
+
 tag @s add trigger_update
+
+#clear traits
+clear @s #abilities_pack:traits{trait:1b}
 
 ######################################## STARTOF Abilities ########################################
 

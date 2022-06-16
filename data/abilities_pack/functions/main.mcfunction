@@ -122,13 +122,15 @@ execute as @e[type=snowball,nbt={Item:{tag:{activator:1b}}}] run kill @s
 #Reset trigger
 execute as @a unless score @s ability_id matches 0 run scoreboard players reset @s pick_ability
 
-#trigger_update on update, trigger_refresh
+#trigger updates on activator score updates
 execute as @a unless score @s act_target = @s prev_act_target run tag @s add trigger_update
 execute as @a run scoreboard players operation @s prev_act_target = @s act_target
-execute as @a[tag=trigger_refresh] run tag @s add trigger_update
+execute as @a unless score @s act_id = @s prev_act_id run tag @s add trigger_refresh
+execute as @a run scoreboard players operation @s prev_act_id = @s act_id
 
-#if trigger_update manage inventory
+#if trigger_update || trigger_refresh manage inventory
 execute as @a[tag=trigger_update] run function abilities_pack:manage_inventory
+execute as @a[tag=trigger_refresh] run function abilities_pack:manage_inventory
 
 #remove slow_tick tag
 tag @a remove slow_tick

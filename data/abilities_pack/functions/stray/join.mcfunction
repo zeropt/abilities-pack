@@ -16,3 +16,4 @@ advancement revoke @s only abilities_pack:hit_entity
 
 #activators
 scoreboard players set @s act_target 1
+scoreboard players set @s act_id 0

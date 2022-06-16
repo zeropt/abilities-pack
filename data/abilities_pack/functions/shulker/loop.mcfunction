@@ -15,9 +15,9 @@ execute as @s[tag=closed,tag=!q_closed] run tag @s remove closed
 execute as @s[tag=closed] run function abilities_pack:abilities/shulker_shell
 
 #update item
-execute as @s[tag=!sneaking] if predicate abilities_pack:is_sneaking run tag @s add trigger_refresh
+execute as @s[tag=!sneaking] if predicate abilities_pack:is_sneaking run scoreboard players set @s act_id 1
 execute as @s[tag=!sneaking] if predicate abilities_pack:is_sneaking run tag @s add sneaking
-execute as @s[tag=sneaking] unless predicate abilities_pack:is_sneaking run tag @s add trigger_refresh
+execute as @s[tag=sneaking] unless predicate abilities_pack:is_sneaking run scoreboard players set @s act_id 0
 execute as @s[tag=sneaking] unless predicate abilities_pack:is_sneaking run tag @s remove sneaking
 
 #tp away when under health threshold
