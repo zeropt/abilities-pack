@@ -14,6 +14,7 @@ scoreboard objectives add ee_counter minecraft.used:minecraft.ender_eye
 scoreboard objectives add ep_counter minecraft.used:minecraft.ender_pearl
 scoreboard objectives add poppy_counter minecraft.used:minecraft.poppy
 scoreboard objectives add sp_counter minecraft.used:minecraft.splash_potion
+scoreboard objectives add bow_counter minecraft.used:minecraft.bow
 scoreboard objectives add activate_cd dummy
 scoreboard objectives add act_count dummy
 scoreboard objectives add act_target dummy
@@ -44,6 +45,7 @@ scoreboard objectives add glow_cd dummy
 scoreboard objectives add health_tracker dummy
 scoreboard objectives add effect_id dummy
 scoreboard objectives add wet_cd dummy
+scoreboard objectives add burn_cd dummy
 team add forget
 
 #Initialize GLobal ID

@@ -1,7 +1,6 @@
 # Damage the player
 # As: Player
 
-# effect give @s minecraft:instant_health 1 0 true
-# effect give @s minecraft:instant_damage 1 0 true
 effect give @s minecraft:wither 1 1 true
-scoreboard players set @s damage_cd 20
+scoreboard players set @s damage_cd 10
+tag @s add remove_wither

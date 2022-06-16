@@ -10,6 +10,6 @@
     }
   },
   "rewards": {
-    "function": "abilities_pack:player_hurt"
+    "function": "abilities_pack:damage"
   }
 }

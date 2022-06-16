@@ -36,3 +36,6 @@ execute if score @s ability_id matches 10 run function abilities_pack:spider/giv
 
 #Axolotl ID:11
 execute if score @s ability_id matches 11 run function abilities_pack:axolotl/give_placeholder
+
+#Stray ID:12
+execute if score @s ability_id matches 12 run function abilities_pack:stray/give_placeholder
