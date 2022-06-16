@@ -45,7 +45,6 @@ scoreboard objectives add glow_cd dummy
 scoreboard objectives add health_tracker dummy
 scoreboard objectives add effect_id dummy
 scoreboard objectives add wet_cd dummy
-scoreboard objectives add burn_cd dummy
 team add forget
 
 #Initialize GLobal ID
