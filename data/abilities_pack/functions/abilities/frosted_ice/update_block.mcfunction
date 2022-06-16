@@ -1,18 +1,18 @@
 # update frosted ice
 # As: Area Effect Cloud
 
-# store duration in temp_global and subtract 1
-execute store result score #global temp_global run data get entity @s Duration
-scoreboard players remove #global temp_global 1
+# store duration in apvar_0 and subtract 1
+execute store result score #abilities_pack apvar_0 run data get entity @s Duration
+scoreboard players remove #abilities_pack apvar_0 1
 
-# store age in temp_x0
-execute store result score #global temp_x0 run data get entity @s Age
+# store age in apvar_1
+execute store result score #abilities_pack apvar_1 run data get entity @s Age
 
-# temp_global -= temp_x0
-scoreboard players operation #global temp_global -= #global temp_x0
+# apvar_0 -= apvar_1
+scoreboard players operation #abilities_pack apvar_0 -= #abilities_pack apvar_1
 
 #melting particles
-execute if score #global temp_global matches ..60 at @s run particle minecraft:falling_water ~ ~0.5 ~ 0.25 0.25 0.25 0 1 normal
+execute if score #abilities_pack apvar_0 matches ..60 at @s run particle minecraft:falling_water ~ ~0.5 ~ 0.25 0.25 0.25 0 1 normal
 
 # back to water
-execute if score #global temp_global matches 0 at @s if block ~ ~ ~ ice run setblock ~ ~ ~ water replace
+execute if score #abilities_pack apvar_0 matches 0 at @s if block ~ ~ ~ ice run setblock ~ ~ ~ water replace

@@ -1,21 +1,21 @@
 # checks if a web needs to be deleted
 # As: Area Effect Cloud
 
-# store duration in temp_global and subtract 1
-execute store result score #global temp_global run data get entity @s Duration
-scoreboard players remove #global temp_global 1
+# store duration in apvar_0 and subtract 1
+execute store result score #abilities_pack apvar_0 run data get entity @s Duration
+scoreboard players remove #abilities_pack apvar_0 1
 
-# store age in temp_x0
-execute store result score #global temp_x0 run data get entity @s Age
+# store age in apvar_1
+execute store result score #abilities_pack apvar_1 run data get entity @s Age
 
-# temp_global -= temp_x0
-scoreboard players operation #global temp_global -= #global temp_x0
+# apvar_0 -= apvar_1
+scoreboard players operation #abilities_pack apvar_0 -= #abilities_pack apvar_1
 
-# if temp_global == 10: playsound
-#execute if score #global temp_global matches 12 at @s if block ~ ~ ~ cobweb run playsound entity.spider.step block @a ~ ~ ~ 0.4 0.5
+# if apvar_0 == 10: playsound
+#execute if score #abilities_pack apvar_0 matches 12 at @s if block ~ ~ ~ cobweb run playsound entity.spider.step block @a ~ ~ ~ 0.4 0.5
 
-# if temp_global == 2: playsound
-execute if score #global temp_global matches 2 at @s if block ~ ~ ~ cobweb run playsound block.stone.break block @a ~ ~ ~ 0.8
+# if apvar_0 == 2: playsound
+execute if score #abilities_pack apvar_0 matches 2 at @s if block ~ ~ ~ cobweb run playsound block.stone.break block @a ~ ~ ~ 0.8
 
-# if temp_global <= 0: delete block
-execute if score #global temp_global matches ..0 at @s if block ~ ~ ~ cobweb run setblock ~ ~ ~ air
+# if apvar_0 <= 0: delete block
+execute if score #abilities_pack apvar_0 matches ..0 at @s if block ~ ~ ~ cobweb run setblock ~ ~ ~ air

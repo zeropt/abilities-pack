@@ -1,8 +1,8 @@
 # frost raycast
 # At: Location
 
-#decrement temp_global
-scoreboard players remove #global temp_global 1
+#decrement apvar_0
+scoreboard players remove #abilities_pack apvar_0 1
 
 #convert water
 function abilities_pack:abilities/frosted_ice
@@ -11,5 +11,5 @@ function abilities_pack:abilities/frosted_ice
 function abilities_pack:abilities/frosted_basalt
 
 #raycast
-execute unless block ~ ~ ~ #abilities_pack:airs run scoreboard players set #global temp_global 0
-execute if score #global temp_global matches 1.. positioned ~ ~-1 ~ run function abilities_pack:abilities/frosted_arrow/raycast
+execute unless block ~ ~ ~ #abilities_pack:airs run scoreboard players set #abilities_pack apvar_0 0
+execute if score #abilities_pack apvar_0 matches 1.. positioned ~ ~-1 ~ run function abilities_pack:abilities/frosted_arrow/raycast

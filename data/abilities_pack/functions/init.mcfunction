@@ -1,7 +1,7 @@
 # Datapack Init
 # As: Server
 
-#Datapack objectives
+#Datapack scoreboards
 scoreboard objectives add player_id dummy
 scoreboard objectives add ability_id dummy
 scoreboard objectives add pick_ability trigger
@@ -19,6 +19,7 @@ scoreboard objectives add activate_cd dummy
 scoreboard objectives add act_count dummy
 scoreboard objectives add act_target dummy
 scoreboard objectives add prev_act_target dummy
+scoreboard objectives add activator_id dummy
 
 #Stat trackers
 scoreboard objectives add health health
@@ -26,14 +27,11 @@ scoreboard objectives add death_counter deathCount
 scoreboard objectives add sleep_counter minecraft.custom:minecraft.sleep_in_bed
 scoreboard objectives add sneak_dur minecraft.custom:minecraft.sneak_time
 
+#general variables
+scoreboard objectives add apvar_0 dummy
+scoreboard objectives add apvar_1 dummy
+
 #Ability objectives and teams
-scoreboard objectives add temp_global dummy
-scoreboard objectives add temp_x0 dummy
-scoreboard objectives add temp_y0 dummy
-scoreboard objectives add temp_z0 dummy
-scoreboard objectives add temp_x1 dummy
-scoreboard objectives add temp_y1 dummy
-scoreboard objectives add temp_z1 dummy
 scoreboard objectives add target_id dummy
 scoreboard objectives add damage_cd dummy
 scoreboard objectives add playsound_cd dummy
@@ -48,8 +46,8 @@ scoreboard objectives add wet_cd dummy
 team add forget
 
 #Initialize GLobal ID
-scoreboard players add #global player_id 0
-scoreboard players add #global target_id 0
+scoreboard players add #abilities_pack player_id 0
+scoreboard players add #abilities_pack target_id 0
 
 #start looping function
 function abilities_pack:kill_pack_items

@@ -17,7 +17,7 @@ scoreboard players set @s act_target 1
 function abilities_pack:guardian/inventory_update
 
 #objectives
-scoreboard players set @s temp_y1 0
+scoreboard players set @s apvar_1 0
 scoreboard objectives add activate_dur dummy
 scoreboard players set @s activate_dur 0
 

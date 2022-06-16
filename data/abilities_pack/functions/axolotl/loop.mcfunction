@@ -29,9 +29,9 @@ execute unless predicate abilities_pack:is_sneaking unless predicate abilities_p
 #dry out
 execute as @s[tag=in_water] run scoreboard players set @s wet_cd 1200
 execute as @s[tag=in_rain] run scoreboard players set @s wet_cd 1200
-scoreboard players set #global temp_global 0
-execute store result score #global temp_global run advancement revoke @s only abilities_pack:drank_water
-execute if score #global temp_global matches 1 run scoreboard players set @s wet_cd 1200
+scoreboard players set #abilities_pack apvar_0 0
+execute store result score #abilities_pack apvar_0 run advancement revoke @s only abilities_pack:drank_water
+execute if score #abilities_pack apvar_0 matches 1 run scoreboard players set @s wet_cd 1200
 function abilities_pack:axolotl/drying_effects
 
 #heal friends
