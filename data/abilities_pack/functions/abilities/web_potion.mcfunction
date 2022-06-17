@@ -13,3 +13,6 @@ scoreboard players operation @e[type=area_effect_cloud,tag=new_cloud,limit=1] ta
 
 # remove new_cloud tag
 tag @e[type=area_effect_cloud,tag=new_cloud] remove new_cloud
+
+#set data
+data merge entity @s {Item:{tag:{CustomModelData:11910}}}

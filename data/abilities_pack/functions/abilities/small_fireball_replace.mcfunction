@@ -20,3 +20,6 @@ execute at @s store result entity @e[type=minecraft:small_fireball,nbt={Tags:["n
 
 #Remove Tag
 execute at @s run tag @e[type=minecraft:small_fireball,nbt={Tags:["new"]},limit=1,sort=nearest] remove new
+
+#kill snowball
+kill @s
