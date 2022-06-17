@@ -22,6 +22,8 @@
         "minecraft:pointed_dripstone",
         "minecraft:cake",
         "minecraft:stonecutter",
-        "minecraft:enchanting_table"
+        "minecraft:enchanting_table",
+        "minecraft:sculk_sensor",
+        "minecraft:sculk_shrieker"
     ]
 }

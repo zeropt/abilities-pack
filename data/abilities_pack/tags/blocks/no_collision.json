@@ -74,6 +74,9 @@
         "minecraft:big_dripleaf_stem",
         "minecraft:small_dripleaf",
         "minecraft:hanging_roots",
-        "minecraft:spore_blossom"
+        "minecraft:spore_blossom",
+        "minecraft:glow_lichen",
+        "minecraft:frogspawn",
+        "minecraft:sculk_vein"
     ]
 }

@@ -4,8 +4,8 @@
 
 tag @s add trigger_update
 
-#clear traits
-clear @s #abilities_pack:traits{trait:1b}
+#clear traits for those without an ability
+clear @s[scores={ability_id=0}] #abilities_pack:traits{trait:1b}
 
 ######################################## STARTOF Abilities ########################################
 

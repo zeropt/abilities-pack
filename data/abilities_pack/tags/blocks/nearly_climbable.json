@@ -6,6 +6,7 @@
         "minecraft:ender_chest",
         "minecraft:farmland",
         "minecraft:dirt_path",
-        "minecraft:bell"
+        "minecraft:bell",
+        "minecraft:mud"
     ]
 }

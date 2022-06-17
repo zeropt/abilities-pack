@@ -21,7 +21,8 @@
         "minecraft:player_wall_head",
         "minecraft:creeper_wall_head",
         "minecraft:dragon_wall_head",
-        "#minecraft:carpets",
+        "#minecraft:wool_carpets",
+        "minecraft:moss_carpet",
         "minecraft:snow",
         "minecraft:bamboo",
         "minecraft:big_dripleaf"

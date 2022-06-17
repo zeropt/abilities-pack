@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:boat",
+    "minecraft:chest_boat",
     "minecraft:item",
     "minecraft:minecart",
     "minecraft:chest_minecart",
@@ -18,6 +19,7 @@
     "minecraft:potion",
     "minecraft:item_frame",
     "minecraft:glow_item_frame",
-    "minecraft:evoker_fangs"
+    "minecraft:evoker_fangs",
+    "minecraft:painting"
   ]
 }

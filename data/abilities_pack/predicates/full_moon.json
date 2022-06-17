@@ -5,7 +5,7 @@
       "dimension": "minecraft:overworld"
     }
   },
-    {
+  {
     "condition": "minecraft:time_check",
     "value": {
       "min": 13000,
