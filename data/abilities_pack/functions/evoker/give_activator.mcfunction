@@ -2,4 +2,4 @@
 # As: Player
 
 # wfoas
-give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Evoker Spells","color":"gray"}'},CustomModelData:11806,activator:1b} 1
+give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Evoker Spells","color":"gray"}',Lore:['{"text":"No Blue Sheep"}']},CustomModelData:11806,activator:1b} 1
