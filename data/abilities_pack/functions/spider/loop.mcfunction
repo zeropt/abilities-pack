@@ -5,7 +5,6 @@
 effect clear @s poison
 execute at @s unless predicate abilities_pack:is_dark run effect give @s weakness 1 0 true
 execute at @s if predicate abilities_pack:is_dark run effect give @s hunger 1 2 true
-#execute at @s if predicate abilities_pack:full_moon run effect give @s invisibility 1 0 false
 function abilities_pack:abilities/spider_effect
 
 #boa damage
