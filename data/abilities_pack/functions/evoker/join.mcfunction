@@ -21,5 +21,4 @@ scoreboard objectives add tou_counter minecraft.used:minecraft.totem_of_undying
 scoreboard players set @s tou_counter 0
 
 #attributes
-attribute @s minecraft:generic.max_health base set 24.0
 attribute @s minecraft:generic.movement_speed base set 0.14
