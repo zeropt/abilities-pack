@@ -11,3 +11,4 @@ effect clear @s minecraft:poison
 effect clear @s minecraft:wither
 effect clear @s minecraft:unluck
 effect clear @s minecraft:bad_omen
+effect clear @s minecraft:darkness
