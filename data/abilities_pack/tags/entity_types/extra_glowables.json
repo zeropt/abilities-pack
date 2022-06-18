@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:boat",
+    "minecraft:chest_boat",
     "minecraft:item",
     "minecraft:minecart",
     "minecraft:chest_minecart",

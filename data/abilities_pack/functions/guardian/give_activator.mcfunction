@@ -1,8 +1,8 @@
 # Give player the guardian activator
 # As: Player
 
-# if sneaking: thorns wfoas
-execute as @s if predicate abilities_pack:is_sneaking run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Guardian Laser","color":"dark_aqua"}'},CustomModelData:11803,activator:1b,Enchantments:[{id:"minecraft:thorns",lvl:3s}]} 1
-
 # if not sneaking: wfoas
-execute as @s unless predicate abilities_pack:is_sneaking run give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Guardian Laser","color":"dark_aqua"}'},CustomModelData:11803,activator:1b} 1
+give @s[scores={act_id=0}] warped_fungus_on_a_stick{display:{Name:'{"text":"Guardian Laser","color":"dark_aqua"}',Lore:['{"text":"Shift for thorns"}']},CustomModelData:11803,activator:1b} 1
+
+# if sneaking: thorns wfoas
+give @s[scores={act_id=1}] warped_fungus_on_a_stick{display:{Name:'{"text":"Guardian Laser","color":"dark_aqua"}'},CustomModelData:11803,activator:1b,Enchantments:[{id:"minecraft:thorns",lvl:3s}]} 1

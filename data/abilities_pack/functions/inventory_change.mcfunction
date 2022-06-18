@@ -1,9 +1,11 @@
 # Executes when inventory changes
 # As: Player
 
-#Replace, Add, Clear Activators
-#execute unless score @s ability_id matches 0 run function abilities_pack:manage_activators
+
 tag @s add trigger_update
+
+#clear traits for those without an ability
+clear @s[scores={ability_id=0}] #abilities_pack:traits{trait:1b}
 
 ######################################## STARTOF Abilities ########################################
 
@@ -28,6 +30,14 @@ execute as @s[scores={ability_id=7}] run function abilities_pack:bat/inventory_u
 #Iron Golem ID:8
 
 #Fox ID:9
+
+#Spider ID:10
+
+#Axolotl ID:11
+execute as @s[scores={ability_id=11}] run function abilities_pack:axolotl/inventory_update
+
+#Stray ID:12
+execute as @s[scores={ability_id=12}] run function abilities_pack:stray/inventory_update
 
 ######################################## ENDOF Abilities ########################################
 

@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:boat",
+    "minecraft:chest_boat",
+    "minecraft:item",
+    "minecraft:minecart",
+    "minecraft:chest_minecart",
+    "minecraft:furnace_minecart",
+    "minecraft:tnt_minecart",
+    "minecraft:hopper_minecart",
+    "#minecraft:arrows",
+    "minecraft:shulker_bullet",
+    "minecraft:small_fireball",
+    "minecraft:fireball",
+    "minecraft:dragon_fireball",
+    "minecraft:trident",
+    "minecraft:area_effect_cloud",
+    "minecraft:potion",
+    "minecraft:item_frame",
+    "minecraft:glow_item_frame",
+    "minecraft:evoker_fangs",
+    "minecraft:painting"
+  ]
+}

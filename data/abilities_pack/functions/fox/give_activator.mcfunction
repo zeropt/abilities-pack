@@ -2,4 +2,4 @@
 # As: Player
 
 # wfoas
-give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Fox Sprint","color":"gold"}'},CustomModelData:11809,activator:1b} 1
+give @s warped_fungus_on_a_stick{display:{Name:'{"text":"Fox Sprint","color":"gold"}',Lore:['{"text":"Shift in the shade to nap"}']},CustomModelData:11809,activator:1b} 1

@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#abilities_pack:hostile",
+    "#abilities_pack:neutral"
+  ]
+}

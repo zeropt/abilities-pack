@@ -1,0 +1,22 @@
+{
+    "replace": false,
+    "values": [
+        "#abilities_pack:airs",
+        "#minecraft:crops",
+        "#minecraft:fire",
+        "#minecraft:small_flowers",
+        "minecraft:grass",
+        "minecraft:tall_grass",
+        "minecraft:crimson_roots",
+        "minecraft:warped_roots",
+        "minecraft:nether_sprouts",
+        "minecraft:crimson_fungus",
+        "minecraft:warped_fungus",
+        "minecraft:brown_mushroom",
+        "minecraft:red_mushroom",
+        "minecraft:dead_bush",
+        "minecraft:fern",
+        "minecraft:glow_lichen",
+        "minecraft:sculk_vein"
+    ]
+}

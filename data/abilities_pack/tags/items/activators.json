@@ -7,6 +7,8 @@
         "minecraft:poppy",
         "minecraft:shulker_shell",
         "minecraft:snowball",
-        "minecraft:warped_fungus_on_a_stick"
+        "minecraft:splash_potion",
+        "minecraft:warped_fungus_on_a_stick",
+        "minecraft:bow"
     ]
 }

@@ -2,8 +2,8 @@
 # As: Player
 
 #Check for hurt by arrow advancement
-scoreboard players set #global temp_global 0
-execute store success score #global temp_global run advancement revoke @s only abilities_pack:hurt_by_arrow
+scoreboard players set #abilities_pack apvar_0 0
+execute store success score #abilities_pack apvar_0 run advancement revoke @s only abilities_pack:hurt_by_arrow
 
 #give effect
-execute if score #global temp_global matches 1 run effect give @s poison 1 4 true
+execute if score #abilities_pack apvar_0 matches 1 run effect give @s poison 1 4 true

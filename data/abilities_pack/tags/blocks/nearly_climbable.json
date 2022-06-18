@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:soul_sand",
+        "minecraft:chest",
+        "minecraft:ender_chest",
+        "minecraft:farmland",
+        "minecraft:dirt_path",
+        "minecraft:bell",
+        "minecraft:mud"
+    ]
+}

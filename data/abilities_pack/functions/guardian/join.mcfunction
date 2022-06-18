@@ -8,7 +8,7 @@ scoreboard players set @s ability_id 3
 title @s title {"text":"Guardian","color":"dark_aqua"}
 
 #playsound
-execute at @s run playsound entity.guardian.ambient player @a ~ ~ ~ 6.0
+execute at @s anchored eyes run playsound entity.guardian.ambient player @a ^ ^ ^ 1.0
 
 #activator
 scoreboard players set @s act_target 1
@@ -17,6 +17,9 @@ scoreboard players set @s act_target 1
 function abilities_pack:guardian/inventory_update
 
 #objectives
-scoreboard players set @s temp_y1 0
+scoreboard players set @s apvar_1 0
 scoreboard objectives add activate_dur dummy
 scoreboard players set @s activate_dur 0
+
+#attributes
+attribute @s minecraft:generic.max_health base set 24.0

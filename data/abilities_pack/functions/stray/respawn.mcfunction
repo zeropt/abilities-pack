@@ -1,0 +1,2 @@
+# stray respawn
+# As: Player

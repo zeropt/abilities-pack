@@ -13,5 +13,6 @@ execute at @s run playsound entity.shulker.ambient player @a ~ ~ ~ 1.0
 #activators
 scoreboard players set @s act_target 1
 
-#set cooldown
-scoreboard players set @s activate_cd 0
+#attributes
+attribute @s minecraft:generic.max_health base set 24.0
+attribute @s minecraft:generic.movement_speed base set 0.085

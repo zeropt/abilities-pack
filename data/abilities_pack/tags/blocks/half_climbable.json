@@ -1,0 +1,29 @@
+{
+    "replace": false,
+    "values": [
+        "#minecraft:slabs",
+        "#minecraft:beds",
+        "minecraft:end_portal_frame",
+        "minecraft:chorus_plant",
+        "minecraft:sea_pickle",
+        "minecraft:skeleton_skull",
+        "minecraft:wither_skeleton_skull",
+        "minecraft:zombie_head",
+        "minecraft:player_head",
+        "minecraft:creeper_head",
+        "minecraft:dragon_head",
+        "minecraft:skeleton_wall_skull",
+        "minecraft:wither_skeleton_wall_skull",
+        "minecraft:zombie_wall_head",
+        "minecraft:player_wall_head",
+        "minecraft:creeper_wall_head",
+        "minecraft:dragon_wall_head",
+        "minecraft:conduit",
+        "minecraft:pointed_dripstone",
+        "minecraft:cake",
+        "minecraft:stonecutter",
+        "minecraft:enchanting_table",
+        "minecraft:sculk_sensor",
+        "minecraft:sculk_shrieker"
+    ]
+}

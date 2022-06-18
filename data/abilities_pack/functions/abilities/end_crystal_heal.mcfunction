@@ -10,7 +10,7 @@
 #execute at @s as @e[type=end_crystal,tag=healer] run data modify entity @s BeamTarget.Z set from entity @p Pos[2]
 
 #heal player
-execute at @s as @s[scores={crystal_regen_cd=..0}] if entity @e[type=end_crystal,distance=..32] run function abilities_pack:abilities/end_crystal_heal/give 
+execute at @s if entity @e[type=end_crystal,distance=..32] run function abilities_pack:abilities/regen
 
 #remove tag
 #execute as @e[type=end_crystal,tag=healer] run tag @s remove healer
