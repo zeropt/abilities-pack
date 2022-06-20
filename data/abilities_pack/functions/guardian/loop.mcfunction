@@ -1,12 +1,7 @@
 # Guardian Loop
 # As: Tagged Player
 
-#Water Breathing
-effect give @s minecraft:water_breathing 1 0 true
-
-#Slowness out of Water
 function abilities_pack:abilities/tag_in_water
-execute as @s[tag=!in_water] run effect give @s minecraft:slowness 1 2 true
 
 #flop sound
 scoreboard players operation @s apvar_0 = @s apvar_1

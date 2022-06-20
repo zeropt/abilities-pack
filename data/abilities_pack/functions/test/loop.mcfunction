@@ -1,9 +1,6 @@
 # Test Loop
 # As: Tagged Player
 
-execute as @s if predicate abilities_pack:activator_in_mainhand run function abilities_pack:abilities/spider_climb
-execute as @s unless predicate abilities_pack:activator_in_mainhand run function abilities_pack:abilities/spider_climb/stop
-
 # on activate
 execute as @s[tag=trigger_act] run function abilities_pack:test/activate
 

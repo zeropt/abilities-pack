@@ -1,16 +1,10 @@
 # Blaze Loop
 # As: Player
 
-#give Fire Resistance
-effect give @s minecraft:fire_resistance 1 0 true
-
 #water Damage
 function abilities_pack:abilities/tag_in_water
 function abilities_pack:abilities/tag_in_rain
 execute unless entity @s[tag=!in_water,tag=!in_rain] run function abilities_pack:abilities/damage
-
-#heal in fire
-function abilities_pack:abilities/fire_heal
 
 #particles
 execute as @s[predicate=abilities_pack:activator_in_mainhand] run function abilities_pack:blaze/ambient

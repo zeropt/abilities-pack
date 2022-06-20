@@ -12,3 +12,6 @@ scoreboard players set @s act_id 0
 scoreboard players set @s prev_act_id 0
 scoreboard players set @s playsound_cd 0
 scoreboard players set @s health_tracker 0
+
+#tags
+tag @s remove healer

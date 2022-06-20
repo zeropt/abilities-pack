@@ -50,6 +50,11 @@ team add forget
 scoreboard players add #abilities_pack player_id 0
 scoreboard players add #abilities_pack target_id 0
 
-#start looping function
+#start looping functions
+function abilities_pack:slow_main
 function abilities_pack:kill_pack_items
-function abilities_pack:slow_tick
+
+#abilities loops
+function abilities_pack:abilities/glow/loop
+function abilities_pack:abilities/launch/loop
+function abilities_pack:abilities/heal_friends/loop

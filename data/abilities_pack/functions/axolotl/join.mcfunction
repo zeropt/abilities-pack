@@ -19,6 +19,9 @@ function abilities_pack:axolotl/inventory_update
 #scoreboards
 scoreboard players set @s wet_cd 1200
 
+#tags
+tag @s add healer
+
 #advancements
 advancement revoke @s only abilities_pack:drank_water
 

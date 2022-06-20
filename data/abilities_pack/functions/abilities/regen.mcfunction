@@ -2,4 +2,4 @@
 # As: Player
 
 # regen on cooldown
-execute unless score @s regen_cd matches ..2147483647 run function abilities_pack:abilities/regen/give
+execute unless predicate abilities_pack:has_regen run effect give @s regeneration 4 0 false

@@ -6,8 +6,6 @@ function abilities_pack:abilities/tag_in_water
 function abilities_pack:abilities/tag_in_rain
 
 #effects
-effect clear @s minecraft:mining_fatigue
-effect give @s minecraft:water_breathing 1 0 true
 execute as @s[tag=!in_water] run attribute @s minecraft:generic.movement_speed base set 0.085
 execute as @s[tag=in_water] run attribute @s minecraft:generic.movement_speed base set 0.1
 
@@ -27,15 +25,7 @@ tag @s remove q_playing_dead
 execute unless predicate abilities_pack:is_sneaking unless predicate abilities_pack:is_swimming run function abilities_pack:abilities/float_in_water
 
 #dry out
-execute as @s[tag=in_water] run scoreboard players set @s wet_cd 1200
-execute as @s[tag=in_rain] run scoreboard players set @s wet_cd 1200
-scoreboard players set #abilities_pack apvar_0 0
-execute store result score #abilities_pack apvar_0 run advancement revoke @s only abilities_pack:drank_water
-execute if score #abilities_pack apvar_0 matches 1 run scoreboard players set @s wet_cd 1200
 function abilities_pack:axolotl/drying_effects
-
-#heal friends
-function abilities_pack:abilities/heal_friends
 
 # on activate
 execute as @s[tag=in_water,tag=trigger_act] run function abilities_pack:axolotl/activate

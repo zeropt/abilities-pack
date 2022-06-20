@@ -4,8 +4,6 @@
 #Give Effects
 execute if predicate abilities_pack:see_carved_pumpkin run effect give @s minecraft:weakness 1 0 false
 execute if predicate abilities_pack:see_carved_pumpkin run effect give @s minecraft:blindness 4 0 false
-#execute if predicate abilities_pack:see_carved_pumpkin run effect give @s minecraft:weakness 1 0 false
-execute as @s[predicate=abilities_pack:see_endermite] run effect give @s minecraft:strength 1 3 false
 
 #Water Damage
 function abilities_pack:abilities/tag_in_water
