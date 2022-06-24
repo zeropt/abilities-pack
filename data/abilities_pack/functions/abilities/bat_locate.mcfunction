@@ -8,3 +8,4 @@ tag @s remove bat_source
 
 #playsound
 execute at @s run playsound entity.bat.ambient player @a ~ ~ ~ 0.4
+function abilities_pack:abilities/trigger_vibration

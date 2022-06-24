@@ -1,6 +1,10 @@
 # Summon an evoker fang ring attack
 # As: Player
 
+#playsound
+execute at @s run playsound entity.evoker.prepare_attack player @a ~ ~ ~ 0.8
+function abilities_pack:abilities/trigger_vibration
+
 #apvar_0 = Player y
 execute store result score @s apvar_0 run data get entity @s Pos[1]
 
@@ -24,9 +28,6 @@ data modify entity @e[type=area_effect_cloud,tag=fangs_ring_head,tag=new,limit=1
 scoreboard players operation @e[type=area_effect_cloud,tag=fangs_ring_head,tag=new] apvar_0 = @s apvar_0
 scoreboard players operation @e[type=area_effect_cloud,tag=fangs_ring_head,tag=new] apvar_1 = @s apvar_1
 tag @e[type=area_effect_cloud,tag=fangs_ring_head,tag=new] remove new
-
-#playsound
-execute at @s run playsound entity.evoker.prepare_attack player @a ~ ~ ~ 0.8
 
 #particles
 scoreboard players set #abilities_pack apvar_0 100

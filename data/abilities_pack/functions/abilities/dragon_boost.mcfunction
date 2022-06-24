@@ -3,3 +3,4 @@
 
 scoreboard players set @s boost_cd 10
 execute at @s run playsound entity.ender_dragon.flap player @a ~ ~ ~ 0.8
+function abilities_pack:abilities/trigger_vibration

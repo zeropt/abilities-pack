@@ -2,8 +2,9 @@
 # As: Player
 
 execute store result score #abilities_pack apvar_0 run data get entity @s Rotation[1]
-execute as @s[tag=!flying] if score #abilities_pack apvar_0 matches ..-1 at @s run playsound entity.bat.takeoff player @a ~ ~ ~ 0.3
-execute as @s[tag=flying] unless score @s apvar_0 matches ..-1 if score #abilities_pack apvar_0 matches ..-1 at @s run playsound entity.bat.takeoff player @a ~ ~ ~ 0.3
+execute as @s[tag=!flying] if score #abilities_pack apvar_0 matches ..-1 run function abilities_pack:abilities/bat_levitation/flap
+execute as @s
+execute as @s[tag=flying] unless score @s apvar_0 matches ..-1 if score #abilities_pack apvar_0 matches ..-1 run function abilities_pack:abilities/bat_levitation/flap
 scoreboard players operation @s apvar_0 = #abilities_pack apvar_0
 effect clear @s minecraft:levitation
 execute if score #abilities_pack apvar_0 matches -90..-61 run effect give @s minecraft:levitation 1 17 true
