@@ -20,4 +20,4 @@ function abilities_pack:dragon/inventory_update
 advancement revoke @s only abilities_pack:hurt_by_arrow
 
 #attributes
-attribute @s minecraft:generic.armor base set 8.0
+attribute @s minecraft:generic.max_health base set 24.0

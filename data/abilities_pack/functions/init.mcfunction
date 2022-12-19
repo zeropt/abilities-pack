@@ -27,6 +27,7 @@ scoreboard objectives add health health
 scoreboard objectives add death_counter deathCount
 scoreboard objectives add sleep_counter minecraft.custom:minecraft.sleep_in_bed
 scoreboard objectives add sneak_dur minecraft.custom:minecraft.sneak_time
+scoreboard objectives add flight_dur minecraft.custom:minecraft.aviate_one_cm
 
 #general variables
 scoreboard objectives add apvar_0 dummy

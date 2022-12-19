@@ -1,6 +1,9 @@
 # Dragon Loop
 # As: Tagged Player
 
+# flying strength
+function abilities_pack:abilities/flying_strength
+
 #dragon ramming
 execute unless predicate abilities_pack:is_sneaking run function abilities_pack:abilities/dragon_ram
 
